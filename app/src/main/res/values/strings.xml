@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MathGeo</string>
+    <string name="title_beranda">Beranda</string>
+    <string name="title_materi">Materi</string>
+    <string name="title_latihan">Latihan</string>
+    <string name="title_quiz">Quiz</string>
+    <string name="title_profil">Profil</string>
+</resources>
