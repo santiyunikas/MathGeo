@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".welcomingpage.WelcomeFragment1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/welcome_background"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Materi Interaktif\nBelajar Geometri\nDimensi Tiga"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_marginTop="150px"
+                android:textSize="35sp"
+                android:fontFamily="serif-monospace">
+            </TextView>
+
+            <ImageView
+                android:layout_width="400px"
+                android:layout_height="wrap_content"
+                android:src="@drawable/teacher_logo"
+                >
+            </ImageView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
