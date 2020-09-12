@@ -8,24 +8,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/welcome_background"
-        android:gravity="center">
+        android:background="@drawable/welcome_background">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Materi Interaktif\nBelajar Geometri\nDimensi Tiga"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="200dp"
+                android:text="@string/fragment1"
                 android:textColor="@color/white"
                 android:textAlignment="center"
-                android:layout_marginTop="150px"
-                android:textSize="35sp"
-                android:fontFamily="serif-monospace">
+                android:textSize="20sp"
+                android:autoSizeTextType="uniform"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/robotoslab_regular"
+                >
             </TextView>
 
             <ImageView
-                android:layout_width="400px"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:src="@drawable/teacher_logo"
                 >
