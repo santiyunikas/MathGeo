@@ -1,5 +1,6 @@
 package com.santiyunikas.mathgeo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
@@ -18,6 +19,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        viewInit()
     }
 
     fun viewInit(){
@@ -37,28 +39,35 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener{
     override fun onClick(v: View?) {
         when(v?.id){
             imgPassDisplay.id->{
-                if(edtPassword.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
-                    imgPassDisplay.setImageResource(R.drawable.ic_hide_pass);
-
-                    //Show Password
-                    edtPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                }
-                else{
+                if(edtPassword.transformationMethod == PasswordTransformationMethod.getInstance()){
                     imgPassDisplay.setImageResource(R.drawable.ic_show_pass);
 
+                    //Show Password
+                    edtPassword.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                }
+                else{
+                    imgPassDisplay.setImageResource(R.drawable.ic_hide_pass);
+
                     //Hide Password
-                    edtPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    edtPassword.transformationMethod = PasswordTransformationMethod.getInstance()
 
                 }
             }
             tvForgotPassword.id->{
+                val intent: Intent = Intent(this@LoginActivity, ForgotPassActivity::class.java)
+                startActivity(intent)
+                finish()
 
             }
             btnLogin.id->{
-
+                val intent: Intent = Intent(this@LoginActivity, ContentActivity::class.java)
+                startActivity(intent)
+                finish()
             }
             tvSignUp.id->{
-
+                val intent: Intent = Intent(this@LoginActivity, SignUpActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
     }

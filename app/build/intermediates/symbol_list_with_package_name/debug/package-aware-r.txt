@@ -814,6 +814,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1445,6 +1446,7 @@ drawable ic_hide_pass
 drawable ic_latihan_logo
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_lock
 drawable ic_materi_logo
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
@@ -1569,6 +1571,7 @@ id blocking
 id bottom
 id btn_done
 id btn_login
+id btn_reset_forgotpass
 id buttonPanel
 id cancel_action
 id cancel_button
@@ -1611,6 +1614,7 @@ id direct
 id disableHome
 id dropdown_menu
 id edit_query
+id edt_email_forgotpass
 id edt_email_login
 id edt_pass_login
 id end
@@ -1793,6 +1797,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id toolbarPass
 id top
 id topPanel
 id touch_outside
@@ -1879,6 +1884,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_content
+layout activity_forgot_pass
 layout activity_login
 layout activity_splash_screen
 layout activity_welcome
@@ -1998,6 +2004,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string edt_email_forgotpass
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2068,6 +2075,7 @@ string title_materi
 string title_notifications
 string title_profil
 string title_quiz
+string tv_forgotpass
 string tv_welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -2583,6 +2591,7 @@ style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense
 style ThemeOverlay_MaterialComponents_Toolbar_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Surface
 style ThemeOverlayColorAccentRed
+style ToolbarStyle
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar

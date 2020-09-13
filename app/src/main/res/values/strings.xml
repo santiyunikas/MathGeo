@@ -20,4 +20,8 @@
     <string name="login_string">LOGIN</string>
     <string name="noacc_string">Tidak Punya Akun?</string>
     <string name="signup_string">SIGN UP</string>
+    <string name="tv_forgotpass">Masukkan email anda untuk mengatur ulang password</string>
+    <string name="edt_email_forgotpass">Email</string>
+    <string name="tv_register">REGISTER</string>
+    <string name="register_string">REGISTER</string>
 </resources>

@@ -22,11 +22,10 @@ private const val ARG_PARAM2 = "param2"
  * Use the [WelcomeFragment3.newInstance] factory method to
  * create an instance of this fragment.
  */
-class WelcomeFragment3 : Fragment(), View.OnClickListener {
+class WelcomeFragment3 : Fragment(){
     // TODO: Rename and change types of parameters
 //    private var param1: String? = null
 //    private var param2: String? = null
-    private lateinit var btnDone: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,8 +41,6 @@ class WelcomeFragment3 : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         var rootView:View = inflater.inflate(R.layout.fragment_welcome3, container, false)
-        btnDone = rootView.findViewById(R.id.btn_done)
-        btnDone.setOnClickListener(this)
         // Inflate the layout for this fragment
         return rootView
     }
@@ -68,12 +65,4 @@ class WelcomeFragment3 : Fragment(), View.OnClickListener {
             }
     }
 
-    override fun onClick(v: View?) {
-        when(v?.id){
-            btnDone.id ->{
-                val intent = Intent(this@WelcomeFragment3.context, LoginActivity::class.java)
-                startActivity(intent)
-            }
-        }
-    }
 }

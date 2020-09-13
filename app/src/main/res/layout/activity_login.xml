@@ -51,6 +51,7 @@
             android:id="@+id/edt_pass_login"
             android:inputType="textPassword"
             android:fontFamily="@font/roboto_regular" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,7 +60,6 @@
             android:layout_centerVertical="true"
             android:id="@+id/img_showhide_pass" />
     </RelativeLayout>
-
 
     <TextView
         android:id="@+id/tv_forgot_pass"

@@ -17,6 +17,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.santiyunikas.mathgeo.ForgotPassActivity" />
         <activity android:name="com.santiyunikas.mathgeo.LoginActivity" />
         <activity android:name="com.santiyunikas.mathgeo.ContentActivity" />
         <activity android:name="com.santiyunikas.mathgeo.WelcomeActivity" />

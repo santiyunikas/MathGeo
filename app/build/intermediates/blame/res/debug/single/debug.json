@@ -32,12 +32,16 @@
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_forgot_pass.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\activity_forgot_pass.xml"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_materi_logo.xml.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_materi_logo.xml"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto_regular.ttf.flat",
@@ -86,6 +90,10 @@
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_show_pass.xml.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_show_pass.xml"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_lock.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_lock.xml"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\font_robotoslab_regular.ttf.flat",
