@@ -18,11 +18,30 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.santiyunikas.mathgeo.ForgotPassActivity" />
-        <activity android:name="com.santiyunikas.mathgeo.LoginActivity" />
-        <activity android:name="com.santiyunikas.mathgeo.ContentActivity" />
-        <activity android:name="com.santiyunikas.mathgeo.WelcomeActivity" />
-        <activity android:name="com.santiyunikas.mathgeo.SplashScreen" >
+        <activity
+            android:name="com.santiyunikas.mathgeo.ContentActivity"
+            android:label="@string/title_activity_content"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.santiyunikas.mathgeo.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.santiyunikas.mathgeo.ForgotPassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.santiyunikas.mathgeo.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.santiyunikas.mathgeo.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.santiyunikas.mathgeo.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

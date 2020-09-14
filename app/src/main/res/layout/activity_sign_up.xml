@@ -22,8 +22,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:drawableLeft="@drawable/ic_nama_lengkap"
+        android:hint="@string/nama_lengkap"
+        android:drawableStart="@drawable/ic_nama_lengkap"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"
         android:id="@+id/edt_full_name"
@@ -31,6 +31,7 @@
         android:layout_below="@+id/tv_welcome"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:inputType="textPersonName"
         />
 
     <EditText
@@ -44,6 +45,7 @@
         android:layout_below="@+id/edt_full_name"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:inputType="phone"
         />
 
     <EditText
@@ -57,6 +59,7 @@
         android:layout_below="@+id/edt_telepon"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:inputType="textEmailAddress"
         />
 
     <RelativeLayout

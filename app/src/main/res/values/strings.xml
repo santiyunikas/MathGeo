@@ -24,4 +24,5 @@
     <string name="edt_email_forgotpass">Email</string>
     <string name="tv_register">REGISTER</string>
     <string name="register_string">REGISTER</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
 </resources>

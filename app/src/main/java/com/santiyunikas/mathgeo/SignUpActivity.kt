@@ -50,11 +50,35 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             imgShowHidePassSignup.id->{
+                if(edtPassSignUp.transformationMethod == PasswordTransformationMethod.getInstance()){
+                    imgShowHidePassSignup.setImageResource(R.drawable.ic_show_pass);
 
+                    //Show Password
+                    edtPassSignUp.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                }
+                else{
+                    imgShowHidePassSignup.setImageResource(R.drawable.ic_hide_pass);
+
+                    //Hide Password
+                    edtPassSignUp.transformationMethod = PasswordTransformationMethod.getInstance()
+
+                }
 
             }
             imgShowHideConfirmPass.id->{
+                if(edtConfirmPass.transformationMethod == PasswordTransformationMethod.getInstance()){
+                    imgShowHideConfirmPass.setImageResource(R.drawable.ic_show_pass);
 
+                    //Show Password
+                    edtConfirmPass.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                }
+                else{
+                    imgShowHideConfirmPass.setImageResource(R.drawable.ic_hide_pass);
+
+                    //Hide Password
+                    edtConfirmPass.transformationMethod = PasswordTransformationMethod.getInstance()
+
+                }
 
             }
             btnSignUp.id->{

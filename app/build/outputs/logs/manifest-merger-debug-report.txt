@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-24:12
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-45:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.0.0] C:\Users\SantiYS\.gradle\caches\transforms-2\files-2.1\1f5a03a200dd6b9993c2cdad1d10a651\navigation-ui-ktx-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\SantiYS\.gradle\caches\transforms-2\files-2.1\d2492a7b6e078fb62a8752a0d3422c63\navigation-ui-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.2.0] C:\Users\SantiYS\.gradle\caches\transforms-2\files-2.1\99f5542b4a26ae94cd5d7fa9d8e622d6\material-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -55,25 +55,27 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\SantiYS\.gradl
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\SantiYS\.gradle\caches\transforms-2\files-2.1\e7dd3c7bba059d55010c6de66a10db87\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\SantiYS\.gradle\caches\transforms-2\files-2.1\5632645692dc6c8a7c969e9bdf858ec2\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\SantiYS\.gradle\caches\transforms-2\files-2.1\3807bf39e6e601804527143add90b452\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-45:12
 	package
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:3:5-39
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:4:5-39
 		INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-24:12
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-45:12
 		INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-24:12
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:1-45:12
 		INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:5:5-22:19
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:6:5-43:19
 MERGED from [com.google.android.material:material:1.2.0] C:\Users\SantiYS\.gradle\caches\transforms-2\files-2.1\99f5542b4a26ae94cd5d7fa9d8e622d6\material-1.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.0] C:\Users\SantiYS\.gradle\caches\transforms-2\files-2.1\99f5542b4a26ae94cd5d7fa9d8e622d6\material-1.2.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\SantiYS\.gradle\caches\transforms-2\files-2.1\460af2c6f090a414131f560f12d5b6a4\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -89,45 +91,85 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\SantiYS\.gradl
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] C:\Users\SantiYS\.gradle\caches\transforms-2\files-2.1\2f1a782d68eb167df347fa808d85804e\core-1.3.1\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:9:9-41
 	android:icon
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:7:9-46
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:8:9-46
 	android:allowBackup
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:7:9-35
 	android:theme
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:10:9-40
-activity#com.santiyunikas.mathgeo.ForgotPassActivity
-ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:11:9-65
-	android:name
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:11:19-53
-activity#com.santiyunikas.mathgeo.LoginActivity
-ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:12:9-51
-	android:name
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:12:19-48
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.santiyunikas.mathgeo.ContentActivity
-ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:13:9-53
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:12:9-16:65
+	android:screenOrientation
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:15:13-49
+	android:label
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:14:13-59
+	tools:ignore
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:16:13-53
 	android:name
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:13:19-50
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:13:13-44
+activity#com.santiyunikas.mathgeo.SignUpActivity
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:17:9-20:55
+	android:screenOrientation
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:19:13-49
+	tools:ignore
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:20:13-53
+	android:theme
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:18:13-69
+	android:name
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:17:19-49
+activity#com.santiyunikas.mathgeo.ForgotPassActivity
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:21:9-24:55
+	android:screenOrientation
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:23:13-49
+	tools:ignore
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:24:13-53
+	android:theme
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:22:13-69
+	android:name
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:21:19-53
+activity#com.santiyunikas.mathgeo.LoginActivity
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:25:9-28:55
+	android:screenOrientation
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:27:13-49
+	tools:ignore
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:28:13-53
+	android:theme
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:26:13-69
+	android:name
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:25:19-48
 activity#com.santiyunikas.mathgeo.WelcomeActivity
-ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:14:9-53
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:29:9-32:55
+	android:screenOrientation
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:31:13-49
+	tools:ignore
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:32:13-53
+	android:theme
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:30:13-69
 	android:name
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:14:19-50
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:29:19-50
 activity#com.santiyunikas.mathgeo.SplashScreen
-ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:15:9-21:20
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:33:9-42:20
+	android:screenOrientation
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:35:13-49
+	tools:ignore
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:36:13-53
+	android:theme
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:34:13-69
 	android:name
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:15:19-47
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:33:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:37:13-41:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:38:17-69
 	android:name
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:38:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:40:17-77
 	android:name
-		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:19:27-74
+		ADDED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml:40:27-74
 uses-sdk
 INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\SantiYS\AndroidStudioProjects\MathGeo\app\src\main\AndroidManifest.xml
