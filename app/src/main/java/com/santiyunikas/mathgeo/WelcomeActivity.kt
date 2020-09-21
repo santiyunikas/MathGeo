@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.SimpleOnPageChangeListener
 import com.google.android.material.tabs.TabLayout
+import com.santiyunikas.mathgeo.view.LoginActivity
 import com.santiyunikas.mathgeo.welcomingpage.WelcomeViewPagerAdapter
 
 class WelcomeActivity : AppCompatActivity(), View.OnClickListener{

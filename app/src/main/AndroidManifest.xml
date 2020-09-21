@@ -14,7 +14,7 @@
             android:label="@string/title_activity_content"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"></activity>
-        <activity android:name=".SignUpActivity"
+        <activity android:name=".view.RegisterActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
@@ -22,7 +22,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".LoginActivity"
+        <activity android:name=".view.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
