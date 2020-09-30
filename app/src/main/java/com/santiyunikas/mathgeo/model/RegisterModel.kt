@@ -4,7 +4,7 @@ import com.santiyunikas.mathgeo.contract.ContractInterface
 
 
 class RegisterModel: ContractInterface.Model {
-    var fullname: String = ""
+    var fullname: String
         get(){
             return field
         }
@@ -12,7 +12,7 @@ class RegisterModel: ContractInterface.Model {
             field = value
         }
 
-    var numberPhone: String = ""
+    var numberPhone: String
         get(){
             return field
         }
@@ -49,10 +49,6 @@ class RegisterModel: ContractInterface.Model {
         this.email = email
         this.password = password
         this.confirmPassword = confirmPassword
-    }
-
-    override fun getData() {
-        TODO("Not yet implemented")
     }
 
 

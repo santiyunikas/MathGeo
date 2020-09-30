@@ -12,6 +12,5 @@ interface ContractInterface {
     interface Presenter{
     }
     interface Model{
-        fun getData()
     }
 }

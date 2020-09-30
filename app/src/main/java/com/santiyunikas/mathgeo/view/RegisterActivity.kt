@@ -2,19 +2,18 @@ package com.santiyunikas.mathgeo.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface
 import com.santiyunikas.mathgeo.model.RegisterModel
 import com.santiyunikas.mathgeo.presenter.RegisterPresenter
+import android.app.ProgressDialog as ProgressDialog1
 
-class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInterface.View{
+class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInterface.View, ResponseInterface{
 
     private lateinit var edtFullName: EditText
     private lateinit var edtTelepon: EditText
@@ -25,10 +24,11 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
     private lateinit var tvLogin: TextView
     private lateinit var imgShowHidePassSignup: ImageView
     private lateinit var imgShowHideConfirmPass: ImageView
-    private lateinit var mAuth: FirebaseAuth
 
     private lateinit var presenter: RegisterPresenter
     private lateinit var model: RegisterModel
+
+    lateinit var loading: ProgressDialog1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,11 +53,18 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
         btnSignUp.setOnClickListener(this)
         tvLogin.setOnClickListener(this)
 
-        mAuth = FirebaseAuth.getInstance()
     }
 
     override fun updateViewData() {
-        TODO("Not yet implemented")
+        edtFullName.setText("")
+        edtEmailSignUp.setText("")
+        edtTelepon.setText("")
+        edtPassSignUp.setText("")
+        edtConfirmPass.setText("")
+        Toast.makeText(this, "Registrasi Berhasil", Toast.LENGTH_LONG).show()
+        val intent: Intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     override fun onClick(v: View?) {
@@ -77,18 +84,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
                 model = RegisterModel(fullname, numberPhone, email, password, confirmPassword)
 
                 if (inputValid(model)){
-                    mAuth.createUserWithEmailAndPassword(model.email, model.password)
-                        .addOnCompleteListener(this, OnCompleteListener {
-                            if (it.isSuccessful){
-                                presenter.inputUser(mAuth, model)
-                                afterRegister()
-                                Toast.makeText(this, "Register berhasil, silakan verifikasi email anda", Toast.LENGTH_LONG).show()
-                            }else{
-                                Toast.makeText(this,
-                                    "Registrasi gagal, email yang anda masukkan telah terdaftar"
-                                    , Toast.LENGTH_LONG).show()
-                            }
-                        })
+                        presenter.register(model.fullname, model.numberPhone, model.email, model.password)
                 }
 
             }
@@ -99,6 +95,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
             }
         }
     }
+
 
     fun inputValid(user: RegisterModel):Boolean{
         var value:Boolean = true
@@ -145,16 +142,14 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
         return value
     }
 
-    fun afterRegister(){
-        edtFullName.setText("")
-        edtEmailSignUp.setText("")
-        edtTelepon.setText("")
-        edtPassSignUp.setText("")
-        edtConfirmPass.setText("")
+    override fun onSuccess(msg: String?) {
+        Log.d("suksesRegister", msg)
+        updateViewData()
+    }
 
-        val intent: Intent = Intent(this@RegisterActivity, LoginActivity::class.java)
-        startActivity(intent)
-        finish()
+    override fun onError(msg: String?) {
+        Log.d("erorRegister", msg)
+        Toast.makeText(this, "Registrasi gagal", Toast.LENGTH_LONG).show()
     }
 
 

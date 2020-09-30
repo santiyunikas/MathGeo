@@ -5,33 +5,45 @@ import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.widget.EditText
 import android.widget.ImageView
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
+
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.Presenter
-import com.santiyunikas.mathgeo.contract.ContractInterface.View
-import com.santiyunikas.mathgeo.model.RegisterModel
-import com.santiyunikas.mathgeo.view.RegisterActivity
+import com.santiyunikas.mathgeo.model.Member
+import com.santiyunikas.mathgeo.network.NetworkConfig
+import com.santiyunikas.mathgeo.view.ResponseInterface
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
+class RegisterPresenter(val registerView: ResponseInterface): Presenter {
 
-class RegisterPresenter(_view: View): Presenter {
+    //method untuk register member baru
+    fun register(fullname: String, numberPhone: String, email: String, password: String){
+        NetworkConfig.serviceRegisterMember()
+            .register(email, password, fullname, numberPhone)
+            .enqueue(object: Callback<Member>{
+                override fun onFailure(call: Call<Member>, t: Throwable) {
+                    registerView.onError(t.localizedMessage)
+                }
 
-    private lateinit var view: RegisterActivity
+                override fun onResponse(
+                    call: Call<Member>,
+                    response: Response<Member>
+                ) {
+                    if(response.body()?.email  != null){
+                        registerView.onSuccess(response.message())
+                        Log.d("memberRegister", response.body()?.toString())
+                    }else{
+                        registerView.onError(response.message())
+                    }
 
-    fun inputUser(mAuth: FirebaseAuth, user: RegisterModel){
-        //add user to database
-        var userId: String = mAuth.uid.toString().trim()
+                }
 
-        val database = Firebase.database
-        val myRef = database.getReference("user/")
-
-        myRef.child(userId).setValue(user)
-        mAuth.currentUser?.sendEmailVerification()
-        Log.d("newUserCreate", userId)
+            })
     }
 
+    //method untuk menampilkan dan menyembunyikan password
     fun showHidePass(editText: EditText, imageView: ImageView){
         if(editText.transformationMethod == PasswordTransformationMethod.getInstance()){
             imageView.setImageResource(R.drawable.ic_show_pass);

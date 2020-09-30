@@ -2,6 +2,7 @@ package com.santiyunikas.mathgeo.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +19,7 @@ import com.santiyunikas.mathgeo.model.LoginModel
 import com.santiyunikas.mathgeo.presenter.LoginPresenter
 
 
-class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterface.View{
+class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterface.View, ResponseInterface{
     private lateinit var edtEmail: EditText
     private lateinit var edtPassword: EditText
     private lateinit var imgPassDisplay: ImageView
@@ -29,11 +30,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterfa
     private lateinit var presenter: LoginPresenter
     private lateinit var model: LoginModel
 
-    private lateinit var mAuth: FirebaseAuth
 
     var builder: AlertDialog.Builder? = null
     var dialog: AlertDialog? = null
-//    private lateinit var mUser: FirebaseUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,12 +54,15 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterfa
         btnLogin.setOnClickListener(this)
         tvSignUp.setOnClickListener(this)
 
-        mAuth = FirebaseAuth.getInstance()
-//        mUser = mAuth.currentUser!!
     }
 
     override fun updateViewData() {
-        TODO("Not yet implemented")
+        edtEmail.setText("")
+        edtPassword.setText("")
+        Toast.makeText(this, "Login Berhasil", Toast.LENGTH_LONG).show()
+        val intent: Intent = Intent(this@LoginActivity, ContentActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     override fun onClick(v: View?) {
@@ -84,27 +86,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterfa
                 model = LoginModel(email, password)
 
                 if (inputValid(model)){
-                    mAuth.signInWithEmailAndPassword(model.email, model.password)
-                        .addOnCompleteListener(this, OnCompleteListener {
-                            if(!it.isSuccessful){
-                                var errorCode:String = it.exception.toString().trim()
-                                when(errorCode){
-                                    "ERROR_USER_NOT_FOUND"->{
-                                        Toast.makeText(this, "Akun belum terdaftar", Toast.LENGTH_LONG).show();
-                                    }
-                                    "ERROR_WRONG_PASSWORD"->{
-                                        Toast.makeText(this, "Password salah", Toast.LENGTH_LONG).show();
-                                    }
-                                }
-                            } else if (!mAuth.currentUser?.isEmailVerified!!){
-                                mAuth.currentUser?.sendEmailVerification()
-                                Toast.makeText(this, "Cek email kamu, untuk verifikasi akun", Toast.LENGTH_SHORT).show()
-                                FirebaseAuth.getInstance().signOut()
-                            }else{
-                                Toast.makeText(this, "Berhasil login", Toast.LENGTH_SHORT).show()
-                                afterLogin()
-                            }
-                        })
+                   presenter.login(model.email, model.password)
                 }
             }
             tvSignUp.id->{
@@ -135,13 +117,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterfa
         return value
     }
 
-    fun afterLogin(){
-        edtEmail.setText("")
-        edtPassword.setText("")
+    override fun onSuccess(msg: String?) {
+        if(msg.equals("isSuccess")){
+            Log.d("suksesRegister", msg)
+            updateViewData()
+        }
+    }
 
-        val intent: Intent = Intent(this@LoginActivity, ContentActivity::class.java)
-        startActivity(intent)
-        finish()
+    override fun onError(msg: String?) {
+        Log.d("erorLogin", msg)
+        Toast.makeText(this, "Login gagal", Toast.LENGTH_LONG).show()
     }
 }
 //tambahin method untuk login belum konfigurasi done

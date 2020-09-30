@@ -56,6 +56,7 @@ class WelcomeActivity : AppCompatActivity(), View.OnClickListener{
             btnDone.id ->{
                 val intent = Intent(this@WelcomeActivity, LoginActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         }
     }

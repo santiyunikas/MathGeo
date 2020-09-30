@@ -12,7 +12,4 @@ class LoginModel:ContractInterface.Model {
         this.email = email
         this.password = password
     }
-    override fun getData() {
-        TODO("Not yet implemented")
-    }
 }
