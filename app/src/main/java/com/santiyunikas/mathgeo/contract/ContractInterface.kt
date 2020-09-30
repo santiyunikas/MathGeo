@@ -7,6 +7,7 @@ interface ContractInterface {
     interface View{
         fun initView()
         fun updateViewData()
+        fun isConnected():Boolean
     }
 
     interface Presenter{

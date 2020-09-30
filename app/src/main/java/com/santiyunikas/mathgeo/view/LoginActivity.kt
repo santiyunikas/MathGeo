@@ -1,7 +1,11 @@
 package com.santiyunikas.mathgeo.view
 
+import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
@@ -9,14 +13,13 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.auth.FirebaseAuth
 import com.santiyunikas.mathgeo.ContentActivity
-import com.santiyunikas.mathgeo.ForgotPassActivity
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface
 import com.santiyunikas.mathgeo.model.LoginModel
 import com.santiyunikas.mathgeo.presenter.LoginPresenter
+import com.santiyunikas.mathgeo.sharedpreferences.SaveSharedPreference
+import org.w3c.dom.Text
 
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterface.View, ResponseInterface{
@@ -37,6 +40,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterfa
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
         initView()
         presenter = LoginPresenter(this)
     }
@@ -60,9 +64,25 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterfa
         edtEmail.setText("")
         edtPassword.setText("")
         Toast.makeText(this, "Login Berhasil", Toast.LENGTH_LONG).show()
+        SaveSharedPreference.setLoggedIn(applicationContext, true)
         val intent: Intent = Intent(this@LoginActivity, ContentActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    override fun isConnected(): Boolean {
+        val state: Boolean
+        val cm = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetwork = cm.activeNetwork
+        if (activeNetwork == null) {
+            this.startActivity(Intent(Settings.ACTION_SETTINGS))
+            Toast.makeText(this, "Aktifkan KOneksi Internet Anda", Toast.LENGTH_SHORT)
+                .show()
+            state=false
+        } else {
+            state=true
+        }
+        return state
     }
 
     override fun onClick(v: View?) {
@@ -71,21 +91,41 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterfa
                     presenter.showHidePass(edtPassword, imgPassDisplay)
             }
             tvForgotPassword.id->{
-                builder = AlertDialog.Builder(this@LoginActivity)
-                builder!!.setTitle("Update Allocation Info")
-                builder!!.setCancelable(false)
-                val view: View = LayoutInflater.from(this@LoginActivity)
-                    .inflate(R.layout.forgot_password, null, false)
-                builder!!.setView(view)
-                dialog = builder!!.create()
-                dialog!!.show()
+                val openDialog = Dialog(this)
+                openDialog.setContentView(R.layout.activity_forgot_pass)
+                openDialog.setCancelable(false)
+                openDialog.setTitle("Lupa Password")
+
+                val edtEmail = openDialog.findViewById<EditText>(R.id.edt_email_forgotpass)
+                val edtPassword= openDialog.findViewById<EditText>(R.id.edt_pass_forgotpass)
+                val edtConfirmPassword = openDialog.findViewById<EditText>(R.id.edt_confirm_forgotpass)
+
+                val imgDisplayPass= openDialog.findViewById<ImageView>(R.id.img_showhide_pass_forgotpass)
+                val imgDisplayConfirmPass= openDialog.findViewById<ImageView>(R.id.img_showhide_confirm_forgotpass)
+
+                val btnCancel = openDialog.findViewById<Button>(R.id.btn_cancel_reset_pass)
+                val btnReset= openDialog.findViewById<Button>(R.id.btn_reset_pass)
+                imgDisplayPass.setOnClickListener(View.OnClickListener {
+                    presenter.showHidePass(edtPassword, imgDisplayPass)
+                })
+                imgDisplayConfirmPass.setOnClickListener(View.OnClickListener {
+                    presenter.showHidePass(edtConfirmPassword, imgDisplayConfirmPass)
+                })
+
+                btnCancel.setOnClickListener(View.OnClickListener { openDialog!!.dismiss() })
+                btnReset.setOnClickListener(View.OnClickListener {
+                    if (isConnected()){Log.d("emailMasuk",edtEmail.text.toString().trim())
+                        presenter.resetPassword(edtEmail.text.toString().trim(), edtPassword.text.toString().trim())
+                    }
+                })
+                openDialog.show()
             }
             btnLogin.id->{
                 var email: String = edtEmail.text.toString().trim()
                 var password: String = edtPassword.text.toString().trim()
                 model = LoginModel(email, password)
 
-                if (inputValid(model)){
+                if (inputValid(model) && isConnected()){
                    presenter.login(model.email, model.password)
                 }
             }
@@ -121,12 +161,25 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterfa
         if(msg.equals("isSuccess")){
             Log.d("suksesRegister", msg)
             updateViewData()
+
+        }else if(msg.equals("resetPassSuccess")){
+            Log.d("suksesResetPassword", msg)
+            Toast.makeText(this, "Pasword Berhasil Diubah", Toast.LENGTH_LONG).show()
         }
     }
 
     override fun onError(msg: String?) {
-        Log.d("erorLogin", msg)
-        Toast.makeText(this, "Login gagal", Toast.LENGTH_LONG).show()
+
+        if (msg.equals("differentPass")){
+            Toast.makeText(this, "Login gagal: Email atau Password Salah", Toast.LENGTH_LONG).show()
+
+        }else if (msg.equals("resetPasswordFail")){
+            Toast.makeText(this, "Password Gagal Diubah", Toast.LENGTH_LONG).show()
+        }else{
+            Toast.makeText(this, "Login gagal", Toast.LENGTH_LONG).show()
+            Log.d("erorLogin", msg)
+        }
+
     }
 }
 //tambahin method untuk login belum konfigurasi done

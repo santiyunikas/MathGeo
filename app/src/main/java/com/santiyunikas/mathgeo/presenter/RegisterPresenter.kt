@@ -20,7 +20,7 @@ class RegisterPresenter(val registerView: ResponseInterface): Presenter {
 
     //method untuk register member baru
     fun register(fullname: String, numberPhone: String, email: String, password: String){
-        NetworkConfig.serviceRegisterMember()
+        NetworkConfig.serviceConnection()
             .register(email, password, fullname, numberPhone)
             .enqueue(object: Callback<Member>{
                 override fun onFailure(call: Call<Member>, t: Throwable) {

@@ -4,52 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ForgotPassActivity"
     android:orientation="vertical">
-
-    <Toolbar
-        android:id="@+id/toolbarPass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:theme="@style/ToolbarStyle"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp"
+        android:padding="5dp"
+        android:gravity="center"
         android:orientation="vertical"
         >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tv_forgotpass"
-            android:gravity="center"
+            android:text= "@string/tv_forgotpass"
             android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
+            android:layout_margin="30px"
+            android:layout_gravity="center"
+            android:gravity="center"
             />
 
         <EditText
-            android:id="@+id/edt_email_forgotpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/edt_email_forgotpass"
-            android:padding="5dp"
+            android:hint="Email"
+            android:drawableLeft="@drawable/ic_email"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/edt_email_forgotpass"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:inputType="textEmailAddress"
-            android:layout_margin="10dp"
             />
 
-        <Button
-            android:id="@+id/btn_reset_forgotpass"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cont_pass"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <EditText
+                android:id="@+id/edt_pass_forgotpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_lock"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hide_pass"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/img_showhide_pass_forgotpass" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cont_confirmpass"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Konfirmasi Password"
+                android:drawableLeft="@drawable/ic_lock"
+                android:id="@+id/edt_confirm_forgotpass"
+                android:inputType="textPassword"
+                android:fontFamily="@font/roboto_regular" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hide_pass"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/img_showhide_confirm_forgotpass" />
+        </RelativeLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:textColor="@color/white"
-            android:text="Reset"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            />
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_cancel_reset_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:text="cancel"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                />
+            <Button
+                android:id="@+id/btn_reset_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:text="Reset"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
 
     </LinearLayout>
 

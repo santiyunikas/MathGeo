@@ -4,10 +4,11 @@ import com.santiyunikas.mathgeo.model.Member
 import retrofit2.Call
 import retrofit2.http.*
 
+
 interface Service {
     //untuk register
     @FormUrlEncoded
-    @POST("member")
+    @POST("/index.php/C_Register/")
     fun register(
         @Field("email") email: String,
         @Field("password") password: String,
@@ -20,4 +21,12 @@ interface Service {
     fun login(
         @Query("email") email: String
     ):Call<List<Member>>
+
+    //untuk reset password
+    @FormUrlEncoded
+    @PUT("/index.php/C_Login/")
+    open fun resetPassword(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Call<Member>
 }

@@ -15,24 +15,13 @@ object NetworkConfig {
             .addInterceptor(interceptor)
             .build()
     }
-
-    //untuk koneksi ke C_Member.php
-    private fun registerMember(): Retrofit{
-        return Retrofit.Builder()
-            .baseUrl("https://mathgeo.ub-learningtechnology.com/index.php/C_Register/")
-            .client(getInterceptor())
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-    fun serviceRegisterMember() = registerMember().create(Service::class.java)!!
-
-    //untuk koneksi ke C_Member.php
-    private fun loginMember(): Retrofit{
+    //untuk koneksi ke server
+    private fun connection(): Retrofit{
         return Retrofit.Builder()
             .baseUrl("https://mathgeo.ub-learningtechnology.com/")
             .client(getInterceptor())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
-    fun serviceLoginMember() = loginMember().create(Service::class.java)!!
+    fun serviceConnection() = connection().create(Service::class.java)!!
 }

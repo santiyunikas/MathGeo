@@ -1,7 +1,10 @@
 package com.santiyunikas.mathgeo.view
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.util.Patterns
 import android.view.View
@@ -67,6 +70,21 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
         finish()
     }
 
+    override fun isConnected(): Boolean {
+        val state: Boolean
+        val cm = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetwork = cm.activeNetwork
+        if (activeNetwork == null) {
+            this.startActivity(Intent(Settings.ACTION_SETTINGS))
+            Toast.makeText(this, "Aktifkan KOneksi Internet Anda", Toast.LENGTH_SHORT)
+                .show()
+            state=false
+        } else {
+            state=true
+        }
+        return state
+    }
+
     override fun onClick(v: View?) {
         when(v?.id){
             imgShowHidePassSignup.id->{
@@ -83,7 +101,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
                 val confirmPassword: String = edtConfirmPass.text.toString().trim()
                 model = RegisterModel(fullname, numberPhone, email, password, confirmPassword)
 
-                if (inputValid(model)){
+                if (inputValid(model) && isConnected()){
                         presenter.register(model.fullname, model.numberPhone, model.email, model.password)
                 }
 
