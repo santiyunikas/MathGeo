@@ -1,44 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".welcomingpage.WelcomeFragment2">
+    tools:context=".welcomingpage.WelcomeFragment2"
+    android:orientation="vertical"
 
+    >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/welcome_background">
-        <LinearLayout
-            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/welcome_background"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/fragment2"
+            android:textColor="@color/white"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            />
+        <ImageView
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:gravity="center">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1.5"
-                android:layout_height="200dp"
-                android:text="@string/fragment2"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:autoSizeTextType="uniform"
-                android:layout_marginLeft="20dp"
-                android:fontFamily="@font/robotoslab_regular"
-                >
-            </TextView>
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:src="@drawable/teacher_logo"
-                >
-            </ImageView>
-        </LinearLayout>
-
-
+            android:layout_weight="1"
+            android:src="@drawable/teacher_fragment2"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group2"/>
+        <Button
+            android:id="@+id/btn_next_to_fragment_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:layout_margin="20dp"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            />
     </LinearLayout>
 
-
-
-</FrameLayout>
+</LinearLayout>
