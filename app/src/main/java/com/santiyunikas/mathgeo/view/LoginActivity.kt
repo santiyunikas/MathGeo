@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
 import android.util.Patterns
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
@@ -19,8 +18,6 @@ import com.santiyunikas.mathgeo.contract.ContractInterface
 import com.santiyunikas.mathgeo.model.LoginModel
 import com.santiyunikas.mathgeo.presenter.LoginPresenter
 import com.santiyunikas.mathgeo.sharedpreferences.SaveSharedPreference
-import org.w3c.dom.Text
-
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener, ContractInterface.View, ResponseInterface{
     private lateinit var edtEmail: EditText

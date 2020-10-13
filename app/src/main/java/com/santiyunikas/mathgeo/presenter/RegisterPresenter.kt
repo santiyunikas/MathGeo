@@ -8,7 +8,7 @@ import android.widget.ImageView
 
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.Presenter
-import com.santiyunikas.mathgeo.model.Member
+import com.santiyunikas.mathgeo.model.MemberModel
 import com.santiyunikas.mathgeo.network.NetworkConfig
 import com.santiyunikas.mathgeo.view.ResponseInterface
 import retrofit2.Call
@@ -18,18 +18,18 @@ import retrofit2.Response
 
 class RegisterPresenter(val registerView: ResponseInterface): Presenter {
 
-    //method untuk register member baru
-    fun register(fullname: String, numberPhone: String, email: String, password: String){
+    //method untuk register pengguna baru
+    fun register(fullname: String, numberPhone: String, email: String, password: String, active: Int){
         NetworkConfig.serviceConnection()
-            .register(email, password, fullname, numberPhone)
-            .enqueue(object: Callback<Member>{
-                override fun onFailure(call: Call<Member>, t: Throwable) {
+            .register(email, password, fullname, numberPhone, active)
+            .enqueue(object: Callback<MemberModel>{
+                override fun onFailure(call: Call<MemberModel>, t: Throwable) {
                     registerView.onError(t.localizedMessage)
                 }
 
                 override fun onResponse(
-                    call: Call<Member>,
-                    response: Response<Member>
+                    call: Call<MemberModel>,
+                    response: Response<MemberModel>
                 ) {
                     if(response.body()?.email  != null){
                         registerView.onSuccess(response.message())
@@ -37,9 +37,7 @@ class RegisterPresenter(val registerView: ResponseInterface): Presenter {
                     }else{
                         registerView.onError(response.message())
                     }
-
                 }
-
             })
     }
 
@@ -56,5 +54,4 @@ class RegisterPresenter(val registerView: ResponseInterface): Presenter {
             editText.transformationMethod = PasswordTransformationMethod.getInstance()
         }
     }
-
 }

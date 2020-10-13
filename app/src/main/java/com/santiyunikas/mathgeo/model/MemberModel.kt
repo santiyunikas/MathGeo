@@ -2,7 +2,7 @@ package com.santiyunikas.mathgeo.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Member(
+data class MemberModel(
     @SerializedName("email")
     val email: String,
     @SerializedName("nama_lengkap")

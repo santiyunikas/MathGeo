@@ -1,9 +1,11 @@
 package com.santiyunikas.mathgeo.network
 
+import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
 
 object NetworkConfig {
     //untuk logging
@@ -15,13 +17,18 @@ object NetworkConfig {
             .addInterceptor(interceptor)
             .build()
     }
+    var gson = GsonBuilder()
+        .setLenient()
+        .create()!!
+
     //untuk koneksi ke server
     private fun connection(): Retrofit{
         return Retrofit.Builder()
             .baseUrl("https://mathgeo.ub-learningtechnology.com/")
             .client(getInterceptor())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
     }
+
     fun serviceConnection() = connection().create(Service::class.java)!!
 }

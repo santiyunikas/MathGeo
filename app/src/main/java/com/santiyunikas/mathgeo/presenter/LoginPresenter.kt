@@ -1,22 +1,14 @@
 package com.santiyunikas.mathgeo.presenter
 
-import android.content.Context
-import android.content.Intent
-import android.net.ConnectivityManager
-import android.provider.Settings
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.Toast
-import androidx.core.content.ContextCompat.getSystemService
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
-import com.santiyunikas.mathgeo.model.Member
+import com.santiyunikas.mathgeo.model.MemberModel
 import com.santiyunikas.mathgeo.network.NetworkConfig
-import com.santiyunikas.mathgeo.view.LoginActivity
-import com.santiyunikas.mathgeo.view.RegisterActivity
 import com.santiyunikas.mathgeo.view.ResponseInterface
 import retrofit2.Call
 import retrofit2.Callback
@@ -27,13 +19,13 @@ class LoginPresenter(val loginView: ResponseInterface): Presenter {
     fun resetPassword(email: String, password: String){
         NetworkConfig.serviceConnection()
             .resetPassword(email, password)
-            .enqueue(object:Callback<Member>{
-                override fun onFailure(call: Call<Member>, t: Throwable) {
+            .enqueue(object:Callback<MemberModel>{
+                override fun onFailure(call: Call<MemberModel>, t: Throwable) {
                     loginView.onError("resetPasswordFail")
                     Log.d("erorResetPassword", t.localizedMessage)
                 }
 
-                override fun onResponse(call: Call<Member>, response: Response<Member>) {
+                override fun onResponse(call: Call<MemberModel>, response: Response<MemberModel>) {
                     Log.d("memberResetPassword", response.body()?.toString())
                     loginView.onSuccess("resetPassSuccess")
                 }
@@ -45,14 +37,14 @@ class LoginPresenter(val loginView: ResponseInterface): Presenter {
     fun login(email: String, password: String){
         NetworkConfig.serviceConnection()
             .login(email)
-            .enqueue(object:Callback<List<Member>>{
-                override fun onFailure(call: Call<List<Member>>, t: Throwable) {
+            .enqueue(object:Callback<List<MemberModel>>{
+                override fun onFailure(call: Call<List<MemberModel>>, t: Throwable) {
                     Log.d("memberGagalLogin",call.toString())
                     loginView.onError(t.localizedMessage)
                 }
                 override fun onResponse(
-                    call: Call<List<Member>>,
-                    response: Response<List<Member>>
+                    call: Call<List<MemberModel>>,
+                    response: Response<List<MemberModel>>
                 ) {
                     if(!response.body()?.isEmpty()!!){
                         Log.d("memberLogin", response.body()?.toString())
@@ -68,6 +60,7 @@ class LoginPresenter(val loginView: ResponseInterface): Presenter {
 
             })
     }
+
     fun showHidePass(editText: EditText, imageView: ImageView){
         if(editText.transformationMethod == PasswordTransformationMethod.getInstance()){
             imageView.setImageResource(R.drawable.ic_show_pass);

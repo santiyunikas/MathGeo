@@ -14,7 +14,6 @@ import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface
 import com.santiyunikas.mathgeo.model.RegisterModel
 import com.santiyunikas.mathgeo.presenter.RegisterPresenter
-import android.app.ProgressDialog as ProgressDialog1
 
 class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInterface.View, ResponseInterface{
 
@@ -30,8 +29,6 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
 
     private lateinit var presenter: RegisterPresenter
     private lateinit var model: RegisterModel
-
-    lateinit var loading: ProgressDialog1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,9 +61,8 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
         edtTelepon.setText("")
         edtPassSignUp.setText("")
         edtConfirmPass.setText("")
-        Toast.makeText(this, "Registrasi Berhasil", Toast.LENGTH_LONG).show()
-        val intent: Intent = Intent(this@RegisterActivity, LoginActivity::class.java)
-        startActivity(intent)
+        val mIntent: Intent = Intent(this, LoginActivity::class.java)
+        startActivity(mIntent)
         finish()
     }
 
@@ -74,13 +70,13 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
         val state: Boolean
         val cm = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val activeNetwork = cm.activeNetwork
-        if (activeNetwork == null) {
+        state = if (activeNetwork == null) {
             this.startActivity(Intent(Settings.ACTION_SETTINGS))
-            Toast.makeText(this, "Aktifkan KOneksi Internet Anda", Toast.LENGTH_SHORT)
+            Toast.makeText(this, "Aktifkan Koneksi Internet Kamu", Toast.LENGTH_SHORT)
                 .show()
-            state=false
+            false
         } else {
-            state=true
+            true
         }
         return state
     }
@@ -102,7 +98,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
                 model = RegisterModel(fullname, numberPhone, email, password, confirmPassword)
 
                 if (inputValid(model) && isConnected()){
-                        presenter.register(model.fullname, model.numberPhone, model.email, model.password)
+                        presenter.register(model.fullname, model.numberPhone, model.email, model.password, 0)
                 }
 
             }
@@ -162,12 +158,13 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, ContractInte
 
     override fun onSuccess(msg: String?) {
         Log.d("suksesRegister", msg)
+        Toast.makeText(this, "Registrasi Berhasil, Cek Email Kamu untuk Verifikasi!", Toast.LENGTH_LONG).show()
         updateViewData()
     }
 
     override fun onError(msg: String?) {
         Log.d("erorRegister", msg)
-        Toast.makeText(this, "Registrasi gagal", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Registrasi Gagal, Email Sudah Terdaftar", Toast.LENGTH_LONG).show()
     }
 
 

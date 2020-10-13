@@ -1,6 +1,6 @@
 package com.santiyunikas.mathgeo.network
 
-import com.santiyunikas.mathgeo.model.Member
+import com.santiyunikas.mathgeo.model.MemberModel
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -13,14 +13,15 @@ interface Service {
         @Field("email") email: String,
         @Field("password") password: String,
         @Field("nama_lengkap") fullname: String,
-        @Field("nomor_telepon") numberPhone: String
-    ): Call<Member>
+        @Field("nomor_telepon") numberPhone: String,
+        @Field("active") active: Int
+    ): Call<MemberModel>
 
     //untuk login
     @GET("/index.php/C_Login?")
     fun login(
         @Query("email") email: String
-    ):Call<List<Member>>
+    ):Call<List<MemberModel>>
 
     //untuk reset password
     @FormUrlEncoded
@@ -28,5 +29,5 @@ interface Service {
     open fun resetPassword(
         @Field("email") email: String,
         @Field("password") password: String
-    ): Call<Member>
+    ): Call<MemberModel>
 }
