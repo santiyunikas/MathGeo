@@ -4,7 +4,17 @@
             "outputFile": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SantiYS\\.gradle\\caches\\transforms-2\\files-2.1\\23ba721829fa2a840ee3df67ba7b6acc\\appcompat-1.1.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\SantiYS\\.gradle\\caches\\transforms-2\\files-2.1\\04fe44af7df0cbdc46e98c3ef77dbffe\\core-1.3.1\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\SantiYS\\.gradle\\caches\\transforms-2\\files-2.1\\74e6f81f56b36f24d8053a6cecbd5d40\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\SantiYS\\.gradle\\caches\\transforms-2\\files-2.1\\a026770ff2a449e8c9831328091306d5\\core-1.3.1\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

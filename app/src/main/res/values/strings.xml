@@ -26,4 +26,17 @@
     <string name="register_string">REGISTER</string>
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="tv_login">LOGIN</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="otp_text">Masukkan email Anda, selanjutnya klik tombol (Dapatkan OTP) dan kami akan mengirimkan kode OTP ke email untuk Verifikasi</string>
+    <string name="masukkan_email">Masukkan email</string>
+    <string name="dapatkan_otp">Dapatkan OTP</string>
+    <string name="masukkan_kode_otp">Masukkan kode OTP</string>
+    <string name="kembali">Kembali</string>
+    <string name="sudah_punya_akun">Sudah Punya Akun?</string>
+    <string name="kirim">Kirim</string>
 </resources>

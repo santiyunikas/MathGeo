@@ -1,166 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.RegisterActivity">
-
-    <TextView
-        android:id="@+id/tv_welcome"
+    tools:context=".view.authentication.RegisterActivity">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="@string/tv_register"
-        android:gravity="center"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/roboto_regular"
-        android:textStyle="bold"
-        />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/nama_lengkap"
-        android:drawableStart="@drawable/ic_nama_lengkap"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/edt_full_name"
-        android:fontFamily="@font/roboto_regular"
-        android:layout_below="@+id/tv_welcome"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:inputType="textPersonName"
-        />
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:text="@string/tv_register"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nomor Telepon"
-        android:drawableLeft="@drawable/ic_phone"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/edt_telepon"
-        android:fontFamily="@font/roboto_regular"
-        android:layout_below="@+id/edt_full_name"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:inputType="phone"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:drawableLeft="@drawable/ic_email"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/edt_email_signup"
-        android:fontFamily="@font/roboto_regular"
-        android:layout_below="@+id/edt_telepon"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:inputType="textEmailAddress"
-        />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edt_email_signup"
-        android:id="@+id/cont_pass"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:drawableLeft="@drawable/ic_lock"
-            android:id="@+id/edt_pass_signup"
-            android:inputType="textPassword"
-            android:fontFamily="@font/roboto_regular" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_hide_pass"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
-            android:layout_centerVertical="true"
-            android:id="@+id/img_showhide_passsignup" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cont_pass"
-        android:id="@+id/cont_confirmpass"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Konfirmasi Password"
-            android:drawableLeft="@drawable/ic_lock"
-            android:id="@+id/edt_confirmpass"
-            android:inputType="textPassword"
-            android:fontFamily="@font/roboto_regular" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_hide_pass"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
-            android:layout_centerVertical="true"
-            android:id="@+id/img_showhide_confirmpass" />
-    </RelativeLayout>
-
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:background="@color/colorPrimary"
-        android:text="@string/register_string"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_below="@+id/cont_confirmpass"
-        android:id="@+id/btn_signup"
-        />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_signup"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:hint="@string/nama_lengkap"
+            android:drawableStart="@drawable/ic_nama_lengkap"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/edt_full_name"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_alignParentBottom="true"
-            android:paddingBottom="50dp"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sudah Punya Akun?"
-                android:id="@+id/tv_hvacc"
-                android:fontFamily="@font/roboto_regular"
-                android:gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_login"
-                android:layout_below="@id/tv_hvacc"
-                android:textColor="@color/colorPrimary"
-                android:gravity="center"
-                android:id="@+id/tv_login"
-                android:textSize="20dp"
-                />
-        </LinearLayout>
+            android:inputType="textPersonName"
+            android:paddingBottom="20dp"
+            />
 
-    </RelativeLayout>
-</RelativeLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor Telepon"
+            android:drawableLeft="@drawable/ic_phone"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/edt_telepon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="phone"
+            android:paddingBottom="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:drawableLeft="@drawable/ic_email"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/edt_email_signup"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="20dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cont_pass"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:drawableLeft="@drawable/ic_lock"
+                android:id="@+id/edt_pass_signup"
+                android:inputType="textPassword"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingBottom="20dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hide_pass"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/img_showhide_passsignup" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cont_confirmpass"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Konfirmasi Password"
+                android:drawableLeft="@drawable/ic_lock"
+                android:id="@+id/edt_confirmpass"
+                android:inputType="textPassword"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingBottom="20dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hide_pass"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/img_showhide_confirmpass" />
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:text="@string/register_string"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:id="@+id/btn_signup"
+            />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sudah_punya_akun"
+                    android:id="@+id/tv_hvacc"
+                    style="@style/TextViewBlack"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_login"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/tv_login"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    style="@style/TextClickable"
+                    />
+    </LinearLayout>
+</ScrollView>

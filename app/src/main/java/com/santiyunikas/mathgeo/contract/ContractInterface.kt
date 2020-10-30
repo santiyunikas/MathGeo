@@ -1,17 +1,22 @@
 package com.santiyunikas.mathgeo.contract
 
-import android.content.Intent
+import android.content.Context
+import android.view.View
 
 interface ContractInterface {
 
-    interface View{
+    interface IView{
         fun initView()
         fun updateViewData()
-        fun isConnected():Boolean
+        fun onSuccess(msg: String?)
+        fun onError(msg: String?)
     }
 
-    interface Presenter{
+    interface IPresenter{
+        fun setView(view1: View?, view2: View?, view3: View?, view4: View?, view5: View?, view6: View?, view7: View?)
+        fun isConnected(context: Context?):Boolean
     }
-    interface Model{
+    interface IModel{
+        fun getData()
     }
 }

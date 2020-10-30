@@ -25,27 +25,29 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.santiyunikas.mathgeo.ContentActivity"
+            android:name="com.santiyunikas.mathgeo.ResetPasswordActivity"
+            android:label="@string/title_activity_reset_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.santiyunikas.mathgeo.view.ContentActivity"
             android:label="@string/title_activity_content"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.santiyunikas.mathgeo.view.RegisterActivity"
+            android:name="com.santiyunikas.mathgeo.view.authentication.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.santiyunikas.mathgeo.ForgotPassActivity"
+            android:name="com.santiyunikas.mathgeo.view.authentication.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.santiyunikas.mathgeo.view.LoginActivity"
+            android:name="com.santiyunikas.mathgeo.view.welcomingpage.WelcomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.santiyunikas.mathgeo.WelcomeActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name="com.santiyunikas.mathgeo.SplashScreen"
+            android:name="com.santiyunikas.mathgeo.view.welcomingpage.SplashScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>

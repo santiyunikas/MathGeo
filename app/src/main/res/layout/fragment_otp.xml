@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.authentication.OtpFragment"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            app:cardCornerRadius="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PASSWORD"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="30sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/otp_text"
+                    style="@style/TextViewBlack"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_email"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:paddingBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/edt_email_reset_pass"/>
+
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:gravity="center"
+                    android:text="Waktu"
+                    style="@style/TextViewBlack"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/dapatkan_otp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/btn_get_otp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    app:cardUseCompatPadding="true"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/masukkan_kode_otp"
+                            android:layout_margin="20dp"
+                            style="@style/TextViewBlack"
+                            />
+
+                        <com.mukesh.OtpView
+                            android:id="@+id/otp_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:itemBackground="@color/white"
+                            android:textColor="@android:color/black"
+                            app:OtpItemCount="4"
+                            app:OtpLineColor="@color/black"
+                            app:OtpViewType="rectangle"
+                            app:OtpItemSpacing="5dp"
+                            style="@style/OtpWidget.OtpView"
+                            />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Verifikasi"
+                            android:textColor="@color/black"
+                            android:layout_margin="20dp"
+                            android:background="#adff00"
+                            android:id="@+id/btn_verifikasi"
+                            />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/TextClickable"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/kembali"
+                    android:layout_gravity="center"
+                    android:id="@+id/tx_kembali"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

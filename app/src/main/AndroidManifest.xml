@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.santiyunikas.mathgeo">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo_mathgeo"
@@ -11,29 +13,38 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ContentActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:name=".view.authentication.ResetPasswordActivity"
+            android:label="@string/title_activity_reset_password">
+        </activity>
+
+        <activity
+            android:name=".view.ContentActivity"
             android:label="@string/title_activity_content"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"></activity>
-        <activity android:name=".view.RegisterActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".view.authentication.RegisterActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".ForgotPassActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".view.authentication.LoginActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".view.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".view.welcomingpage.WelcomeActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".WelcomeActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".view.welcomingpage.SplashScreen"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
