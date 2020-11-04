@@ -4,12 +4,28 @@
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_header_koin.png.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\header_koin.png"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_close.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_close.xml"
+    },
+    {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_teacher_fragment1.png.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable-v24\\teacher_fragment1.png"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_quiz_logo.xml.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_quiz_logo.xml"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_account_circle_24.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_baseline_account_circle_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_kanan.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_kanan.xml"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_24dp.xml.flat",
@@ -56,12 +72,24 @@
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
     },
     {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_edit_profile.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\activity_edit_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_group3.png.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable-v24\\group3.png"
     },
     {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_petunjuk.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\activity_petunjuk.xml"
+    },
+    {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_otp.xml.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_otp.xml"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_quiz.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_quiz.xml"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_nama_lengkap.xml.flat",
@@ -100,6 +128,10 @@
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_kompetensi_tujuan.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\activity_kompetensi_tujuan.xml"
+    },
+    {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_beranda_logo.xml.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_beranda_logo.xml"
     },
@@ -116,12 +148,24 @@
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\activity_content.xml"
     },
     {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_group2.png.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable-v24\\group2.png"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_welcome2.xml.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_welcome2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_penyusun.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_penyusun.xml"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_kompetensi_dan_tujuan.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_kompetensi_dan_tujuan.xml"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
@@ -134,6 +178,10 @@
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_edit.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_edit.xml"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
@@ -164,8 +212,12 @@
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notifications.xml.flat",
-        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_latihan.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_latihan.xml"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_petunjuk.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_petunjuk.xml"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_group1.png.flat",
@@ -180,12 +232,24 @@
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_email.xml"
     },
     {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_beranda.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_beranda.xml"
+    },
+    {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_back_button.png.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_back_button.png"
+    },
+    {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_show_pass.xml.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_show_pass.xml"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_blue_shadow.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\button_blue_shadow.xml"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_lock.xml.flat",
@@ -196,19 +260,23 @@
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
-        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_koin_gratis.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\activity_koin_gratis.xml"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_kode_referal.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable\\ic_kode_referal.xml"
     },
     {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_welcome3.xml.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_welcome3.xml"
     },
     {
-        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dashboard.xml.flat",
-        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
-    },
-    {
         "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_teacher_fragment3.png.flat",
         "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\drawable-v24\\teacher_fragment3.png"
+    },
+    {
+        "merged": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_materi.xml.flat",
+        "source": "C:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\src\\main\\res\\layout\\fragment_materi.xml"
     }
 ]

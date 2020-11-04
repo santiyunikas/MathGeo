@@ -1,6 +1,5 @@
 package com.santiyunikas.mathgeo.view.authentication
 
-import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -15,9 +14,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.mukesh.OnOtpCompletionListener
 import com.mukesh.OtpView
-import com.santiyunikas.mathgeo.presenter.OtpPresenter
+import com.santiyunikas.mathgeo.presenter.auth.OtpPresenter
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 import java.util.concurrent.TimeUnit
 
 
@@ -141,7 +141,7 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.btn_get_otp ->{
-                if(inputValid() && presenter.isConnected(activity)){
+                if(inputValid() && InternetConnection.isConnected(activity)){
                     timerClass = TimerClass(60000 * 3, 1000)
                     timerClass.start()
                     btnGetOtp.visibility = View.INVISIBLE
@@ -163,6 +163,7 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
                 }else{
                     if (otpView.text.toString().trim() == kodeOtp){
                         timerClass.cancel()
+
                         val fragmentResetPassword = ResetPasswordFragment()
                         val mBundle = Bundle()
                         mBundle.putString("EMAIL_KEY", edtEmail.text.toString().trim())
@@ -187,8 +188,6 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
                 }
             }
             R.id.tx_kembali ->{
-                val intent: Intent = Intent(activity, LoginActivity::class.java)
-                startActivity(intent)
                 activity?.finish()
             }
         }

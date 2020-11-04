@@ -6,13 +6,13 @@ import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.widget.*
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
-import com.santiyunikas.mathgeo.presenter.LoginPresenter
-import com.santiyunikas.mathgeo.util.sharedpreferences.SaveSharedPreference
-import com.santiyunikas.mathgeo.view.ContentActivity
+import com.santiyunikas.mathgeo.presenter.auth.LoginPresenter
+import com.santiyunikas.mathgeo.util.network.InternetConnection
+import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
+import com.santiyunikas.mathgeo.view.content.ContentActivity
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
     private lateinit var edtEmail: EditText
@@ -21,16 +21,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
     private lateinit var tvForgotPassword:TextView
     private lateinit var btnLogin: Button
     private lateinit var tvSignUp: TextView
-
     private lateinit var presenter: LoginPresenter
-
-    var builder: AlertDialog.Builder? = null
-    var dialog: AlertDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
         initView()
         presenter = LoginPresenter(this)
     }
@@ -53,11 +48,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
     override fun updateViewData() {
         edtEmail.setText("")
         edtPassword.setText("")
-        Toast.makeText(this, "Login Berhasil", Toast.LENGTH_LONG).show()
-        SaveSharedPreference.setLoggedIn(applicationContext, true)
-        val intent: Intent = Intent(this@LoginActivity, ContentActivity::class.java)
-        startActivity(intent)
-        finish()
     }
 
     override fun onClick(v: View?) {
@@ -66,15 +56,19 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
                     presenter.showHidePass(edtPassword, imgPassDisplay)
             }
             tvForgotPassword.id->{
+                val fragmentOtp = OtpFragment()
+                val mBundle = Bundle()
+                mBundle.putString("STATE_KEY", "Login")
+                fragmentOtp.arguments = mBundle
+
                 val intent: Intent = Intent(this@LoginActivity, ResetPasswordActivity::class.java)
                 startActivity(intent)
-                finish()
             }
             btnLogin.id->{
                 var email: String = edtEmail.text.toString().trim()
                 var password: String = edtPassword.text.toString().trim()
 
-                if (inputValid(email, password) && presenter.isConnected(this)){
+                if (inputValid(email, password) && InternetConnection.isConnected(this)){
                    presenter.login(email, password)
                 }
             }
@@ -84,6 +78,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
                 finish()
             }
         }
+    }
+
+    fun passingData(fullname: String, email: String, nomor_telepon: String, kode_referal: String, nKoin: Int, id_member: Int){
+        Preferences.setLoggedInStatus(applicationContext, true)
+        Preferences.setRegisteredEmail(applicationContext, email)
+        Preferences.setRegisteredFullname(applicationContext, fullname)
+        Preferences.setRegisteredPhone(applicationContext, nomor_telepon)
+        Preferences.setRegisteredKodeReferal(applicationContext, kode_referal)
+        Preferences.setRegisteredJumlahKoin(applicationContext, nKoin)
+        Preferences.setRegisteredIdUser(applicationContext, id_member)
     }
 
     private fun inputValid(email: String, password: String): Boolean{
@@ -106,10 +110,15 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
         return value
     }
 
-    override fun onSuccess(msg: String?) {
+     override fun onSuccess(msg: String?) {
         if(msg.equals("isSuccess")){
             Log.d("suksesRegister", msg)
             updateViewData()
+            Toast.makeText(this, "Login Berhasil", Toast.LENGTH_LONG).show()
+
+            val intent: Intent = Intent(this@LoginActivity, ContentActivity::class.java)
+            startActivity(intent)
+            finish()
 
         }else if(msg.equals("resetPassSuccess")){
             Log.d("suksesResetPassword", msg)
@@ -134,6 +143,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
                 Log.d("erorLogin", msg)
             }
         }
-
+        updateViewData()
     }
 }

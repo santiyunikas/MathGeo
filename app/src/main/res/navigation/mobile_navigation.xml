@@ -3,23 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_beranda">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.santiyunikas.mathgeo.view.content.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_beranda"
+        android:name="com.santiyunikas.mathgeo.view.content.beranda.BerandaFragment"
+        android:label="@string/title_beranda"
+        tools:layout="@layout/fragment_beranda" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.santiyunikas.mathgeo.view.content.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_latihan"
+        android:name="com.santiyunikas.mathgeo.view.content.latihan.LatihanFragment"
+        android:label="@string/title_latihan"
+        tools:layout="@layout/fragment_latihan" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.santiyunikas.mathgeo.view.content.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_quiz"
+        android:name="com.santiyunikas.mathgeo.view.content.quiz.QuizFragment"
+        android:label="@string/title_quiz"
+        tools:layout="@layout/fragment_quiz" />
+
+    <fragment
+        android:id="@+id/navigation_materi"
+        android:name="com.santiyunikas.mathgeo.view.content.materi.MateriFragment"
+        android:label="@string/title_materi"
+        tools:layout="@layout/fragment_materi" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.santiyunikas.mathgeo.view.content.profil.ProfileFragment"
+        android:label="@string/title_profil"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

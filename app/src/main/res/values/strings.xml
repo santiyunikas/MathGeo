@@ -39,4 +39,18 @@
     <string name="kembali">Kembali</string>
     <string name="sudah_punya_akun">Sudah Punya Akun?</string>
     <string name="kirim">Kirim</string>
+    <string name="info_pribadi">Info Pribadi</string>
+    <string name="nomor_telepon">Nomor Telepon</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="isi_password">**********</string>
+    <string name="ubah_password">Ubah Password</string>
+    <string name="info_aplikasi">Info Aplikasi</string>
+    <string name="kompetensi_pembelajaran">Kompetensi Pembelajaran</string>
+    <string name="tujuan_pembelajaran">Tujuan Pembelajaran</string>
+    <string name="petunjuk_penggunaan_media_pembelajaran">Petunjuk Penggunaan Media Pembelajaran</string>
+    <string name="petunjuk_penggunaan">Petunjuk Penggunaan Media Pembelajaran</string>
+    <string name="indahnya_persahabatan">Indahnya Persahabatan!</string>
+    <string name="body3">Ajak teman belajar pakai kode kamu. Temanmu akan mendapatkan 1 koin gratis</string>
+    <string name="body4">Masukkan kode temanmu. Kamu akan mendapatkan 1 koin gratis</string>
 </resources>

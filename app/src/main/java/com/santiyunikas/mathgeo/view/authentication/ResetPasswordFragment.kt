@@ -10,8 +10,9 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import com.santiyunikas.mathgeo.R
-import com.santiyunikas.mathgeo.presenter.ResetPasswordPresenter
+import com.santiyunikas.mathgeo.presenter.auth.ResetPasswordPresenter
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 
 
 class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
@@ -103,7 +104,7 @@ class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
                 val pass = edtPassReset.text.toString().trim()
                 val confirmPass = edtConfirmpassReset.text.toString().trim()
 
-                if (inputValid(pass, confirmPass) && presenter.isConnected(activity)) {
+                if (inputValid(pass, confirmPass) && InternetConnection.isConnected(activity)) {
                     presenter.changePassword(email, pass)
                     Log.d("emailPass", "$email $pass")
                 }

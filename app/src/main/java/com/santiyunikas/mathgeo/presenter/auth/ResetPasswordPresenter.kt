@@ -1,4 +1,4 @@
-package com.santiyunikas.mathgeo.presenter
+package com.santiyunikas.mathgeo.presenter.auth
 
 import android.content.Context
 import android.content.Intent
@@ -21,36 +21,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class ResetPasswordPresenter(context: ResetPasswordFragment): IPresenter {
-
+class ResetPasswordPresenter(context: ResetPasswordFragment) {
     private var view: ResetPasswordFragment = context
-
-    override fun setView(
-        view1: View?,
-        view2: View?,
-        view3: View?,
-        view4: View?,
-        view5: View?,
-        view6: View?,
-        view7: View?
-    ) {
-        TODO("Not yet implemented")
-    }
-
-    override fun isConnected(context: Context?): Boolean {
-        val state: Boolean
-        val cm = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val activeNetwork = cm.activeNetwork
-        state = if (activeNetwork == null) {
-            context.startActivity(Intent(Settings.ACTION_SETTINGS))
-            Toast.makeText(context, "Aktifkan Koneksi Internet Kamu", Toast.LENGTH_SHORT)
-                .show()
-            false
-        } else {
-            true
-        }
-        return state
-    }
 
     //method untuk menampilkan dan menyembunyikan password
     fun showHidePass(editText: EditText, imageView: ImageView){

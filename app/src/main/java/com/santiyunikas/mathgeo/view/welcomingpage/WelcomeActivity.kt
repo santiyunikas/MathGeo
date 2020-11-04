@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.santiyunikas.mathgeo.R
-import com.santiyunikas.mathgeo.util.sharedpreferences.SaveSharedPreference
-import com.santiyunikas.mathgeo.view.ContentActivity
+import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
+import com.santiyunikas.mathgeo.view.content.ContentActivity
 
 
 class WelcomeActivity : AppCompatActivity(){
@@ -14,7 +14,7 @@ class WelcomeActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
-        if (SaveSharedPreference.getLoggedStatus(applicationContext)){
+        if (Preferences.getLoggedInStatus(applicationContext)){
             //masuk ketika sudah pernah login sebelumnya
             val intent:Intent= Intent(this@WelcomeActivity, ContentActivity::class.java)
             startActivity(intent)

@@ -8,11 +8,11 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.santiyunikas.mathgeo.R
-import com.santiyunikas.mathgeo.contract.ContractInterface.IView
-import com.santiyunikas.mathgeo.presenter.RegisterPresenter
+import com.santiyunikas.mathgeo.contract.ContractInterface.*
+import com.santiyunikas.mathgeo.presenter.auth.RegisterPresenter
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 
 class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
-
     private lateinit var edtFullName: EditText
     private lateinit var edtTelepon: EditText
     private lateinit var edtEmailSignUp: EditText
@@ -22,7 +22,6 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
     private lateinit var tvLogin: TextView
     private lateinit var imgShowHidePassSignup: ImageView
     private lateinit var imgShowHideConfirmPass: ImageView
-
     private lateinit var presenter: RegisterPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,11 +55,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
         edtTelepon.setText("")
         edtPassSignUp.setText("")
         edtConfirmPass.setText("")
-        val mIntent: Intent = Intent(this, LoginActivity::class.java)
-        startActivity(mIntent)
-        finish()
     }
-
 
     override fun onClick(v: View?) {
         when(v?.id){
@@ -77,10 +72,9 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
                 val password: String = edtPassSignUp.text.toString().trim()
                 val confirmPassword: String = edtConfirmPass.text.toString().trim()
 
-                if (inputValid(fullname, numberPhone, email, password, confirmPassword) && presenter.isConnected(this)){
+                if (inputValid(fullname, numberPhone, email, password, confirmPassword) && InternetConnection.isConnected(this)){
                         presenter.register(fullname, numberPhone, email, password, 0)
                 }
-
             }
             tvLogin.id->{
                 val intent: Intent = Intent(this@RegisterActivity, LoginActivity::class.java)
@@ -90,8 +84,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
         }
     }
 
-
-    fun inputValid(fullname: String, numberPhone: String, email: String, password: String, confirmPassword: String):Boolean{
+    private fun inputValid(fullname: String, numberPhone: String, email: String, password: String, confirmPassword: String):Boolean{
         var value:Boolean = true
         if(fullname.isEmpty()){
             edtFullName.error = "Nama tidak boleh kosong"
@@ -140,6 +133,9 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
         Log.d("suksesRegister", msg)
         Toast.makeText(this, "Registrasi Berhasil, Cek Email Kamu untuk Verifikasi!", Toast.LENGTH_LONG).show()
         updateViewData()
+        val mIntent: Intent = Intent(this, LoginActivity::class.java)
+        startActivity(mIntent)
+        finish()
     }
 
     override fun onError(msg: String?) {
