@@ -23,17 +23,20 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.santiyunikas.mathgeo.view.content.quiz.DetailQuizActivity" />
+        <activity android:name="com.santiyunikas.mathgeo.view.content.materi.DetailMateriActivity" />
+        <activity android:name="com.santiyunikas.mathgeo.view.content.latihan.DetailLatihanActivity" />
         <activity
-            android:name="com.santiyunikas.mathgeo.view.content.PetunjukActivity"
+            android:name="com.santiyunikas.mathgeo.view.content.profil.PetunjukActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.santiyunikas.mathgeo.view.content.KompetensiTujuanActivity"
+            android:name="com.santiyunikas.mathgeo.view.content.profil.KompetensiTujuanActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.santiyunikas.mathgeo.EditProfileActivity"
+            android:name="com.santiyunikas.mathgeo.view.content.profil.EditProfileActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.santiyunikas.mathgeo.view.content.KoinGratisActivity"
+            android:name="com.santiyunikas.mathgeo.view.content.profil.KoinGratisActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.santiyunikas.mathgeo.view.authentication.ResetPasswordActivity"

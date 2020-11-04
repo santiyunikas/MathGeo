@@ -67,6 +67,11 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array array_desc_latihan
+array array_desc_materi
+array array_title_latihan
+array array_title_materi
+array array_title_quiz
 array circular_progress_layout_color_scheme_colors
 attr OtpCursorColor
 attr OtpCursorWidth
@@ -1036,6 +1041,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color materi_list_green
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1751,6 +1757,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable open_on_phone
+drawable peta_konsep_materi
 drawable preference_list_divider_material
 drawable shadow
 drawable tab_indicator_actived
@@ -2074,6 +2081,9 @@ id right_side
 id round
 id rounded
 id row_index_key
+id rv_list_latihan
+id rv_list_materi
+id rv_list_quiz
 id save_non_transition_alpha
 id save_overlay_view
 id scale
@@ -2144,11 +2154,9 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id text_dashboard
 id text_home
 id text_input_end_icon
 id text_input_start_icon
-id text_notifications
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2171,10 +2179,13 @@ id transition_transform
 id tujuan
 id tv_forgot_pass
 id tv_hvacc
+id tv_item_desc
+id tv_item_title
 id tv_login
 id tv_signup
 id tv_welcome
 id tx_back
+id tx_detail_materi
 id tx_email
 id tx_kembali
 id tx_kode_referal
@@ -2297,6 +2308,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_content
+layout activity_detail_latihan
+layout activity_detail_materi
+layout activity_detail_quiz
 layout activity_edit_profile
 layout activity_koin_gratis
 layout activity_kompetensi_tujuan
@@ -2334,6 +2348,8 @@ layout fragment_welcome1
 layout fragment_welcome2
 layout fragment_welcome3
 layout image_frame
+layout item_daftar_materi_latihan
+layout item_daftar_quiz
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

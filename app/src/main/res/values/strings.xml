@@ -53,4 +53,56 @@
     <string name="indahnya_persahabatan">Indahnya Persahabatan!</string>
     <string name="body3">Ajak teman belajar pakai kode kamu. Temanmu akan mendapatkan 1 koin gratis</string>
     <string name="body4">Masukkan kode temanmu. Kamu akan mendapatkan 1 koin gratis</string>
+
+    <string-array name="array_title_materi">
+        <item>Materi pra syarat</item>
+        <item>Bagian-bagian kubus</item>
+        <item>Jarak antara dua titik</item>
+        <item>Jarak antara titik ke garis</item>
+        <item>Jarak antara titik ke bidang</item>
+        <item>Jarak antara dua garis</item>
+        <item>Jarak antar garis ke bidang</item>
+        <item>Jarak antara dua bidang</item>
+    </string-array>
+
+    <string-array name="array_desc_materi">
+        <item>Titik, Garis dan Bidang</item>
+        <item>Titik, Garis dan Bidang</item>
+        <item>Jarak</item>
+        <item>Jarak</item>
+        <item>Kedudukan titik, garis dan bidang</item>
+        <item>Titik, Garis dan Bidang</item>
+        <item>Jarak</item>
+        <item>Jarak</item>
+    </string-array>
+
+    <string-array name="array_title_latihan">
+        <item>Latihan 1</item>
+        <item>Latihan 2</item>
+        <item>Latihan 3</item>
+        <item>Latihan 4</item>
+        <item>Latihan 5</item>
+        <item>Latihan 6</item>
+        <item>Latihan 7</item>
+        <item>Latihan 8</item>
+    </string-array>
+
+    <string-array name="array_desc_latihan">
+        <item>Pra Syarat</item>
+        <item>Dari Materi</item>
+        <item>Dari Materi</item>
+        <item>Dari Materi</item>
+        <item>Dari Materi</item>
+        <item>Dari Materi</item>
+        <item>Dari Materi</item>
+        <item>Dari Materi</item>
+    </string-array>
+
+    <string-array name="array_title_quiz">
+        <item>Quiz 1</item>
+        <item>Quiz 2</item>
+        <item>Quiz 3</item>
+        <item>Quiz 4</item>
+        <item>Quiz 5</item>
+    </string-array>
 </resources>

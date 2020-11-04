@@ -13,19 +13,19 @@
 
     <fragment
         android:id="@+id/navigation_latihan"
-        android:name="com.santiyunikas.mathgeo.view.content.latihan.LatihanFragment"
+        android:name="com.santiyunikas.mathgeo.view.content.latihan.DaftarLatihanFragment"
         android:label="@string/title_latihan"
         tools:layout="@layout/fragment_latihan" />
 
     <fragment
         android:id="@+id/navigation_quiz"
-        android:name="com.santiyunikas.mathgeo.view.content.quiz.QuizFragment"
+        android:name="com.santiyunikas.mathgeo.view.content.quiz.DaftarQuizFragment"
         android:label="@string/title_quiz"
         tools:layout="@layout/fragment_quiz" />
 
     <fragment
         android:id="@+id/navigation_materi"
-        android:name="com.santiyunikas.mathgeo.view.content.materi.MateriFragment"
+        android:name="com.santiyunikas.mathgeo.view.content.materi.DaftarMateriFragment"
         android:label="@string/title_materi"
         tools:layout="@layout/fragment_materi" />
 

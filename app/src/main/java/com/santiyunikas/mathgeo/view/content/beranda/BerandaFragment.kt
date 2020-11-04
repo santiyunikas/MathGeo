@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.santiyunikas.mathgeo.R
 
-class BerandaFragment : Fragment() {
+class BerandaFragment : Fragment(){
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,4 +22,10 @@ class BerandaFragment : Fragment() {
         textView.text="Beranda"
         return root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+    }
+
+
 }

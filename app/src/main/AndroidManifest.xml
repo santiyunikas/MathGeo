@@ -12,22 +12,25 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".view.content.quiz.DetailQuizActivity"></activity>
+        <activity android:name=".view.content.materi.DetailMateriActivity" />
+        <activity android:name=".view.content.latihan.DetailLatihanActivity" />
         <activity
+            android:name=".view.content.profil.PetunjukActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            android:name=".view.content.profil.PetunjukActivity" />
+            tools:ignore="LockedOrientationActivity" />
         <activity
+            android:name=".view.content.profil.KompetensiTujuanActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            android:name=".view.content.profil.KompetensiTujuanActivity" />
+            tools:ignore="LockedOrientationActivity" />
         <activity
+            android:name=".view.content.profil.EditProfileActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            android:name=".view.content.profil.EditProfileActivity" />
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".view.content.profil.KoinGratisActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".view.authentication.ResetPasswordActivity"
             android:label="@string/title_activity_reset_password"
