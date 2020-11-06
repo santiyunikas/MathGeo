@@ -7,21 +7,14 @@
     <string name="title_profil">Profil</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fragment2">Latihan dan Pembahasan yang Lengkap</string>
     <string name="fragment1">Materi Interaktif Belajar Geometri Dimensi Tiga</string>
     <string name="fragment3">Adanya Quiz yang Menjadi Tolak Ukur Nilai Akhir</string>
     <string name="title_activity_content">ContentActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_activity_main">MainActivity</string>
     <string name="tv_welcome">WELCOME</string>
     <string name="login_string">LOGIN</string>
     <string name="noacc_string">Tidak Punya Akun?</string>
     <string name="signup_string">SIGN UP</string>
-    <string name="tv_forgotpass">Masukkan email anda untuk mengatur ulang password</string>
-    <string name="edt_email_forgotpass">Email</string>
     <string name="tv_register">REGISTER</string>
     <string name="register_string">REGISTER</string>
     <string name="nama_lengkap">Nama Lengkap</string>
@@ -31,7 +24,6 @@
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
     -->
-    <string name="hello_world">Hello Square World!</string>
     <string name="otp_text">Masukkan email Anda, selanjutnya klik tombol (Dapatkan OTP) dan kami akan mengirimkan kode OTP ke email untuk Verifikasi</string>
     <string name="masukkan_email">Masukkan email</string>
     <string name="dapatkan_otp">Dapatkan OTP</string>
@@ -49,7 +41,6 @@
     <string name="kompetensi_pembelajaran">Kompetensi Pembelajaran</string>
     <string name="tujuan_pembelajaran">Tujuan Pembelajaran</string>
     <string name="petunjuk_penggunaan_media_pembelajaran">Petunjuk Penggunaan Media Pembelajaran</string>
-    <string name="petunjuk_penggunaan">Petunjuk Penggunaan Media Pembelajaran</string>
     <string name="indahnya_persahabatan">Indahnya Persahabatan!</string>
     <string name="body3">Ajak teman belajar pakai kode kamu. Temanmu akan mendapatkan 1 koin gratis</string>
     <string name="body4">Masukkan kode temanmu. Kamu akan mendapatkan 1 koin gratis</string>

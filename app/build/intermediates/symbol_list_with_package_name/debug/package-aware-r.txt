@@ -1041,6 +1041,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color materi_list_green
 color material_blue_grey_800
 color material_blue_grey_900
@@ -1150,7 +1151,6 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
-color welcome_tab_indicator
 color white
 color ws_switch_thumb_color_material
 color ws_switch_track_color_material
@@ -1233,10 +1233,7 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
-dimen activity_horizontal_margin
-dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
-dimen box_inset_layout_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -1309,7 +1306,6 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
-dimen inner_frame_layout_padding
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
@@ -1701,17 +1697,13 @@ drawable ic_back_button
 drawable ic_baseline_account_circle_24
 drawable ic_beranda_logo
 drawable ic_close
-drawable ic_dashboard_black_24dp
 drawable ic_edit
 drawable ic_email
 drawable ic_hide_pass
-drawable ic_home_black_24dp
 drawable ic_kanan
 drawable ic_kode_referal
 drawable ic_kompetensi_dan_tujuan
 drawable ic_latihan_logo
-drawable ic_launcher_background
-drawable ic_launcher_foreground
 drawable ic_lock
 drawable ic_materi_logo
 drawable ic_mtrl_checked_circle
@@ -1719,8 +1711,6 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_nama_lengkap
-drawable ic_notifications_black_24dp
-drawable ic_penyusun
 drawable ic_petunjuk
 drawable ic_phone
 drawable ic_profil_logo
@@ -1759,10 +1749,6 @@ drawable notify_panel_notification_icon_bg
 drawable open_on_phone
 drawable peta_konsep_materi
 drawable preference_list_divider_material
-drawable shadow
-drawable tab_indicator_actived
-drawable tab_indicator_inactived
-drawable tab_selector
 drawable teacher_fragment1
 drawable teacher_fragment2
 drawable teacher_fragment3
@@ -2444,6 +2430,9 @@ layout ws_single_page_nav_drawer_peek_view
 layout ws_single_page_nav_drawer_text
 layout ws_wearable_drawer_view
 menu bottom_nav_menu
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
 navigation mobile_navigation
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
@@ -2504,7 +2493,6 @@ string common_signin_button_text_long
 string copy
 string dapatkan_otp
 string default_web_client_id
-string edt_email_forgotpass
 string email
 string error_icon_content_description
 string expand_button_title
@@ -2520,8 +2508,6 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
-string hello_blank_fragment
-string hello_world
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string indahnya_persahabatan
@@ -2585,7 +2571,6 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string petunjuk_penggunaan
 string petunjuk_penggunaan_media_pembelajaran
 string preference_copied
 string project_id
@@ -2596,18 +2581,13 @@ string status_bar_notification_info_overflow
 string sudah_punya_akun
 string summary_collapsed_preference_list
 string title_activity_content
-string title_activity_main
 string title_activity_reset_password
 string title_beranda
-string title_dashboard
-string title_home
 string title_latihan
 string title_materi
-string title_notifications
 string title_profil
 string title_quiz
 string tujuan_pembelajaran
-string tv_forgotpass
 string tv_login
 string tv_register
 string tv_welcome

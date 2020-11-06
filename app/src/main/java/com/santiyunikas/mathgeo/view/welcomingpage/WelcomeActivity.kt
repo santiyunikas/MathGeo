@@ -18,6 +18,7 @@ class WelcomeActivity : AppCompatActivity(){
             //masuk ketika sudah pernah login sebelumnya
             val intent:Intent= Intent(this@WelcomeActivity, ContentActivity::class.java)
             startActivity(intent)
+            finish()
         }else{
             fragmentInit()
         }
