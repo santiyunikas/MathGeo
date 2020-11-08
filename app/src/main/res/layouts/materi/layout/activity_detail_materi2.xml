@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.materi.DetailMateri2Activity"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center">
+        <TextView
+            style="@style/NormalTextBold"
+            android:text="@string/bagian_bagian_kubus"
+            android:layout_gravity="left"
+            />
+        <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:id="@+id/frame_kubus"/>
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_rusuk"
+                    style="@style/BtnBeforeClick3"
+                    android:text="@string/rusuk"
+                    />
+                <Button
+                    android:id="@+id/btn_bidang_sisi"
+                    android:text="@string/bidang_sisi"
+                    style="@style/BtnBeforeClick3" />
+                <Button
+                    android:id="@+id/btn_titik_sudut"
+                    android:text="@string/titik_sudut"
+                    style="@style/BtnBeforeClick3"/>
+                <Button
+                    android:id="@+id/btn_bidang_diagonal"
+                    android:text="@string/bidang_diagonal"
+                    style="@style/BtnBeforeClick3"/>
+                <Button
+                    android:id="@+id/btn_diagonal_ruang"
+                    style="@style/BtnBeforeClick3"
+                    android:text="@string/diagonal_ruang"
+                    />
+                <Button
+                    android:id="@+id/btn_diagonal_sisi"
+                    android:text="@string/diagonal_sisi_diagonal_bidang"
+                    style="@style/BtnBeforeClick3"/>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewCustom"
+            android:id="@+id/cont_rusuk">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/NormalTextBold"
+                    android:text="@string/rusuk"
+                    />
+                <TextView
+                    style="@style/TextViewBlack"
+                    android:text="@string/ket_rusuk"
+                    android:id="@+id/ket_rusuk"
+                    android:textAlignment="textStart"
+                    />
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/ab"
+                        android:id="@+id/btn_ab"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/ad"
+                        android:id="@+id/btn_ad"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/bc"
+                        android:id="@+id/btn_bc"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/dc"
+                        android:id="@+id/btn_dc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/ef"
+                        android:id="@+id/btn_ef" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/fg"
+                        android:id="@+id/btn_fg" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/hg"
+                        android:id="@+id/btn_hg" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/eh"
+                        android:id="@+id/btn_eh" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/ae"
+                        android:id="@+id/btn_ae" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/bf"
+                        android:id="@+id/btn_bf" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/cg"
+                        android:id="@+id/btn_cg" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/dh"
+                        android:id="@+id/btn_dh" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewCustom"
+            android:id="@+id/cont_sisi">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/NormalTextBold"
+                    android:text="@string/bidang_sisi"
+                    />
+                <TextView
+                    style="@style/TextViewBlack"
+                    android:text="@string/ket_sisi"
+                    android:textAlignment="textStart"
+                    />
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/abfe"
+                        android:id="@+id/btn_abfe"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/adhe"
+                        android:id="@+id/btn_adhe"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/efgh"
+                        android:id="@+id/btn_efgh"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/abcd"
+                        android:id="@+id/btn_abcd" />
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/dcgh"
+                        android:id="@+id/btn_dcgh" />
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/bfgc"
+                        android:id="@+id/btn_bfgc" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewCustom"
+            android:id="@+id/cont_titik_sudut">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/NormalTextBold"
+                    android:text="@string/titik_sudut"
+                    />
+                <TextView
+                    style="@style/TextViewBlack"
+                    android:text="@string/kubus_diatas_memiliki_8_titik_sudut_yaitu"
+                    android:textAlignment="textStart"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/a"
+                        android:id="@+id/btn_a"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/b"
+                        android:id="@+id/btn_b"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/c"
+                        android:id="@+id/btn_c"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/d"
+                        android:id="@+id/btn_d" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/e"
+                        android:id="@+id/btn_e" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/f"
+                        android:id="@+id/btn_f" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/g"
+                        android:id="@+id/btn_g" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/h"
+                        android:id="@+id/btn_h" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewCustom"
+            android:id="@+id/cont_bidang_diagonal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/NormalTextBold"
+                    android:text="@string/bidang_diagonal"
+                    />
+                <TextView
+                    style="@style/TextViewBlack"
+                    android:textAlignment="textStart"
+                    android:text="@string/ket_bidang_diagonal"
+                    />
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/dbfh"
+                        android:id="@+id/btn_dbfh"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/ehcb"
+                        android:id="@+id/btn_ehcb"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/adgf"
+                        android:id="@+id/btn_adgf"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/efcd"
+                        android:id="@+id/btn_efcd" />
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/aegc"
+                        android:id="@+id/btn_aegc" />
+                    <Button
+                        style="@style/BtnBeforeClick"
+                        android:text="@string/abgh"
+                        android:id="@+id/btn_abgh" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewCustom"
+            android:id="@+id/cont_diagonal_ruang">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/NormalTextBold"
+                    android:text="@string/diagonal_ruang"
+                    />
+                <TextView
+                    style="@style/TextViewBlack"
+                    android:text="@string/ket_diagonal_ruang"
+                    android:textAlignment="textStart"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/df"
+                        android:id="@+id/btn_df"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/ag"
+                        android:id="@+id/btn_ag"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/ec"
+                        android:id="@+id/btn_ec"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/bh"
+                        android:id="@+id/btn_bh" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewCustom"
+            android:id="@+id/cont_diagonal_sisi">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/NormalTextBold"
+                    android:text="@string/diagonal_sisi_diagonal_bidang"
+                    />
+                <TextView
+                    style="@style/TextViewBlack"
+                    android:text="@string/ket_diagonal_sisi"
+                    android:textAlignment="textStart"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/af"
+                        android:id="@+id/btn_af"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/be"
+                        android:id="@+id/btn_be"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/bg"
+                        android:id="@+id/btn_bg"
+                        />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="CF"
+                        android:id="@+id/btn_cf" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/ah"
+                        android:id="@+id/btn_ah" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/de"
+                        android:id="@+id/btn_de" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/eg"
+                        android:id="@+id/btn_eg" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/fh"
+                        android:id="@+id/btn_fh" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/ac"
+                        android:id="@+id/btn_ac" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/bd"
+                        android:id="@+id/btn_bd" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/dg"
+                        android:id="@+id/btn_dg" />
+                    <Button
+                        style="@style/BtnBeforeClick2"
+                        android:text="@string/ch"
+                        android:id="@+id/btn_ch" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\SantiYS\\.gradle\\caches\\transforms-2\\files-2.1\\04fe44af7df0cbdc46e98c3ef77dbffe\\core-1.3.1\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "source": "C:\\Users\\SantiYS\\.gradle\\caches\\transforms-2\\files-2.1\\f806665cd30cd752a4d7b8ee485dbd9c\\core-1.3.2\\res\\values-en-rIN\\values-en-rIN.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -55,24 +55,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\SantiYS\\.gradle\\caches\\transforms-2\\files-2.1\\fa09e1bed72ce6b4f474442fa71b060f\\wear-1.0.0\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "source": "C:\\Users\\SantiYS\\.gradle\\caches\\transforms-2\\files-2.1\\12f71335755bec5e390be579793345fe\\wear-1.1.0\\res\\values-en-rIN\\values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
                         "startOffsets": "55,164",
-                        "endColumns": "108,116",
-                        "endOffsets": "159,276"
+                        "endColumns": "108,115",
+                        "endOffsets": "159,275"
                     },
                     "to": {
                         "startLines": "40,41",
                         "startColumns": "4,4",
                         "startOffsets": "3856,3965",
-                        "endColumns": "108,116",
-                        "endOffsets": "3960,4077"
+                        "endColumns": "108,115",
+                        "endOffsets": "3960,4076"
                     }
                 },
                 {
-                    "source": "C:\\Users\\SantiYS\\.gradle\\caches\\transforms-2\\files-2.1\\727d74b351b1b62530304dd7272bc3bc\\navigation-ui-2.0.0\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "source": "C:\\Users\\SantiYS\\.gradle\\caches\\transforms-2\\files-2.1\\c4c5bec1d39d1a428d253cf412f866fd\\navigation-ui-2.3.1\\res\\values-en-rIN\\values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

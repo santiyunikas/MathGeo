@@ -9,10 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.santiyunikas.mathgeo.R
-import com.santiyunikas.mathgeo.model.DaftarLatihan
 import com.santiyunikas.mathgeo.model.DaftarMateri
 import com.santiyunikas.mathgeo.presenter.materi.DaftarMateriPresenter
-import java.text.FieldPosition
 
 class DaftarMateriFragment : Fragment() {
     private lateinit var rvDaftarMateri: RecyclerView
@@ -30,7 +28,7 @@ class DaftarMateriFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         rvDaftarMateri = view.findViewById(R.id.rv_list_materi)
         rvDaftarMateri.setHasFixedSize(true)
-
+        rvDaftarMateri.isNestedScrollingEnabled = true
         presenter = DaftarMateriPresenter(this)
 
         list.addAll(presenter.getDaftarMateri())
@@ -52,8 +50,9 @@ class DaftarMateriFragment : Fragment() {
     }
 
     private fun moveDetailMateri(materi: DaftarMateri, position: Int) {
-        val intent: Intent = Intent(context, DetailMateriActivity::class.java)
-        intent.putExtra("EXTRA_SESSION_ID", position)
+        val intent = Intent(context, DetailMateriActivity::class.java)
+        intent.putExtra("EXTRA_SESSION_ID", position+1)
+        intent.putExtra("EXTRA_SESSION_JUDUL_MATERI", materi.title)
         startActivity(intent)
     }
 

@@ -96,4 +96,7 @@
         <item>Quiz 4</item>
         <item>Quiz 5</item>
     </string-array>
+
+    <string name="pilih_materi">Pilih Materi:</string>
+    <string name="bagian_bagian_kubus">Bagian-bagian kubus</string>
 </resources>
