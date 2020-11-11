@@ -17,11 +17,9 @@ import com.santiyunikas.mathgeo.contract.ContractInterface.IView
 import com.bumptech.glide.Glide
 import com.jstarczewski.pc.mathview.src.MathView
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
+import kotlinx.android.synthetic.main.activity_detail_materi.*
 
 class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClickListener {
-    private lateinit var container: LinearLayout
-    private lateinit var judulMateri: TextView
-    private lateinit var btnPembahasan: Button
     private var idMateri: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,13 +43,10 @@ class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClic
     }
 
     override fun initView() {
-        container = findViewById(R.id.lyt_detail_materi)
-        judulMateri = findViewById(R.id.judul_materi)
-        btnPembahasan = findViewById(R.id.btn_pembahasan_materi)
-        btnPembahasan.visibility = View.GONE
-        btnPembahasan.setOnClickListener(this)
+        btn_pembahasan_materi.visibility = View.GONE
+        btn_pembahasan_materi.setOnClickListener(this)
         idMateri = intent.getIntExtra("EXTRA_SESSION_ID", 0)
-        judulMateri.text = intent.getStringExtra("EXTRA_SESSION_JUDUL_MATERI")
+        judul_materi.text = intent.getStringExtra("EXTRA_SESSION_JUDUL_MATERI")
         Log.d("idMateri", idMateri.toString())
     }
 
@@ -275,12 +270,12 @@ class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClic
             .placeholder(R.drawable.not_ready_yet)
             .into(view)
         view.setPadding(10)
-        container.addView(view)
+        lyt_detail_materi.addView(view)
     }
 
     override fun getButton(text: String) {
-        btnPembahasan.text = text
-        btnPembahasan.visibility = View.VISIBLE
+        btn_pembahasan_materi.text = text
+        btn_pembahasan_materi.visibility = View.VISIBLE
     }
 
     @SuppressLint("ResourceAsColor")
@@ -293,7 +288,7 @@ class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClic
         view.layoutParams = LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT,
             LinearLayout.LayoutParams.WRAP_CONTENT)
-        container.addView(view)
+        lyt_detail_materi.addView(view)
     }
 
     override fun setImageView(url: String, image: ImageView) {

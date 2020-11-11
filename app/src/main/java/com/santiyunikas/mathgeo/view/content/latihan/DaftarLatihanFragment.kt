@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.model.DaftarLatihan
 import com.santiyunikas.mathgeo.presenter.latihan.DaftarLatihanPresenter
+import kotlinx.android.synthetic.main.fragment_latihan.*
 
 class DaftarLatihanFragment : Fragment() {
-    private lateinit var rvDaftarLatihan: RecyclerView
+
     private lateinit var presenter: DaftarLatihanPresenter
     private val list = ArrayList<DaftarLatihan>()
 
@@ -26,8 +26,8 @@ class DaftarLatihanFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        rvDaftarLatihan = view.findViewById(R.id.rv_list_latihan)
-        rvDaftarLatihan.setHasFixedSize(true)
+
+        rv_list_latihan.setHasFixedSize(true)
 
         presenter = DaftarLatihanPresenter(this)
 
@@ -36,8 +36,8 @@ class DaftarLatihanFragment : Fragment() {
     }
 
     private fun showRecyclerList(){
-        rvDaftarLatihan.layoutManager = LinearLayoutManager(context)
+        rv_list_latihan.layoutManager = LinearLayoutManager(context)
         val daftarLatihanAdapter = DaftarLatihanAdapter(list)
-        rvDaftarLatihan.adapter = daftarLatihanAdapter
+        rv_list_latihan.adapter = daftarLatihanAdapter
     }
 }

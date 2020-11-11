@@ -11,9 +11,6 @@ import com.santiyunikas.mathgeo.R
 
 class WelcomeFragment2 : Fragment(), View.OnClickListener {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,11 +19,6 @@ class WelcomeFragment2 : Fragment(), View.OnClickListener {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_welcome2, container, false)
     }
-
-    companion object {
-
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btnNextToFragment3: Button = view.findViewById(R.id.btn_next_to_fragment_3)

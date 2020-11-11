@@ -11,17 +11,9 @@ import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
 import com.santiyunikas.mathgeo.presenter.auth.RegisterPresenter
 import com.santiyunikas.mathgeo.util.network.InternetConnection
+import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
-    private lateinit var edtFullName: EditText
-    private lateinit var edtTelepon: EditText
-    private lateinit var edtEmailSignUp: EditText
-    private lateinit var edtPassSignUp: EditText
-    private lateinit var edtConfirmPass: EditText
-    private lateinit var btnSignUp: Button
-    private lateinit var tvLogin: TextView
-    private lateinit var imgShowHidePassSignup: ImageView
-    private lateinit var imgShowHideConfirmPass: ImageView
     private lateinit var presenter: RegisterPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,51 +24,41 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
     }
 
     override fun initView() {
-        edtFullName = findViewById(R.id.edt_full_name)
-        edtTelepon = findViewById(R.id.edt_telepon)
-        edtEmailSignUp = findViewById(R.id.edt_email_signup)
-        edtPassSignUp = findViewById(R.id.edt_pass_signup)
-        edtConfirmPass = findViewById(R.id.edt_confirmpass)
-        btnSignUp = findViewById(R.id.btn_signup)
-        tvLogin = findViewById(R.id.tv_login)
-        imgShowHidePassSignup = findViewById(R.id.img_showhide_passsignup)
-        imgShowHideConfirmPass = findViewById(R.id.img_showhide_confirmpass)
-
-        imgShowHidePassSignup.setOnClickListener(this)
-        imgShowHideConfirmPass.setOnClickListener(this)
-        btnSignUp.setOnClickListener(this)
-        tvLogin.setOnClickListener(this)
+        img_showhide_passsignup.setOnClickListener(this)
+        img_showhide_confirmpass.setOnClickListener(this)
+        btn_signup.setOnClickListener(this)
+        tv_login.setOnClickListener(this)
 
     }
 
     override fun updateViewData() {
-        edtFullName.setText("")
-        edtEmailSignUp.setText("")
-        edtTelepon.setText("")
-        edtPassSignUp.setText("")
-        edtConfirmPass.setText("")
+        edt_full_name.setText("")
+        edt_email_signup.setText("")
+        edt_telepon.setText("")
+        edt_pass_signup.setText("")
+        edt_confirmpass.setText("")
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
-            imgShowHidePassSignup.id->{
-                presenter.showHidePass(edtPassSignUp, imgShowHidePassSignup)
+            img_showhide_passsignup.id->{
+                presenter.showHidePass(edt_pass_signup, img_showhide_passsignup)
             }
-            imgShowHideConfirmPass.id->{
-                presenter.showHidePass(edtConfirmPass, imgShowHideConfirmPass)
+            img_showhide_confirmpass.id->{
+                presenter.showHidePass(edt_confirmpass, img_showhide_passsignup)
             }
-            btnSignUp.id->{
-                val fullname: String = edtFullName.text.toString().trim()
-                val numberPhone: String = edtTelepon.text.toString().trim()
-                val email: String = edtEmailSignUp.text.toString().trim()
-                val password: String = edtPassSignUp.text.toString().trim()
-                val confirmPassword: String = edtConfirmPass.text.toString().trim()
+            btn_signup.id->{
+                val fullname: String = edt_full_name.text.toString().trim()
+                val numberPhone: String = edt_telepon.text.toString().trim()
+                val email: String = edt_email_signup.text.toString().trim()
+                val password: String = edt_pass_signup.text.toString().trim()
+                val confirmPassword: String = edt_confirmpass.text.toString().trim()
 
                 if (inputValid(fullname, numberPhone, email, password, confirmPassword) && InternetConnection.isConnected(this)){
                         presenter.register(fullname, numberPhone, email, password, 0)
                 }
             }
-            tvLogin.id->{
+            tv_login.id->{
                 val intent: Intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -87,42 +69,42 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
     private fun inputValid(fullname: String, numberPhone: String, email: String, password: String, confirmPassword: String):Boolean{
         var value:Boolean = true
         if(fullname.isEmpty()){
-            edtFullName.error = "Nama tidak boleh kosong"
+            edt_full_name.error = "Nama tidak boleh kosong"
             value = false
         }
 
         if(numberPhone.isEmpty()){
-            edtTelepon.error = "Nomor telepon tidak boleh kosong"
+            edt_telepon.error = "Nomor telepon tidak boleh kosong"
             value = false
         }else if (!Patterns.PHONE.matcher(numberPhone).matches()){
-            edtTelepon.error = "Masukkan nomor telepon"
+            edt_telepon.error = "Masukkan nomor telepon"
             value = false
         }else if(numberPhone.length<10){
-            edtTelepon.error = "Masukkan nomor telepon"
+            edt_telepon.error = "Masukkan nomor telepon"
             value = false
         }
 
         if(email.isEmpty()){
-            edtEmailSignUp.error = "Email tidak boleh kosong"
+            edt_email_signup.error = "Email tidak boleh kosong"
             value = false
         }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            edtEmailSignUp.error = "Masukkan email"
+            edt_email_signup.error = "Masukkan email"
             value = false
         }
 
         if (password.isEmpty()){
-            edtPassSignUp.error = "Password tidak boleh kosong"
+            edt_pass_signup.error = "Password tidak boleh kosong"
             value = false
         }else if(password.length<6){
-            edtPassSignUp.error = "Password tidak boleh kurang dari 6 digit"
+            edt_pass_signup.error = "Password tidak boleh kurang dari 6 digit"
             value = false
         }
 
         if(confirmPassword.isEmpty()){
-            edtConfirmPass.error = "Konfirmasi password tidak boleh kosong"
+            edt_confirmpass.error = "Konfirmasi password tidak boleh kosong"
             value = false
         }else if(confirmPassword != password){
-            edtConfirmPass.error = "Konfirmasi password tidak sama dengan password"
+            edt_confirmpass.error = "Konfirmasi password tidak sama dengan password"
             value = false
         }
 

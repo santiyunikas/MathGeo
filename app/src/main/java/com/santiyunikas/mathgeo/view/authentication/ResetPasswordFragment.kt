@@ -13,16 +13,10 @@ import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.presenter.auth.ResetPasswordPresenter
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
 import com.santiyunikas.mathgeo.util.network.InternetConnection
+import kotlinx.android.synthetic.main.fragment_reset_password.*
 
 
 class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
-
-    private lateinit var edtPassReset: EditText
-    private lateinit var edtConfirmpassReset: EditText
-    private lateinit var imgShowHidePassReset: ImageView
-    private lateinit var imgShowHideConfirmpassReset: ImageView
-    private lateinit var btnSend: Button
-    private lateinit var txBack: TextView
     private lateinit var presenter: ResetPasswordPresenter
     private  var email: String? = null
 
@@ -36,17 +30,10 @@ class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        edtPassReset = view.findViewById(R.id.edt_pass_reset)
-        edtConfirmpassReset = view.findViewById(R.id.edt_confirmpass_reset)
-        imgShowHidePassReset = view.findViewById(R.id.img_showhide_pass_reset)
-        imgShowHideConfirmpassReset = view.findViewById(R.id.img_showhide_confirmpass_reset)
-        btnSend = view.findViewById(R.id.btn_send)
-        txBack = view.findViewById(R.id.tx_back)
-
-        imgShowHidePassReset.setOnClickListener(this)
-        imgShowHideConfirmpassReset.setOnClickListener(this)
-        btnSend.setOnClickListener(this)
-        txBack.setOnClickListener(this)
+        img_showhide_pass_reset.setOnClickListener(this)
+        img_showhide_confirmpass_reset.setOnClickListener(this)
+        btn_send.setOnClickListener(this)
+        tx_back.setOnClickListener(this)
 
         presenter = ResetPasswordPresenter(this)
     }
@@ -56,8 +43,8 @@ class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
     }
 
     override fun updateViewData() {
-        edtConfirmpassReset.setText("")
-        edtPassReset.setText("")
+        edt_confirmpass_reset.setText("")
+        edt_pass_reset.setText("")
     }
 
     override fun onSuccess(msg: String?) {
@@ -88,11 +75,11 @@ class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.img_showhide_pass_reset -> {
-                presenter.showHidePass(edtPassReset, imgShowHidePassReset)
+                presenter.showHidePass(edt_pass_reset, img_showhide_pass_reset)
 
             }
             R.id.img_showhide_confirmpass_reset -> {
-                presenter.showHidePass(edtConfirmpassReset, imgShowHideConfirmpassReset)
+                presenter.showHidePass(edt_confirmpass_reset, img_showhide_confirmpass_reset)
             }
             R.id.btn_send -> {
                 val bundle = this.arguments
@@ -101,8 +88,8 @@ class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
                     Log.d("emailPass", "$email")
                 }
 
-                val pass = edtPassReset.text.toString().trim()
-                val confirmPass = edtConfirmpassReset.text.toString().trim()
+                val pass = edt_pass_reset.text.toString().trim()
+                val confirmPass = edt_confirmpass_reset.text.toString().trim()
 
                 if (inputValid(pass, confirmPass) && InternetConnection.isConnected(activity)) {
                     presenter.changePassword(email, pass)
@@ -130,18 +117,18 @@ class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
     private fun inputValid(pass: String, confirmPass: String): Boolean{
         var value: Boolean = true
         if (pass.isEmpty()){
-            edtPassReset.error = "Password tidak boleh kosong"
+            edt_pass_reset.error = "Password tidak boleh kosong"
             value = false
         }else if(pass.length<6){
-            edtPassReset.error = "Password tidak boleh kurang dari 6 digit"
+            edt_pass_reset.error = "Password tidak boleh kurang dari 6 digit"
             value = false
         }
 
         if(confirmPass.isEmpty()){
-            edtConfirmpassReset.error = "Konfirmasi password tidak boleh kosong"
+            edt_confirmpass_reset.error = "Konfirmasi password tidak boleh kosong"
             value = false
         }else if(confirmPass != pass){
-            edtConfirmpassReset.error = "Konfirmasi password tidak sama dengan password"
+            edt_confirmpass_reset.error = "Konfirmasi password tidak sama dengan password"
             value = false
         }
 

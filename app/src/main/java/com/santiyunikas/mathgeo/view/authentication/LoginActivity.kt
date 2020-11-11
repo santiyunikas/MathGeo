@@ -13,14 +13,9 @@ import com.santiyunikas.mathgeo.presenter.auth.LoginPresenter
 import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import com.santiyunikas.mathgeo.view.content.ContentActivity
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
-    private lateinit var edtEmail: EditText
-    private lateinit var edtPassword: EditText
-    private lateinit var imgPassDisplay: ImageView
-    private lateinit var tvForgotPassword:TextView
-    private lateinit var btnLogin: Button
-    private lateinit var tvSignUp: TextView
     private lateinit var presenter: LoginPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,31 +26,24 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
     }
 
     override fun initView() {
-        edtEmail = findViewById(R.id.edt_email_login)
-        edtPassword = findViewById(R.id.edt_pass_login)
-        imgPassDisplay = findViewById(R.id.img_showhide_pass)
-        tvForgotPassword = findViewById(R.id.tv_forgot_pass)
-        btnLogin = findViewById(R.id.btn_login)
-        tvSignUp = findViewById(R.id.tv_signup)
-
-        imgPassDisplay.setOnClickListener(this)
-        tvForgotPassword.setOnClickListener(this)
-        btnLogin.setOnClickListener(this)
-        tvSignUp.setOnClickListener(this)
+        img_showhide_pass.setOnClickListener(this)
+        tv_forgot_pass.setOnClickListener(this)
+        btn_login.setOnClickListener(this)
+        tv_signup.setOnClickListener(this)
 
     }
 
     override fun updateViewData() {
-        edtEmail.setText("")
-        edtPassword.setText("")
+        edt_email_login.setText("")
+        edt_pass_login.setText("")
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
-            imgPassDisplay.id->{
-                    presenter.showHidePass(edtPassword, imgPassDisplay)
+            R.id.img_showhide_pass->{
+                    presenter.showHidePass(edt_pass_login, img_showhide_pass)
             }
-            tvForgotPassword.id->{
+            R.id.tv_forgot_pass->{
                 val fragmentOtp = OtpFragment()
                 val mBundle = Bundle()
                 mBundle.putString("STATE_KEY", "Login")
@@ -64,15 +52,15 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
                 val intent: Intent = Intent(this@LoginActivity, ResetPasswordActivity::class.java)
                 startActivity(intent)
             }
-            btnLogin.id->{
-                var email: String = edtEmail.text.toString().trim()
-                var password: String = edtPassword.text.toString().trim()
+            R.id.btn_login->{
+                val email: String = edt_email_login.text.toString().trim()
+                val password: String = edt_pass_login.text.toString().trim()
 
                 if (inputValid(email, password) && InternetConnection.isConnected(this)){
                    presenter.login(email, password)
                 }
             }
-            tvSignUp.id->{
+            R.id.tv_signup->{
                 val intent: Intent = Intent(this@LoginActivity, RegisterActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -93,17 +81,17 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
     private fun inputValid(email: String, password: String): Boolean{
         var value = true
         if (email.isEmpty()){
-            edtEmail.error = "Email tidak boleh kosong"
+            edt_email_login.error = "Email tidak boleh kosong"
             value = false
          }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            edtEmail.error = "Masukkan email"
+            edt_email_login.error = "Masukkan email"
         }
 
         if (password.isEmpty()){
-            edtPassword.error = "Password tidak boleh kosong"
+            edt_pass_login.error = "Password tidak boleh kosong"
             value = false
         }else if(password.length<6){
-            edtPassword.error = "Password tidak boleh kurang dari 6 digit"
+            edt_pass_login.error = "Password tidak boleh kurang dari 6 digit"
             value = false
         }
 

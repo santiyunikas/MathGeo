@@ -3,17 +3,13 @@ package com.santiyunikas.mathgeo.view.content.profil
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.TextView
 import com.santiyunikas.mathgeo.R
+import kotlinx.android.synthetic.main.activity_kompetensi_tujuan.*
 
 class KompetensiTujuanActivity : AppCompatActivity() {
-    private lateinit var tujuan: TextView
-    private lateinit var kompetensi: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kompetensi_tujuan)
-        kompetensi = findViewById(R.id.kompetensi)
-        tujuan = findViewById(R.id.tujuan)
         kompetensi.text=
             """1. KOMPETENSI PENGETAHUAN
                 |  Memahami menerapkan, menganalisis dan mengevaluasi pengetahuan faktual, konseptual,prosedural dan metakognitif berdasarkan rasa ingin tahu tentang ilmu pengetahuan, teknologi, seni, budaya dan humaniora dengan wawasan kemanusiaan, kebangsaan, kenegaraan dan peradaban terkait penyebab fenomena dan kejadian, serta menerapkan pengetahuan prosedural pada bidang kajian yang spesifik sesuai dengan bakal dan minatnya untuk memecahkan masalah

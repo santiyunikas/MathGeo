@@ -10,10 +10,6 @@ import com.santiyunikas.mathgeo.R
 
 class WelcomeFragment1 : Fragment(), View.OnClickListener {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,9 +18,6 @@ class WelcomeFragment1 : Fragment(), View.OnClickListener {
         return inflater.inflate(R.layout.fragment_welcome1, container, false)
     }
 
-    companion object {
-        //define static variable
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

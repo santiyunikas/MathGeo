@@ -9,7 +9,7 @@ class DaftarLatihanPresenter(context: DaftarLatihanFragment) {
 
     fun getDaftarLatihan(): ArrayList<DaftarLatihan>{
         val dataTitle = view.resources.getStringArray(R.array.array_title_latihan)
-        val dataDesc = view.resources.getStringArray(R.array.array_desc_latihan)
+        val dataDesc = view.resources.getStringArray(R.array.array_title_materi)
 
         val daftarLatihan = ArrayList<DaftarLatihan>()
         repeat(dataTitle.count()) {

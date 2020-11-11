@@ -7,13 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.model.DaftarMateri
 import com.santiyunikas.mathgeo.presenter.materi.DaftarMateriPresenter
+import kotlinx.android.synthetic.main.fragment_daftar_materi.*
 
 class DaftarMateriFragment : Fragment() {
-    private lateinit var rvDaftarMateri: RecyclerView
     private val list = ArrayList<DaftarMateri>()
     private lateinit var presenter: DaftarMateriPresenter
     override fun onCreateView(
@@ -26,9 +25,8 @@ class DaftarMateriFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        rvDaftarMateri = view.findViewById(R.id.rv_list_materi)
-        rvDaftarMateri.setHasFixedSize(true)
-        rvDaftarMateri.isNestedScrollingEnabled = true
+        rv_list_materi.setHasFixedSize(true)
+        rv_list_materi.isNestedScrollingEnabled = true
         presenter = DaftarMateriPresenter(this)
 
         list.addAll(presenter.getDaftarMateri())
@@ -36,9 +34,9 @@ class DaftarMateriFragment : Fragment() {
     }
 
     private fun showRecyclerList(){
-        rvDaftarMateri.layoutManager = LinearLayoutManager(context)
+        rv_list_materi.layoutManager = LinearLayoutManager(context)
         val daftarMateriAdapter = DaftarMateriAdapter(list)
-        rvDaftarMateri.adapter = daftarMateriAdapter
+        rv_list_materi.adapter = daftarMateriAdapter
 
         daftarMateriAdapter.setOnItemClickCallback(object :
             DaftarMateriAdapter.OnItemClickCallback {

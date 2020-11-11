@@ -5,19 +5,14 @@ import android.os.Bundle
 import android.util.Patterns
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
 import com.santiyunikas.mathgeo.presenter.profil.EditProfilPresenter
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
+import kotlinx.android.synthetic.main.activity_edit_profile.*
 
 class EditProfileActivity : AppCompatActivity(), IView, View.OnClickListener {
-    private lateinit var edtName: EditText
-    private lateinit var edtPhone: EditText
-    private lateinit var edtEmail: EditText
-    private lateinit var btnSend: Button
     private lateinit var presenter: EditProfilPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,21 +33,17 @@ class EditProfileActivity : AppCompatActivity(), IView, View.OnClickListener {
     }
 
     override fun initView() {
-        edtName = findViewById(R.id.edt_profile_fullname)
-        edtPhone = findViewById(R.id.edt_profile_phone)
-        edtEmail = findViewById(R.id.edt_profile_email)
-        btnSend = findViewById(R.id.btn_send_edit_profile)
-        btnSend.setOnClickListener(this)
+        btn_send_edit_profile.setOnClickListener(this)
         presenter = EditProfilPresenter(this)
-        edtName.setText(Preferences.getRegisteredFullname(this))
-        edtPhone.setText(Preferences.getRegisteredPhone(this))
-        edtEmail.setText(Preferences.getRegisteredEmail(this))
+        edt_profile_fullname.setText(Preferences.getRegisteredFullname(this))
+        edt_profile_phone.setText(Preferences.getRegisteredPhone(this))
+        edt_profile_email.setText(Preferences.getRegisteredEmail(this))
     }
 
     override fun updateViewData() {
-        edtName.setText("")
-        edtPhone.setText("")
-        edtEmail.setText("")
+        edt_profile_fullname.setText("")
+        edt_profile_phone.setText("")
+        edt_profile_email.setText("")
     }
 
     override fun onSuccess(msg: String?) {
@@ -66,8 +57,8 @@ class EditProfileActivity : AppCompatActivity(), IView, View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.btn_send_edit_profile ->{
-                if(inputValid(edtName.text.toString(), edtPhone.text.toString(), edtEmail.text.toString())){
-                    presenter.editProfil(edtName.text.toString(), edtPhone.text.toString(), edtEmail.text.toString())
+                if(inputValid(edt_profile_fullname.text.toString(), edt_profile_phone.text.toString(), edt_profile_email.text.toString())){
+                    presenter.editProfil(edt_profile_fullname.text.toString(), edt_profile_phone.text.toString(), edt_profile_email.text.toString())
                 }
 
             }
@@ -77,26 +68,26 @@ class EditProfileActivity : AppCompatActivity(), IView, View.OnClickListener {
     private fun inputValid(fullname: String, numberPhone: String, email: String):Boolean{
         var value:Boolean = true
         if(fullname.isEmpty()){
-            edtName.error = "Nama tidak boleh kosong"
+            edt_profile_fullname.error = "Nama tidak boleh kosong"
             value = false
         }
 
         if(numberPhone.isEmpty()){
-            edtPhone.error = "Nomor telepon tidak boleh kosong"
+            edt_profile_phone.error = "Nomor telepon tidak boleh kosong"
             value = false
         }else if (!Patterns.PHONE.matcher(numberPhone).matches()){
-            edtPhone.error = "Masukkan nomor telepon"
+            edt_profile_phone.error = "Masukkan nomor telepon"
             value = false
         }else if(numberPhone.length<10){
-            edtPhone.error = "Masukkan nomor telepon"
+            edt_profile_phone.error = "Masukkan nomor telepon"
             value = false
         }
 
         if(email.isEmpty()){
-            edtEmail.error = "Email tidak boleh kosong"
+            edt_profile_email.error = "Email tidak boleh kosong"
             value = false
         }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            edtEmail.error = "Masukkan email"
+            edt_profile_email.error = "Masukkan email"
             value = false
         }
 

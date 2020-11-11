@@ -7,17 +7,14 @@ import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.mukesh.OnOtpCompletionListener
-import com.mukesh.OtpView
 import com.santiyunikas.mathgeo.presenter.auth.OtpPresenter
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
 import com.santiyunikas.mathgeo.util.network.InternetConnection
+import kotlinx.android.synthetic.main.fragment_otp.*
 import java.util.concurrent.TimeUnit
 
 
@@ -25,12 +22,6 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
     private lateinit var presenter: OtpPresenter
     private var kodeOtp: String = ""
     private lateinit var timerClass: TimerClass
-    private lateinit var timer: TextView
-    private lateinit var edtEmail: EditText
-    private lateinit var btnGetOtp: Button
-    private lateinit var otpView: OtpView
-    private lateinit var btnVerification: Button
-    private lateinit var txtBack: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,21 +33,14 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        timer = view.findViewById(R.id.timer)
-        edtEmail = view.findViewById(R.id.edt_email_reset_pass)
-        btnGetOtp  = view.findViewById(R.id.btn_get_otp)
-        otpView  = view.findViewById(R.id.otp_view)
-        btnVerification  = view.findViewById(R.id.btn_verifikasi)
-        txtBack = view.findViewById(R.id.tx_kembali)
         timer.visibility = View.INVISIBLE
-
-        btnGetOtp.setOnClickListener(this)
-        btnVerification.setOnClickListener(this)
-        txtBack.setOnClickListener(this)
+        btn_get_otp.setOnClickListener(this)
+        btn_verifikasi.setOnClickListener(this)
+        tx_kembali.setOnClickListener(this)
 
         presenter = OtpPresenter(this)
 
-        otpView.setOtpCompletionListener(OnOtpCompletionListener { otp -> // do Stuff
+        otp_view.setOtpCompletionListener(OnOtpCompletionListener { otp -> // do Stuff
             Log.d("onOtpCompleted=>", otp)
         })
     }
@@ -81,7 +65,7 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
         }
 
         override fun onFinish() {
-            btnGetOtp.visibility = View.VISIBLE
+            btn_get_otp.visibility = View.VISIBLE
             timer.visibility = View.INVISIBLE
         }
     }
@@ -106,19 +90,19 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
                 Toast.makeText(activity,
                     "Ubah password gagal: Cek email untuk konfirmasi akun anda",
                     Toast.LENGTH_LONG).show()
-                btnGetOtp.visibility = View.VISIBLE
+                btn_get_otp.visibility = View.VISIBLE
                 timer.visibility=View.INVISIBLE
             }
             msg.equals("noEmail")->{
                 Toast.makeText(activity,
                     "Akun anda belum terdaftar",
                     Toast.LENGTH_LONG).show()
-                btnGetOtp.visibility = View.VISIBLE
+                btn_get_otp.visibility = View.VISIBLE
                 timer.visibility=View.INVISIBLE
             }
             else -> {
                 Toast.makeText(activity, "Ubah password gagal", Toast.LENGTH_LONG).show()
-                btnGetOtp.visibility = View.VISIBLE
+                btn_get_otp.visibility = View.VISIBLE
                 timer.visibility = View.INVISIBLE
                 Log.d("erorResetPassword", msg)
             }
@@ -127,11 +111,11 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
 
     private fun inputValid(): Boolean{
         var value = true
-        if(edtEmail.text.toString().isEmpty()){
-            edtEmail.error = "Email tidak boleh kosong"
+        if(edt_email_reset_pass.text.toString().isEmpty()){
+            edt_email_reset_pass.error = "Email tidak boleh kosong"
             value = false
-        }else if(!Patterns.EMAIL_ADDRESS.matcher(edtEmail.text.toString()).matches()){
-            edtEmail.error = "Masukkan email"
+        }else if(!Patterns.EMAIL_ADDRESS.matcher(edt_email_reset_pass.text.toString()).matches()){
+            edt_email_reset_pass.error = "Masukkan email"
             value = false
         }
 
@@ -144,15 +128,15 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
                 if(inputValid() && InternetConnection.isConnected(activity)){
                     timerClass = TimerClass(60000 * 3, 1000)
                     timerClass.start()
-                    btnGetOtp.visibility = View.INVISIBLE
+                    btn_get_otp.visibility = View.INVISIBLE
                     timer.visibility = View.VISIBLE
-                    val email = edtEmail.text.toString().trim()
+                    val email = edt_email_reset_pass.text.toString().trim()
                     Log.d("emailmasuk",email)
                     presenter.sendOtp(email)
                 }
             }
             R.id.btn_verifikasi ->{
-                if (otpView.text?.isEmpty()!!){
+                if (otp_view.text?.isEmpty()!!){
                     Toast.makeText(activity,
                         "Masukkan OTP",
                         Toast.LENGTH_LONG).show()
@@ -161,12 +145,12 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
                         "Dapatkan OTP baru",
                         Toast.LENGTH_LONG).show()
                 }else{
-                    if (otpView.text.toString().trim() == kodeOtp){
+                    if (otp_view.text.toString().trim() == kodeOtp){
                         timerClass.cancel()
 
                         val fragmentResetPassword = ResetPasswordFragment()
                         val mBundle = Bundle()
-                        mBundle.putString("EMAIL_KEY", edtEmail.text.toString().trim())
+                        mBundle.putString("EMAIL_KEY", edt_email_reset_pass.text.toString().trim())
                         fragmentResetPassword.arguments = mBundle
 
                         val fragmentOtp: Fragment? = fragmentManager?.findFragmentByTag(OtpFragment::class.java.simpleName)

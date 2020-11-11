@@ -1,9 +1,6 @@
 package com.santiyunikas.mathgeo.view.content
 
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -11,11 +8,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.santiyunikas.mathgeo.R
-import com.santiyunikas.mathgeo.view.authentication.OtpFragment
-
 
 class ContentActivity : AppCompatActivity() {
-private var state="default"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_content)

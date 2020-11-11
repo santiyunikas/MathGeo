@@ -1,18 +1,11 @@
 package com.santiyunikas.mathgeo.presenter.auth
 
-import android.content.Context
-import android.content.Intent
-import android.net.ConnectivityManager
-import android.provider.Settings
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
-import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.Toast
 import com.santiyunikas.mathgeo.R
-import com.santiyunikas.mathgeo.contract.ContractInterface.*
 import com.santiyunikas.mathgeo.model.Member
 import com.santiyunikas.mathgeo.util.network.NetworkConfig
 import com.santiyunikas.mathgeo.view.authentication.ResetPasswordFragment

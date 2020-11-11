@@ -13,19 +13,9 @@ import com.santiyunikas.mathgeo.*
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import com.santiyunikas.mathgeo.view.authentication.LoginActivity
 import com.santiyunikas.mathgeo.view.authentication.ResetPasswordActivity
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 class ProfileFragment : Fragment(){
-    private lateinit var txFullname: TextView
-    private lateinit var txPhone: TextView
-    private lateinit var txEmail: TextView
-    private lateinit var txNamaLengkapEdit: TextView
-    private lateinit var btnChangePass: TextView
-    private lateinit var btnEditProfile: LinearLayout
-    private lateinit var btnKoin: RelativeLayout
-    private lateinit var btnKompetensiTujuan: RelativeLayout
-    private lateinit var btnPetunjuk: RelativeLayout
-    private lateinit var btnLogout: RelativeLayout
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,48 +26,36 @@ class ProfileFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        txNamaLengkapEdit = view.findViewById(R.id.tx_nama_lengkap_edit)
-        txFullname = view.findViewById(R.id.tx_nama_lengkap)
-        txPhone = view.findViewById(R.id.tx_nomor_telepon)
-        txEmail = view.findViewById(R.id.tx_email)
-        btnChangePass = view.findViewById(R.id.tx_ubah_pass)
-        btnEditProfile = view.findViewById(R.id.btn_edit_profile)
-        btnKoin = view.findViewById(R.id.btn_kode_referal)
-        btnKompetensiTujuan = view.findViewById(R.id.btn_kompetensi_dan_tujuan)
-        btnPetunjuk = view.findViewById(R.id.btn_petunjuk)
-        btnLogout = view.findViewById(R.id.btn_logout)
-
-        btnChangePass.setOnClickListener {
+        tx_ubah_pass.setOnClickListener {
             val intent: Intent = Intent(view.context, ResetPasswordActivity::class.java)
             startActivity(intent)
         }
-        btnEditProfile.setOnClickListener{
+        btn_edit_profile.setOnClickListener{
             val intent: Intent = Intent(view.context, EditProfileActivity::class.java)
             startActivity(intent)
         }
-        btnKoin.setOnClickListener{
+        btn_kode_referal.setOnClickListener{
             val intent: Intent = Intent(view.context, KoinGratisActivity::class.java)
             startActivity(intent)
         }
-        btnKompetensiTujuan.setOnClickListener{
+        btn_kompetensi_dan_tujuan.setOnClickListener{
             val intent: Intent = Intent(view.context, KompetensiTujuanActivity::class.java)
             startActivity(intent)
         }
-        btnPetunjuk.setOnClickListener{
+        btn_petunjuk.setOnClickListener{
             val intent: Intent = Intent(view.context, PetunjukActivity::class.java)
             startActivity(intent)
         }
-        btnLogout.setOnClickListener {
+        btn_logout.setOnClickListener {
             Preferences.clearLoggedInUser(view.context)
             val intent: Intent = Intent(view.context, LoginActivity::class.java)
             startActivity(intent)
             activity?.finish()
         }
 
-        txNamaLengkapEdit.text = Preferences.getRegisteredFullname(view.context)
-        txFullname.text = Preferences.getRegisteredFullname(view.context)
-        txPhone.text = Preferences.getRegisteredPhone(view.context)
-        txEmail.text = Preferences.getRegisteredEmail(view.context)
+        tx_nama_lengkap_edit.text = Preferences.getRegisteredFullname(view.context)
+        tx_nama_lengkap.text = Preferences.getRegisteredFullname(view.context)
+        tx_nomor_telepon.text = Preferences.getRegisteredPhone(view.context)
+        tx_email.text = Preferences.getRegisteredEmail(view.context)
     }
 }

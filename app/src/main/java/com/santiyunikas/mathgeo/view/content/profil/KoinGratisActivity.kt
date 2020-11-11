@@ -4,22 +4,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
 import com.santiyunikas.mathgeo.presenter.profil.KoinGratisPresenter
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
+import kotlinx.android.synthetic.main.activity_koin_gratis.*
 
 
 class KoinGratisActivity : AppCompatActivity(), IView, View.OnClickListener {
-    private lateinit var txKodeReferal: TextView
-    private lateinit var btnSalin: Button
-    private lateinit var edtKodeTeman: EditText
-    private lateinit var btnPeriksa: Button
     private lateinit var presenter: KoinGratisPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,21 +35,16 @@ class KoinGratisActivity : AppCompatActivity(), IView, View.OnClickListener {
     }
 
     override fun initView() {
-        txKodeReferal = findViewById(R.id.kode_referal)
-        btnSalin = findViewById(R.id.btn_share)
-        edtKodeTeman = findViewById(R.id.kode_teman)
-        btnPeriksa = findViewById(R.id.btn_periksa)
+        btn_share.setOnClickListener(this)
+        btn_periksa.setOnClickListener(this)
 
-        btnSalin.setOnClickListener(this)
-        btnPeriksa.setOnClickListener(this)
-
-        txKodeReferal.text = Preferences.getRegisteredKodeReferal(this)
+        kode_referal.text = Preferences.getRegisteredKodeReferal(this)
 
         presenter = KoinGratisPresenter(this)
     }
 
     override fun updateViewData() {
-        edtKodeTeman.setText("")
+        kode_teman.setText("")
     }
 
     override fun onSuccess(msg: String?) {
@@ -65,8 +54,8 @@ class KoinGratisActivity : AppCompatActivity(), IView, View.OnClickListener {
                 updateViewData()
             }
             "valid"->{
-                if(presenter.cekKodeSendiri(edtKodeTeman.text.toString())){
-                    presenter.tambahKodeTeman(edtKodeTeman.text.toString())
+                if(presenter.cekKodeSendiri(kode_teman.text.toString())){
+                    presenter.tambahKodeTeman(kode_teman.text.toString())
                 }
             }
         }
@@ -100,7 +89,7 @@ class KoinGratisActivity : AppCompatActivity(), IView, View.OnClickListener {
                 startActivity(shareIntent)
             }
             R.id.btn_periksa -> {
-                presenter.validasiKode(edtKodeTeman.text.toString()).toString()
+                presenter.validasiKode(kode_teman.text.toString()).toString()
             }
         }
     }

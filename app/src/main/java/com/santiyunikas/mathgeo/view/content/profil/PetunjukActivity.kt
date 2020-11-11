@@ -5,13 +5,12 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
 import com.santiyunikas.mathgeo.R
+import kotlinx.android.synthetic.main.activity_petunjuk.*
 
 class PetunjukActivity : AppCompatActivity() {
-    private lateinit var petunjuk: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_petunjuk)
-        petunjuk = findViewById(R.id.petunjuk)
         petunjuk.text =
             """Pada media pembelajaran ini, kalian perlu menuju menu 'Materi Prasyarat' untuk mengetahui apakah kalian sudah siap menerima materi Jarak pada Dimensi Tiga. pada menu ini kalian akan diberikan 5 soal mengenai materi sebelumnya. Apabila kalian salah lebih dari 2 soal maka kalian perlu mengingat kembali materi sebelumnya yang bermanfaat untuk mempelajari materi berikutnya jika kalian mendapatkan minimal nilai 60, maka terdapat pilihan untuk memilih menu materi sebelumnya atau melanjutkan pada menu materi berikutnya yaitu, tentang jarak pada dimensi tiga.
                 |

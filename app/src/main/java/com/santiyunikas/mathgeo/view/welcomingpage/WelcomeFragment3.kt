@@ -12,9 +12,6 @@ import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.view.authentication.LoginActivity
 
 class WelcomeFragment3 : Fragment(), View.OnClickListener {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,9 +20,6 @@ class WelcomeFragment3 : Fragment(), View.OnClickListener {
         var rootView:View = inflater.inflate(R.layout.fragment_welcome3, container, false)
         // Inflate the layout for this fragment
         return rootView
-    }
-
-    companion object {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
