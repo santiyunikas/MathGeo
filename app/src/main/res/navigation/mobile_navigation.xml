@@ -27,7 +27,7 @@
         android:id="@+id/navigation_materi"
         android:name="com.santiyunikas.mathgeo.view.content.materi.DaftarMateriFragment"
         android:label="@string/title_materi"
-        tools:layout="@layout/fragment_materi" />
+        tools:layout="@layout/fragment_daftar_materi" />
 
     <fragment
         android:id="@+id/navigation_profile"

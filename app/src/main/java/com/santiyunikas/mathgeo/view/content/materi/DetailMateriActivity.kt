@@ -15,6 +15,7 @@ import androidx.core.view.setPadding
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
 import com.bumptech.glide.Glide
+import com.jstarczewski.pc.mathview.src.MathView
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
 
 class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClickListener {
@@ -184,7 +185,7 @@ class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClic
                     |b. 2√3 cm
                     |c. 3 cm
                     |d. 3√3 cm
-                    |e. 4√3
+                    |e. 4√3 cm
                 """.trimMargin()
                 getTextview(text)
                 getButton("Cek Pembahasan")
@@ -212,7 +213,7 @@ class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClic
                     |b. 23√3 cm
                     |c. 15 cm
                     |d. 10/2 √3 cm
-                    |e. 15/2 √2
+                    |e. 15√2/2 cm
                 """.trimMargin()
                 getTextview(text)
                 getButton("Cek Pembahasan")
@@ -295,11 +296,27 @@ class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClic
         container.addView(view)
     }
 
+    override fun setImageView(url: String, image: ImageView) {
+        TODO("Not yet implemented")
+    }
+
+    override fun setButton(name: String, btn: Button) {
+        TODO("Not yet implemented")
+    }
+
+    override fun setTextview(text: String?, tv: TextView) {
+        TODO("Not yet implemented")
+    }
+
+    override fun setMathview(text: String?, mv: MathView) {
+        TODO("Not yet implemented")
+    }
+
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.btn_pembahasan_materi -> {
                 val intent = Intent(this, PembahasanActivity::class.java)
-                intent.putExtra("EXTRA_ID_MATERI", idMateri + 1)
+                intent.putExtra("EXTRA_ID_MATERI", idMateri)
                 startActivity(intent)
             }
         }

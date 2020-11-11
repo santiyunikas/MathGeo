@@ -27,7 +27,6 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
-anim fade_out
 anim fragment_close_enter
 anim fragment_close_exit
 anim fragment_fade_enter
@@ -931,6 +930,7 @@ attr targetPackage
 attr telltales_tailColor
 attr telltales_tailScale
 attr telltales_velocityMode
+attr text
 attr textAllCaps
 attr textAppearanceBody1
 attr textAppearanceBody2
@@ -2027,9 +2027,13 @@ id btn_aegc
 id btn_af
 id btn_ag
 id btn_ah
+id btn_ap
+id btn_ap2
+id btn_ap3
 id btn_b
 id btn_bc
 id btn_bd
+id btn_bd_pembahasan8
 id btn_be
 id btn_bf
 id btn_bfgc
@@ -2037,6 +2041,8 @@ id btn_bg
 id btn_bh
 id btn_bidang_diagonal
 id btn_bidang_sisi
+id btn_bm_pembahasan8
+id btn_bn
 id btn_c
 id btn_cf
 id btn_cg
@@ -2051,6 +2057,10 @@ id btn_dg
 id btn_dh
 id btn_diagonal_ruang
 id btn_diagonal_sisi
+id btn_dm_pembahasan8
+id btn_dmfk_pembahasan8
+id btn_dp
+id btn_dq
 id btn_e
 id btn_ec
 id btn_edit_profile
@@ -2063,20 +2073,33 @@ id btn_ehcb
 id btn_f
 id btn_fg
 id btn_fh
+id btn_fm
+id btn_fm_pembahasan8
 id btn_g
 id btn_get_otp
 id btn_h
+id btn_hdh_aksen
 id btn_hg
+id btn_hp
+id btn_klb
 id btn_kode_referal
 id btn_kompetensi_dan_tujuan
 id btn_login
 id btn_logout
+id btn_mf_aksen
+id btn_ml_pembahasan8
+id btn_mn
 id btn_next_to_fragment_2
 id btn_next_to_fragment_3
 id btn_next_to_login
+id btn_pb
 id btn_pembahasan_materi
 id btn_periksa
 id btn_petunjuk
+id btn_pf_aksen
+id btn_pq
+id btn_pq_pembahasan8
+id btn_qn
 id btn_rusuk
 id btn_send
 id btn_send_edit_profile
@@ -2113,6 +2136,12 @@ id cont_confirmpass
 id cont_diagonal_ruang
 id cont_diagonal_sisi
 id cont_pass
+id cont_pembahasan3
+id cont_pembahasan4
+id cont_pembahasan5
+id cont_pembahasan6
+id cont_pembahasan7
+id cont_pembahasan8
 id cont_rusuk
 id cont_sisi
 id cont_titik_sudut
@@ -2215,6 +2244,20 @@ id ignore
 id ignoreRequest
 id image
 id img_kubus
+id img_kubus_pembahasan
+id img_pembahasan3
+id img_pembahasan41
+id img_pembahasan42
+id img_pembahasan51
+id img_pembahasan52
+id img_pembahasan61
+id img_pembahasan62
+id img_pembahasan71
+id img_pembahasan72
+id img_pembahasan73
+id img_pembahasan74
+id img_pembahasan81
+id img_pembahasan82
 id img_showhide_confirmpass
 id img_showhide_confirmpass_reset
 id img_showhide_pass
@@ -2224,6 +2267,9 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id jawaban1
+id jawaban2
+id jawaban3
 id judul_materi
 id jumpToEnd
 id jumpToStart
@@ -2280,6 +2326,25 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiPage
 id multiply
+id mv41
+id mv51
+id mv52
+id mv61
+id mv71
+id mv72
+id mv73
+id mv74
+id mv75
+id mv76
+id mv77
+id mv78
+id mv81
+id mv82
+id mv83
+id mvBn
+id mvMf_aksen
+id mvMn
+id mvQn
 id nav_controller_view_tag
 id nav_host_fragment
 id nav_host_fragment_container
@@ -2370,6 +2435,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id soal1
 id spacer
 id spinner
 id spline
@@ -2454,6 +2520,31 @@ id tx_logout
 id tx_nama_lengkap
 id tx_nama_lengkap_edit
 id tx_nomor_telepon
+id tx_pembahasan41
+id tx_pembahasan51
+id tx_pembahasan52
+id tx_pembahasan53
+id tx_pembahasan61
+id tx_pembahasan62
+id tx_pembahasan71
+id tx_pembahasan72
+id tx_pembahasan73
+id tx_pembahasan74
+id tx_pembahasan75
+id tx_pembahasan76
+id tx_pembahasan77
+id tx_pembahasan78
+id tx_pembahasan79
+id tx_pembahasan80
+id tx_pembahasan81
+id tx_pembahasan82
+id tx_pembahasan83
+id tx_pembahasan84
+id tx_pembahasan85
+id tx_pembahasan86
+id tx_pembahasan87
+id tx_pembahasan88
+id tx_pembahasan89
 id tx_petunjuk
 id tx_ubah_pass
 id unchecked
@@ -2601,10 +2692,11 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
 layout fragment_beranda
-layout fragment_blank
+layout fragment_daftar_materi
 layout fragment_latihan
-layout fragment_materi
+layout fragment_materi_image_dialog
 layout fragment_otp
+layout fragment_pembahasan_materi_image
 layout fragment_profile
 layout fragment_quiz
 layout fragment_reset_password
@@ -2754,6 +2846,7 @@ string aegc
 string af
 string ag
 string ah
+string ap
 string app_name
 string appbar_scrolling_view_behavior
 string b
@@ -2771,6 +2864,7 @@ string body3
 string body4
 string bottom_sheet_behavior
 string c
+string cf
 string cg
 string ch
 string character_counter_content_description
@@ -2902,12 +2996,16 @@ string noacc_string
 string nomor_telepon
 string not_set
 string otp_text
+string panjang
 string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string pb
+string pembahasan
+string perhatikan_gambar
 string petunjuk_penggunaan_media_pembelajaran
 string pilih_materi
 string preference_copied
@@ -2919,6 +3017,7 @@ string signup_string
 string status_bar_notification_info_overflow
 string sudah_punya_akun
 string summary_collapsed_preference_list
+string symbol_samadengan
 string titik_sudut
 string title_activity_content
 string title_activity_reset_password
@@ -3164,6 +3263,7 @@ style Base_Widget_MaterialComponents_TextView
 style BtnBeforeClick
 style BtnBeforeClick2
 style BtnBeforeClick3
+style BtnBeforeClick4
 style CardView
 style CardView_Dark
 style CardView_Light
@@ -3774,6 +3874,7 @@ styleable MaterialRadioButton buttonTint useMaterialThemeColors
 styleable MaterialShape shapeAppearance shapeAppearanceOverlay
 styleable MaterialTextAppearance android_lineHeight lineHeight
 styleable MaterialTextView android_textAppearance android_lineHeight lineHeight
+styleable MathView text
 styleable MenuGroup android_enabled android_id android_visible android_menuCategory android_orderInCategory android_checkableBehavior
 styleable MenuItem android_icon android_enabled android_id android_checked android_visible android_menuCategory android_orderInCategory android_title android_titleCondensed android_alphabeticShortcut android_numericShortcut android_checkable android_onClick actionLayout actionProviderClass actionViewClass alphabeticModifiers contentDescription iconTint iconTintMode numericModifiers showAsAction tooltipText
 styleable MenuView android_windowAnimationStyle android_itemTextAppearance android_horizontalDivider android_verticalDivider android_headerBackground android_itemBackground android_itemIconDisabledAlpha preserveIconSpacing subMenuArrow

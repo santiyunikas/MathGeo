@@ -1,6 +1,5 @@
 package com.santiyunikas.mathgeo.view.content.materi
 
-import android.annotation.SuppressLint
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,9 +7,10 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentManager
-import com.santiyunikas.mathgeo.BlankFragment
+import com.jstarczewski.pc.mathview.src.MathView
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
 
@@ -104,7 +104,7 @@ class DetailMateri2Activity : AppCompatActivity(), IView, CustomView, View.OnCli
     override fun getImageView(url: String) {
         val bundle = Bundle()
         bundle.putString("IMAGE_KUBUS_URL", url)
-        val fragment = BlankFragment()
+        val fragment = MateriImageDialogFragment()
         fragment.arguments = bundle
         val fm: FragmentManager = supportFragmentManager
         val transaction = fm.beginTransaction()
@@ -118,6 +118,22 @@ class DetailMateri2Activity : AppCompatActivity(), IView, CustomView, View.OnCli
 
     override fun getTextview(text: String?) {
 
+    }
+
+    override fun setImageView(url: String, image: ImageView) {
+        TODO("Not yet implemented")
+    }
+
+    override fun setButton(name: String, btn: Button) {
+        TODO("Not yet implemented")
+    }
+
+    override fun setTextview(tx: String?, tv: TextView) {
+        TODO("Not yet implemented")
+    }
+
+    override fun setMathview(tx: String?, mv: MathView) {
+        TODO("Not yet implemented")
     }
 
     private fun horizontalScrollButton(){
