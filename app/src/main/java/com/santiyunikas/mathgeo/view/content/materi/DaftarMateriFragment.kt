@@ -15,6 +15,12 @@ import kotlinx.android.synthetic.main.fragment_daftar_materi.*
 class DaftarMateriFragment : Fragment() {
     private val list = ArrayList<DaftarMateri>()
     private lateinit var presenter: DaftarMateriPresenter
+
+    companion object{
+        const val KEY_ID_MATERI = "EXTRA_ID_MATERI"
+        const val KEY_JUDUL_MATERI = "EXTRA_JUDUL_MATERI"
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -49,8 +55,8 @@ class DaftarMateriFragment : Fragment() {
 
     private fun moveDetailMateri(materi: DaftarMateri, position: Int) {
         val intent = Intent(context, DetailMateriActivity::class.java)
-        intent.putExtra("EXTRA_SESSION_ID", position+1)
-        intent.putExtra("EXTRA_SESSION_JUDUL_MATERI", materi.title)
+        intent.putExtra(KEY_ID_MATERI, position+1)
+        intent.putExtra(KEY_JUDUL_MATERI, materi.title)
         startActivity(intent)
     }
 

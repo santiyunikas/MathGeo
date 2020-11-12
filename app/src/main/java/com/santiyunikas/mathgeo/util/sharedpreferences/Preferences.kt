@@ -1,5 +1,6 @@
 package com.santiyunikas.mathgeo.util.sharedpreferences
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
@@ -95,12 +96,16 @@ object Preferences {
         return getSharedPreference(context).getBoolean(KEY_STATUS_SEDANG_LOGIN, false)
     }
 
+    @SuppressLint("CommitPrefEdits")
     fun clearLoggedInUser(context: Context) {
         val editor = getSharedPreference(context).edit()
         editor.remove(KEY_STATUS_SEDANG_LOGIN)
-        editor.remove(KEY_EMAIL_TEREGISTER)
+        editor.remove(KEY_ID_USER_TEREGISTER)
         editor.remove(KEY_NAMA_LENGKAP_TEREGISTER)
         editor.remove(KEY_NOMOR_TELEPON_TEREGISTER)
+        editor.remove(KEY_EMAIL_TEREGISTER)
+        editor.remove(KEY_KODE_REFERAL_TEREGISTER)
+        editor.remove(KEY_JUMLAH_KOIN_TEREGISTER)
         editor.apply()
     }
 }

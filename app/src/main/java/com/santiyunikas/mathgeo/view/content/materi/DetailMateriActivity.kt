@@ -45,8 +45,8 @@ class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClic
     override fun initView() {
         btn_pembahasan_materi.visibility = View.GONE
         btn_pembahasan_materi.setOnClickListener(this)
-        idMateri = intent.getIntExtra("EXTRA_SESSION_ID", 0)
-        judul_materi.text = intent.getStringExtra("EXTRA_SESSION_JUDUL_MATERI")
+        idMateri = intent.getIntExtra(DaftarMateriFragment.KEY_ID_MATERI, 0)
+        judul_materi.text = intent.getStringExtra(DaftarMateriFragment.KEY_JUDUL_MATERI)
         Log.d("idMateri", idMateri.toString())
     }
 

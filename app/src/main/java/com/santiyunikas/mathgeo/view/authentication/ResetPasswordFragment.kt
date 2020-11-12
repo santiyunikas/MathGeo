@@ -13,6 +13,7 @@ import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.presenter.auth.ResetPasswordPresenter
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
 import com.santiyunikas.mathgeo.util.network.InternetConnection
+import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import kotlinx.android.synthetic.main.fragment_reset_password.*
 
 
@@ -52,9 +53,10 @@ class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
             "Berhasil atur ulang password",
             Toast.LENGTH_LONG).show()
         updateViewData()
-        val intent: Intent = Intent(activity, LoginActivity::class.java)
+        view?.context?.let { Preferences.clearLoggedInUser(it) }
+        val intent = Intent(activity, LoginActivity::class.java)
         startActivity(intent)
-        activity?.finish()
+        activity?.finishAffinity()
     }
 
     override fun onError(msg: String?) {

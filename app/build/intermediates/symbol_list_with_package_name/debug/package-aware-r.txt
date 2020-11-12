@@ -2239,6 +2239,7 @@ id icon
 id icon_frame
 id icon_group
 id icon_only
+id id_latihan
 id ifRoom
 id ignore
 id ignoreRequest
@@ -2692,8 +2693,8 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
 layout fragment_beranda
+layout fragment_daftar_latihan
 layout fragment_daftar_materi
-layout fragment_latihan
 layout fragment_materi_image_dialog
 layout fragment_otp
 layout fragment_pembahasan_materi_image

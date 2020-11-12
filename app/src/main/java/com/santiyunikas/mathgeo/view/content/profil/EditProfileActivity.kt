@@ -66,7 +66,7 @@ class EditProfileActivity : AppCompatActivity(), IView, View.OnClickListener {
     }
 
     private fun inputValid(fullname: String, numberPhone: String, email: String):Boolean{
-        var value:Boolean = true
+        var value = true
         if(fullname.isEmpty()){
             edt_profile_fullname.error = "Nama tidak boleh kosong"
             value = false

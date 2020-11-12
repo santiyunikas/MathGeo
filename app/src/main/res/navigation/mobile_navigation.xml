@@ -15,7 +15,7 @@
         android:id="@+id/navigation_latihan"
         android:name="com.santiyunikas.mathgeo.view.content.latihan.DaftarLatihanFragment"
         android:label="@string/title_latihan"
-        tools:layout="@layout/fragment_latihan" />
+        tools:layout="@layout/fragment_daftar_latihan" />
 
     <fragment
         android:id="@+id/navigation_quiz"
