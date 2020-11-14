@@ -2044,6 +2044,7 @@ id btn_bidang_sisi
 id btn_bm_pembahasan8
 id btn_bn
 id btn_c
+id btn_cek_jawaban
 id btn_cf
 id btn_cg
 id btn_ch
@@ -2089,6 +2090,7 @@ id btn_logout
 id btn_mf_aksen
 id btn_ml_pembahasan8
 id btn_mn
+id btn_next_soallatihan
 id btn_next_to_fragment_2
 id btn_next_to_fragment_3
 id btn_next_to_login
@@ -2101,11 +2103,14 @@ id btn_pq
 id btn_pq_pembahasan8
 id btn_qn
 id btn_rusuk
+id btn_selesai
 id btn_send
 id btn_send_edit_profile
 id btn_share
 id btn_signup
+id btn_submit_soallatihan
 id btn_titik_sudut
+id btn_ulangi_latihan
 id btn_verifikasi
 id butt
 id buttonPanel
@@ -2148,6 +2153,7 @@ id cont_titik_sudut
 id container
 id content
 id contentPanel
+id content_detail_latihan
 id coordinator
 id cos
 id custom
@@ -2215,6 +2221,7 @@ id floating
 id forever
 id fragment_container_view_tag
 id frame_kubus
+id frame_latihan
 id frame_reset_password_container
 id frame_welcome_container
 id ghost_view
@@ -2239,7 +2246,6 @@ id icon
 id icon_frame
 id icon_group
 id icon_only
-id id_latihan
 id ifRoom
 id ignore
 id ignoreRequest
@@ -2264,6 +2270,7 @@ id img_showhide_confirmpass_reset
 id img_showhide_pass
 id img_showhide_pass_reset
 id img_showhide_passsignup
+id img_soal_latihan
 id info
 id invisible
 id italic
@@ -2271,6 +2278,7 @@ id item_touch_helper_previous_elevation
 id jawaban1
 id jawaban2
 id jawaban3
+id judul_latihan
 id judul_materi
 id jumpToEnd
 id jumpToStart
@@ -2379,12 +2387,18 @@ id pathRelative
 id peekHeight
 id percent
 id petunjuk
+id pilihan_A
+id pilihan_B
+id pilihan_C
+id pilihan_D
+id pilihan_E
 id pin
 id position
 id postLayout
 id progress_circular
 id progress_horizontal
 id radio
+id radio_latihan
 id ratio
 id rectangle
 id rectangles
@@ -2393,12 +2407,14 @@ id reverseSawtooth
 id right
 id right_icon
 id right_side
+id rolling
 id round
 id rounded
 id row_index_key
 id rv_list_latihan
 id rv_list_materi
 id rv_list_quiz
+id sad_emoji
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2432,6 +2448,7 @@ id singlePage
 id skipCollapsed
 id slide
 id smallLabel
+id smile_emoji
 id snackbar_action
 id snackbar_text
 id snap
@@ -2547,6 +2564,7 @@ id tx_pembahasan87
 id tx_pembahasan88
 id tx_pembahasan89
 id tx_petunjuk
+id tx_soal_latihan
 id tx_ubah_pass
 id unchecked
 id uniform
@@ -2695,12 +2713,15 @@ layout expand_button
 layout fragment_beranda
 layout fragment_daftar_latihan
 layout fragment_daftar_materi
+layout fragment_gagal_latihan_dialog
+layout fragment_lulus_latihan_dialog
 layout fragment_materi_image_dialog
 layout fragment_otp
 layout fragment_pembahasan_materi_image
 layout fragment_profile
 layout fragment_quiz
 layout fragment_reset_password
+layout fragment_soal_latihan
 layout fragment_welcome1
 layout fragment_welcome2
 layout fragment_welcome3

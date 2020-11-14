@@ -33,16 +33,7 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        timer.visibility = View.INVISIBLE
-        btn_get_otp.setOnClickListener(this)
-        btn_verifikasi.setOnClickListener(this)
-        tx_kembali.setOnClickListener(this)
-
-        presenter = OtpPresenter(this)
-
-        otp_view.setOtpCompletionListener(OnOtpCompletionListener { otp -> // do Stuff
-            Log.d("onOtpCompleted=>", otp)
-        })
+        initView()
     }
 
     inner class TimerClass(
@@ -71,7 +62,16 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
     }
 
     override fun initView() {
-        TODO("Not yet implemented")
+        timer.visibility = View.INVISIBLE
+        btn_get_otp.setOnClickListener(this)
+        btn_verifikasi.setOnClickListener(this)
+        tx_kembali.setOnClickListener(this)
+
+        presenter = OtpPresenter(this)
+
+        otp_view.setOtpCompletionListener(OnOtpCompletionListener { otp -> // do Stuff
+            Log.d("onOtpCompleted=>", otp)
+        })
     }
 
     override fun updateViewData() {

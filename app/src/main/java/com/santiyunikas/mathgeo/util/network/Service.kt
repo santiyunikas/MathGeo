@@ -1,7 +1,9 @@
 package com.santiyunikas.mathgeo.util.network
 
+import com.santiyunikas.mathgeo.model.DetailLatihan
 import com.santiyunikas.mathgeo.model.KodeTeman
 import com.santiyunikas.mathgeo.model.Member
+import com.santiyunikas.mathgeo.model.StatusMengerjakanLatihan
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -67,4 +69,34 @@ interface Service {
         @Field("email") email: String?
     ): Call<Member>
 
+    //untuk get detail latihan
+    @GET("/index.php/C_DetailLatihan?")
+    fun getDetailLatihan(
+        @Query("id_latihan") id_latihan: Int
+    ):Call<List<DetailLatihan>>
+
+    //untuk get status mengerjakan latihan
+    @GET("/index.php/C_StatusMengerjakanLatihan?")
+    fun getStatusMengerjakanLatihan(
+        @Query("id_latihan") id_latihan: String,
+        @Query("id_member") id_member: String
+    ):Call<List<StatusMengerjakanLatihan>>
+
+    //tambah status mengerjakan latihan
+    @FormUrlEncoded
+    @POST("/index.php/C_StatusMengerjakanLatihan/")
+    fun addNilaiLatihan(
+        @Field("id_member") id_member: String,
+        @Field("id_latihan") id_latihan: String,
+        @Field("nilai") nilai: String
+    ): Call<StatusMengerjakanLatihan>
+
+    //ubah nilai
+    @FormUrlEncoded
+    @PUT("/index.php/C_StatusMengerjakanLatihan/")
+    fun updateNilaiLatihan(
+        @Field("id_member") id_member: String?,
+        @Field("id_latihan") id_latihan: String?,
+        @Field("nilai") nilai: String?
+    ): Call<StatusMengerjakanLatihan>
 }

@@ -14,7 +14,7 @@ import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
 import kotlinx.android.synthetic.main.activity_detail_materi2.*
 
-class DetailMateri2Activity : AppCompatActivity(), IView, CustomView, View.OnClickListener {
+class DetailMateri2Activity : AppCompatActivity(), IView, View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +34,7 @@ class DetailMateri2Activity : AppCompatActivity(), IView, CustomView, View.OnCli
         }
     }
 
-    override fun getImageView(url: String) {
+    fun getImageView(url: String) {
         val bundle = Bundle()
         bundle.putString("IMAGE_KUBUS_URL", url)
         val fragment = MateriImageDialogFragment()
@@ -45,29 +45,6 @@ class DetailMateri2Activity : AppCompatActivity(), IView, CustomView, View.OnCli
         transaction.commit()
     }
 
-    override fun getButton(name: String) {
-
-    }
-
-    override fun getTextview(text: String?) {
-
-    }
-
-    override fun setImageView(url: String, image: ImageView) {
-        TODO("Not yet implemented")
-    }
-
-    override fun setButton(name: String, btn: Button) {
-        TODO("Not yet implemented")
-    }
-
-    override fun setTextview(tx: String?, tv: TextView) {
-        TODO("Not yet implemented")
-    }
-
-    override fun setMathview(tx: String?, mv: MathView) {
-        TODO("Not yet implemented")
-    }
 
     private fun horizontalScrollButton(){
         btn_rusuk.setOnClickListener(this)

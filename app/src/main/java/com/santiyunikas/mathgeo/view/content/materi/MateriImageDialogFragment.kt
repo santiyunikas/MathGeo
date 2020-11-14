@@ -9,6 +9,7 @@ import android.widget.ImageView
 import androidx.fragment.app.DialogFragment
 import com.bumptech.glide.Glide
 import com.santiyunikas.mathgeo.R
+import kotlinx.android.synthetic.main.fragment_materi_image_dialog.*
 
 class MateriImageDialogFragment : DialogFragment() {
 
@@ -23,9 +24,8 @@ class MateriImageDialogFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val url = arguments?.getString("IMAGE_KUBUS_URL")
-        val imgKubus: ImageView = view.findViewById(R.id.img_kubus)
         Glide.with(view)
             .load(url)
-            .into(imgKubus)
+            .into(img_kubus)
     }
 }

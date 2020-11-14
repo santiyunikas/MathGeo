@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".view.content.latihan.LulusLatihanDialogFragment"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/smile_emoji"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        style="@style/NormalTextBold"
+        android:text="Selamat!\nKamu lulus dalam latihan ini"
+        android:layout_margin="10dp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Selesai dan kumpulkan 1 koin"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:id="@+id/btn_selesai"/>
+</LinearLayout>

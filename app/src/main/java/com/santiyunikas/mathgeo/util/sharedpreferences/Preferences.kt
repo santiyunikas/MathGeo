@@ -17,10 +17,30 @@ object Preferences {
 
     const val KEY_STATUS_SEDANG_LOGIN = "Status_logged_in"
 
+    const val KEY_TEMP_JAWABAN = "jawaban"
+
     /** Pendlakarasian Shared Preferences yang berdasarkan paramater context  */
     private fun getSharedPreference(context: Context): SharedPreferences {
         return PreferenceManager.getDefaultSharedPreferences(context)
     }
+
+    fun setTempJawaban(context: Context, jawaban: String?) {
+        val editor = getSharedPreference(context).edit()
+        editor.putString(KEY_TEMP_JAWABAN, jawaban)
+        editor.apply()
+    }
+
+    fun getTempJawaban(context: Context): String? {
+        return getSharedPreference(context).getString(KEY_TEMP_JAWABAN, "null")
+    }
+
+    @SuppressLint("CommitPrefEdits")
+    fun clearTempJawaban(context: Context) {
+        val editor = getSharedPreference(context).edit()
+        editor.remove(KEY_TEMP_JAWABAN)
+        editor.apply()
+    }
+
 
     fun setRegisteredFullname(context: Context, fullname: String?) {
         val editor = getSharedPreference(context).edit()

@@ -31,16 +31,16 @@ class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initView()
+    }
+
+    override fun initView() {
         img_showhide_pass_reset.setOnClickListener(this)
         img_showhide_confirmpass_reset.setOnClickListener(this)
         btn_send.setOnClickListener(this)
         tx_back.setOnClickListener(this)
 
         presenter = ResetPasswordPresenter(this)
-    }
-
-    override fun initView() {
-        TODO("Not yet implemented")
     }
 
     override fun updateViewData() {
