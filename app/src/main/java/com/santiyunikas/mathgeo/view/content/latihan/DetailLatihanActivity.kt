@@ -24,12 +24,14 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
     private var arraySoal = arrayListOf<DetailLatihan>()
     private var jawaban = arrayListOf<String>()
     private var counterSoal = 0
+    private var isNotSubmited = true
 
     companion object {
         const val KEY_SOAL = "SOAL"
         const val KEY_KUNCI = "KUNCI"
         const val KEY_PILIHAN_GANDA = "PILIHAN_GANDA"
         const val KEY_GAMBAR = "GAMBAR"
+        const val KEY_NILAI = "NILAI"
     }
 
     @SuppressLint("SetTextI18n")
@@ -59,14 +61,24 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
 
 
     override fun initView() {
+        judul_latihan.text = judulLatihan
         content_detail_latihan.visibility = View.GONE
         btn_submit_soallatihan.visibility = View.GONE
-        if (idLatihan==1){
+        if (idLatihan == 1) {
             btn_cek_jawaban.visibility = View.GONE
         }
         btn_submit_soallatihan.setOnClickListener {
-            rekamJawaban()
-            presenter.simpanReviewLatihan(jawaban, arraySoal)
+            if (Preferences.getTempJawaban(this) != "null") {
+                if (isNotSubmited) {
+                    rekamJawaban()
+                    isNotSubmited = false
+                }
+                presenter.simpanReviewLatihan(jawaban, arraySoal)
+            } else {
+                Toast.makeText(this, "Pilih satu jawaban", Toast.LENGTH_LONG).show()
+            }
+
+
         }
 
         btn_next_soallatihan.setOnClickListener {
@@ -146,9 +158,6 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
             "successUpdateNilai" -> {
                 Toast.makeText(this, "Jawaban kamu berhasil disimpan", Toast.LENGTH_LONG).show()
             }
-            else -> {
-                Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
-            }
         }
 
     }
@@ -158,16 +167,16 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
     }
 
-    fun showLulus() {
-        val fragment = LulusLatihanDialogFragment()
+    fun showReviewLatihan(state: String) {
+        val bundle = Bundle()
+        bundle.putString(KEY_NILAI, state)
+        val fragment = ReviewLatihanDialogFragment()
+        fragment.arguments = bundle
+
+
         val fm = supportFragmentManager
-        fragment.show(fm, LulusLatihanDialogFragment::class.java.simpleName)
+        fragment.show(fm, ReviewLatihanDialogFragment::class.java.simpleName)
     }
 
-    fun showGagal() {
-        val fragment = GagalLatihanDialogFragment()
-        val fm = supportFragmentManager
-        fragment.show(fm, GagalLatihanDialogFragment::class.java.simpleName)
-    }
 
 }

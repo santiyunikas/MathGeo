@@ -50,6 +50,6 @@
             android:text="pilihan E"
             android:id="@+id/pilihan_E"
             android:textAlignment="textStart"/>
-    </RadioGroup>
+    </RadioGroup>`
 
 </LinearLayout>

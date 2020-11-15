@@ -1,9 +1,6 @@
 package com.santiyunikas.mathgeo.util.network
 
-import com.santiyunikas.mathgeo.model.DetailLatihan
-import com.santiyunikas.mathgeo.model.KodeTeman
-import com.santiyunikas.mathgeo.model.Member
-import com.santiyunikas.mathgeo.model.StatusMengerjakanLatihan
+import com.santiyunikas.mathgeo.model.*
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -99,4 +96,35 @@ interface Service {
         @Field("id_latihan") id_latihan: String?,
         @Field("nilai") nilai: String?
     ): Call<StatusMengerjakanLatihan>
+
+    //untuk get detail quiz
+    @GET("/index.php/C_DetailQuiz?")
+    fun getDetailQuiz(
+        @Query("id_quiz") id_quiz: Int
+    ):Call<List<DetailQuiz>>
+
+    //untuk get status mengerjakan quiz
+    @GET("/index.php/C_StatusMengerjakanQuiz?")
+    fun getStatusMengerjakanQuiz(
+        @Query("id_quiz") id_quiz: String,
+        @Query("id_member") id_member: String
+    ):Call<List<StatusMengerjakanQuiz>>
+
+    //tambah status mengerjakan quiz
+    @FormUrlEncoded
+    @POST("/index.php/C_StatusMengerjakanQuiz/")
+    fun addNilaiQuiz(
+        @Field("id_member") id_member: String,
+        @Field("id_quiz") id_quiz: String,
+        @Field("nilai") nilai: String
+    ): Call<StatusMengerjakanQuiz>
+
+    //ubah nilai quiz
+    @FormUrlEncoded
+    @PUT("/index.php/C_StatusMengerjakanQuiz/")
+    fun updateNilaiQuiz(
+        @Field("id_member") id_member: String?,
+        @Field("id_quiz") id_latihan: String?,
+        @Field("nilai") nilai: String?
+    ): Call<StatusMengerjakanQuiz>
 }

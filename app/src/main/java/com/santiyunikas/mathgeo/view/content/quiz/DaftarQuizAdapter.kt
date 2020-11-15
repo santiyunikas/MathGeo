@@ -9,10 +9,21 @@ import com.santiyunikas.mathgeo.model.DaftarQuiz
 import kotlinx.android.synthetic.main.item_daftar_quiz.view.*
 
 class DaftarQuizAdapter(private val listQuiz: ArrayList<DaftarQuiz>): RecyclerView.Adapter<DaftarQuizAdapter.ListViewHolder>() {
+    private var onItemClickCallback: OnItemClickCallback? = null
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: DaftarQuiz, position: Int)
+    }
+
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(quiz: DaftarQuiz) {
+        fun bind(quiz: DaftarQuiz, position: Int) {
             with(itemView){
                 tv_item_title.text = quiz.title
+                itemView.setOnClickListener { onItemClickCallback?.onItemClicked(quiz, position) }
             }
         }
     }
@@ -23,7 +34,7 @@ class DaftarQuizAdapter(private val listQuiz: ArrayList<DaftarQuiz>): RecyclerVi
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        holder.bind(listQuiz[position])
+        holder.bind(listQuiz[position], position)
     }
 
     override fun getItemCount(): Int = listQuiz.size

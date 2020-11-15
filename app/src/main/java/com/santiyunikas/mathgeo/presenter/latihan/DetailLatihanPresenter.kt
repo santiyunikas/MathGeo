@@ -2,18 +2,15 @@ package com.santiyunikas.mathgeo.presenter.latihan
 
 import android.content.Context
 import android.util.Log
-import android.view.View
 import com.santiyunikas.mathgeo.model.DetailLatihan
 import com.santiyunikas.mathgeo.model.Member
 import com.santiyunikas.mathgeo.model.StatusMengerjakanLatihan
 import com.santiyunikas.mathgeo.util.network.NetworkConfig
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import com.santiyunikas.mathgeo.view.content.latihan.DetailLatihanActivity
-import com.santiyunikas.mathgeo.view.content.latihan.LulusLatihanDialogFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.util.concurrent.CopyOnWriteArrayList
 
 class DetailLatihanPresenter() {
     lateinit var view: DetailLatihanActivity
@@ -80,6 +77,8 @@ class DetailLatihanPresenter() {
                     call: Call<List<StatusMengerjakanLatihan>>,
                     response: Response<List<StatusMengerjakanLatihan>>
                 ) {
+                    Log.d("jmlbenar", response.body()?.size.toString())
+                    Log.d("jmlbenar", response.body()?.toString())
                     if (response.body()?.size!! > 0){
                         Preferences.getRegisteredIdUser(view?.applicationContext!!)?.let {
                             Log.d("jmlbenar", jmlBenar.toString())
@@ -100,9 +99,9 @@ class DetailLatihanPresenter() {
             })
 
         if (jmlSalah > jmlBenar){
-            view?.showGagal()
+            view?.showReviewLatihan("gagal")
         }else{
-            view?.showLulus()
+            view?.showReviewLatihan("lulus")
         }
     }
 
