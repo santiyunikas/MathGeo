@@ -112,6 +112,7 @@ interface Service {
 
     //tambah status mengerjakan quiz
     @FormUrlEncoded
+
     @POST("/index.php/C_StatusMengerjakanQuiz/")
     fun addNilaiQuiz(
         @Field("id_member") id_member: String,
@@ -124,13 +125,13 @@ interface Service {
     @PUT("/index.php/C_StatusMengerjakanQuiz/")
     fun updateNilaiQuiz(
         @Field("id_member") id_member: String?,
-        @Field("id_quiz") id_latihan: String?,
+        @Field("id_quiz") id_quiz: String?,
         @Field("nilai") nilai: String?
     ): Call<StatusMengerjakanQuiz>
 
     //untuk get Pembahasan Latihan
     @GET("/index.php/C_PembahasanLatihan?")
     fun getPembahasanLatihan(
-        @Query("id_soal") id_member: String
+        @Query("id_latihan") id_latihan: String
     ):Call<List<PembahasanLatihan>>
 }
