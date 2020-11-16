@@ -21,7 +21,7 @@
         android:id="@+id/navigation_quiz"
         android:name="com.santiyunikas.mathgeo.view.content.quiz.DaftarQuizFragment"
         android:label="@string/title_quiz"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_daftar_quiz" />
 
     <fragment
         android:id="@+id/navigation_materi"

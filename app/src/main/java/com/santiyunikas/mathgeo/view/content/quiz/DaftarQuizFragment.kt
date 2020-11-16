@@ -11,7 +11,7 @@ import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.model.DaftarQuiz
 import com.santiyunikas.mathgeo.presenter.quiz.DaftarQuizPresenter
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
-import kotlinx.android.synthetic.main.fragment_quiz.*
+import kotlinx.android.synthetic.main.fragment_daftar_quiz.*
 
 class DaftarQuizFragment : Fragment() {
     private lateinit var presenter: DaftarQuizPresenter
@@ -27,7 +27,7 @@ class DaftarQuizFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_quiz, container, false)
+        return inflater.inflate(R.layout.fragment_daftar_quiz, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

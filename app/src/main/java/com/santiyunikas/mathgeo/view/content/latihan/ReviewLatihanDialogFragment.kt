@@ -2,6 +2,7 @@ package com.santiyunikas.mathgeo.view.content.latihan
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,7 @@ class ReviewLatihanDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+//        dialog?.window?.setGravity(Gravity.BOTTOM)
         return inflater.inflate(R.layout.fragment_review_latihan_dialog, container, false)
     }
 

@@ -2092,6 +2092,7 @@ id btn_logout
 id btn_mf_aksen
 id btn_ml_pembahasan8
 id btn_mn
+id btn_next
 id btn_next_soallatihan
 id btn_next_soalquiz
 id btn_next_to_fragment_2
@@ -2260,6 +2261,7 @@ id ignoreRequest
 id image
 id img_kubus
 id img_kubus_pembahasan
+id img_pembahasan
 id img_pembahasan3
 id img_pembahasan41
 id img_pembahasan42
@@ -2287,6 +2289,8 @@ id item_touch_helper_previous_elevation
 id jawaban1
 id jawaban2
 id jawaban3
+id jawaban_benar
+id jawaban_salah
 id judul_latihan
 id judul_materi
 id judul_quiz
@@ -2557,6 +2561,7 @@ id tx_lulus
 id tx_nama_lengkap
 id tx_nama_lengkap_edit
 id tx_nomor_telepon
+id tx_pembahasan
 id tx_pembahasan41
 id tx_pembahasan51
 id tx_pembahasan52
@@ -2733,11 +2738,12 @@ layout expand_button
 layout fragment_beranda
 layout fragment_daftar_latihan
 layout fragment_daftar_materi
+layout fragment_daftar_quiz
 layout fragment_materi_image_dialog
 layout fragment_otp
+layout fragment_pembahasan_latihan_dialog
 layout fragment_pembahasan_materi_image
 layout fragment_profile
-layout fragment_quiz
 layout fragment_reset_password
 layout fragment_review_latihan_dialog
 layout fragment_review_quiz_dialog
@@ -3327,6 +3333,7 @@ style MyActionBar
 style NormalTextBold
 style OtpWidget
 style OtpWidget_OtpView
+style PembahasanDialog
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents

@@ -127,4 +127,10 @@ interface Service {
         @Field("id_quiz") id_latihan: String?,
         @Field("nilai") nilai: String?
     ): Call<StatusMengerjakanQuiz>
+
+    //untuk get Pembahasan Latihan
+    @GET("/index.php/C_PembahasanLatihan?")
+    fun getPembahasanLatihan(
+        @Query("id_soal") id_member: String
+    ):Call<List<PembahasanLatihan>>
 }

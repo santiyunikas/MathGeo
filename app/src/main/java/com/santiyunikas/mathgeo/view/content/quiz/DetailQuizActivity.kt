@@ -167,6 +167,7 @@ class DetailQuizActivity : AppCompatActivity(), ContractInterface.IView {
         fragment.arguments = bundle
 
         val fm = supportFragmentManager
+
         fragment.show(fm, ReviewQuizDialogFragment::class.java.simpleName)
     }
 }

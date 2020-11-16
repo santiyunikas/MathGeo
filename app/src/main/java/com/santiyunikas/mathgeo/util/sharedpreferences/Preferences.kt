@@ -19,10 +19,22 @@ object Preferences {
 
     const val KEY_TEMP_JAWABAN = "jawaban"
 
+    const val KEY_STATE_PEMBAHASAN = "pembahasan_latihan"
+
     /** Pendlakarasian Shared Preferences yang berdasarkan paramater context  */
     private fun getSharedPreference(context: Context): SharedPreferences {
         return PreferenceManager.getDefaultSharedPreferences(context)
     }
+
+//    fun setTempPembahasan(context: Context, jawaban: Boolean?) {
+//        val editor = getSharedPreference(context).edit()
+//        editor.putBoolean(KEY_STATE_PEMBAHASAN, jawaban!!)
+//        editor.apply()
+//    }
+//
+//    fun getTempPembahasan(context: Context): Boolean? {
+//        return getSharedPreference(context).getBoolean(KEY_TEMP_JAWABAN, false)
+//    }
 
     fun setTempJawaban(context: Context, jawaban: String?) {
         val editor = getSharedPreference(context).edit()
