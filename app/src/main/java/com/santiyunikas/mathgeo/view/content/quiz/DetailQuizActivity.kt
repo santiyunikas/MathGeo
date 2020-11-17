@@ -40,22 +40,16 @@ class DetailQuizActivity : AppCompatActivity(), ContractInterface.IView {
         setContentView(R.layout.activity_detail_quiz)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        idQuiz = intent.getIntExtra(DaftarQuizFragment.KEY_ID_QUIZ, 0)
-        judulQuiz = intent.getStringExtra(DaftarQuizFragment.KEY_JUDUL_QUIZ)
-
-        presenter = DetailQuizPresenter(this)
-        presenter.getDetailQuiz(idQuiz)
-        if (Preferences.getRegisteredJumlahKoin(this)!! <= 0){
-            Toast.makeText(this, """Koin kamu tidak mencukupi!
-                |Kerjakan latihan atau masukkan kode teman untuk mendapat tambahan koin
-            """.trimMargin(), Toast.LENGTH_LONG).show()
+        if (InternetConnection.isConnected(this)){
+            idQuiz = intent.getIntExtra(DaftarQuizFragment.KEY_ID_QUIZ, 0)
+            judulQuiz = intent.getStringExtra(DaftarQuizFragment.KEY_JUDUL_QUIZ)
+            presenter = DetailQuizPresenter(this)
+            presenter.getDetailQuiz(idQuiz)
+            initView()
         }else{
-            if (InternetConnection.isConnected(this)){
-                initView()
-            }else{
-                finish()
-            }
+            finish()
         }
+
 
     }
 

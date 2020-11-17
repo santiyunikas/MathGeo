@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.santiyunikas.mathgeo.R
@@ -48,7 +49,13 @@ class DaftarQuizFragment : Fragment() {
         daftarQuizAdapter.setOnItemClickCallback(object :
             DaftarQuizAdapter.OnItemClickCallback {
             override fun onItemClicked(data: DaftarQuiz, position: Int) {
-                moveDetailQuiz(data, position)
+                if (view?.context?.let { Preferences.getRegisteredJumlahKoin(it) }!! <= 0){
+                    Toast.makeText(view?.context, """Koin kamu tidak mencukupi!
+                |Kerjakan latihan atau masukkan kode teman untuk mendapat tambahan koin
+            """.trimMargin(), Toast.LENGTH_LONG).show()
+                }else{
+                    moveDetailQuiz(data, position)
+                }
             }
         })
     }
@@ -62,11 +69,6 @@ class DaftarQuizFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        rv_list_quiz.setHasFixedSize(true)
-        presenter = DaftarQuizPresenter(this)
-
         tx_koin.text = activity?.applicationContext?.let { Preferences.getRegisteredJumlahKoin(it).toString() }
-        list.addAll(presenter.getDaftarQuiz())
-        showRecyclerList()
     }
 }

@@ -18,7 +18,7 @@ class WelcomeFragment3 : Fragment(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var rootView:View = inflater.inflate(R.layout.fragment_welcome3, container, false)
+        val rootView:View = inflater.inflate(R.layout.fragment_welcome3, container, false)
         // Inflate the layout for this fragment
         return rootView
     }

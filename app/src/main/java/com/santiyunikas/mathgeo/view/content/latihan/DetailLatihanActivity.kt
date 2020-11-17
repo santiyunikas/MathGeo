@@ -48,16 +48,15 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
         setContentView(R.layout.activity_detail_latihan)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        idLatihan = intent.getIntExtra(DaftarLatihanFragment1.KEY_ID_LATIHAN, 0)
-        judulLatihan = intent.getStringExtra(DaftarLatihanFragment1.KEY_JUDUL_LATIHAN)
-        Log.d("latihanIdentity", "$idLatihan = $judulLatihan")
-
-        presenter = DetailLatihanPresenter(this)
-        presenter.getDetailLatihan(idLatihan)
-
-        presenterPembahasan = PembahasanLatihanPresenter(this)
-
         if (InternetConnection.isConnected(this)){
+            idLatihan = intent.getIntExtra(DaftarLatihanFragment1.KEY_ID_LATIHAN, 0)
+            judulLatihan = intent.getStringExtra(DaftarLatihanFragment1.KEY_JUDUL_LATIHAN)
+            Log.d("latihanIdentity", "$idLatihan = $judulLatihan")
+
+            presenter = DetailLatihanPresenter(this)
+            presenter.getDetailLatihan(idLatihan)
+
+            presenterPembahasan = PembahasanLatihanPresenter(this)
                 initView()
         }else{
             finish()
