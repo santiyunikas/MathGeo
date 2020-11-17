@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.santiyunikas.mathgeo.R
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import kotlinx.android.synthetic.main.fragment_soal_latihan.*
 

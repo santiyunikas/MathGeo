@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
                 mBundle.putString("STATE_KEY", "Login")
                 fragmentOtp.arguments = mBundle
 
-                val intent: Intent = Intent(this@LoginActivity, ResetPasswordActivity::class.java)
+                val intent = Intent(this@LoginActivity, ResetPasswordActivity::class.java)
                 startActivity(intent)
             }
             R.id.btn_login->{
@@ -61,7 +61,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
                 }
             }
             R.id.tv_signup->{
-                val intent: Intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+                val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
                 startActivity(intent)
                 finish()
             }

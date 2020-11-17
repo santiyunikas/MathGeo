@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentManager
 import com.jstarczewski.pc.mathview.src.MathView
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 import kotlinx.android.synthetic.main.activity_detail_materi2.*
 
 class DetailMateri2Activity : AppCompatActivity(), IView, View.OnClickListener {
@@ -21,7 +22,9 @@ class DetailMateri2Activity : AppCompatActivity(), IView, View.OnClickListener {
         setContentView(R.layout.activity_detail_materi2)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Materi Bangun Ruang"
-        initView()
+        if (InternetConnection.isConnected(this)){
+            initView()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

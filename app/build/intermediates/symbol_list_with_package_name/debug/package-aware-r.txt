@@ -1830,6 +1830,7 @@ drawable gradient
 drawable group1
 drawable group2
 drawable group3
+drawable header_beranda
 drawable header_koin
 drawable heart
 drawable ic_arrow_down_24dp
@@ -2304,6 +2305,7 @@ id kode_teman
 id kompetensi
 id labeled
 id largeLabel
+id latihan
 id layout
 id left
 id light
@@ -2315,6 +2317,7 @@ id listMode
 id list_item
 id lyt_detail_materi
 id masked
+id materi
 id media_actions
 id message
 id middle
@@ -2412,6 +2415,7 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id quiz
 id radio
 id radio_latihan
 id radio_quiz
@@ -2496,6 +2500,7 @@ id submenuarrow
 id submit_area
 id switchWidget
 id tabMode
+id tabhost
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -2514,7 +2519,6 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id text_home
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -2553,6 +2557,7 @@ id tx3
 id tx_back
 id tx_email
 id tx_gagal
+id tx_greetings
 id tx_kembali
 id tx_kode_referal
 id tx_koin
@@ -3068,6 +3073,9 @@ string status_bar_notification_info_overflow
 string sudah_punya_akun
 string summary_collapsed_preference_list
 string symbol_samadengan
+string tips1
+string tips2
+string tips3
 string titik_sudut
 string title_activity_content
 string title_activity_reset_password
@@ -3418,6 +3426,7 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
+style TabWidgetTheme
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
 style Test_Widget_MaterialComponents_MaterialCalendar

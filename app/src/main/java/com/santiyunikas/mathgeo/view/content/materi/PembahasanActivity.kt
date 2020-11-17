@@ -13,6 +13,7 @@ import com.jstarczewski.pc.mathview.src.MathView
 import com.jstarczewski.pc.mathview.src.TextAlign
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 import kotlinx.android.synthetic.main.activity_pembahasan.*
 
 class PembahasanActivity : AppCompatActivity(), ContractInterface.IView, ContractInterface.CustomView,
@@ -26,8 +27,12 @@ class PembahasanActivity : AppCompatActivity(), ContractInterface.IView, Contrac
         supportActionBar?.title = "Materi Bangun Ruang"
         idMateri = intent.getIntExtra("EXTRA_ID_MATERI", 0)
         Log.d("idmateripembahasan", idMateri.toString())
-        initView()
-        updateViewData()
+        if(InternetConnection.isConnected(this)){
+            initView()
+            updateViewData()
+        }else{
+            finish()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

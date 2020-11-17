@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
 import com.santiyunikas.mathgeo.presenter.profil.KoinGratisPresenter
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import kotlinx.android.synthetic.main.activity_koin_gratis.*
 
@@ -21,7 +22,11 @@ class KoinGratisActivity : AppCompatActivity(), IView, View.OnClickListener {
         setContentView(R.layout.activity_koin_gratis)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title="Dapatkan Koin Gratis!"
-        initView()
+        if(InternetConnection.isConnected(this)){
+            initView()
+        }else{
+            finish()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

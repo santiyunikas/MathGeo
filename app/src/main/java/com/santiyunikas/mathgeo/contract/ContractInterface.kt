@@ -8,7 +8,7 @@ import com.jstarczewski.pc.mathview.src.MathView
 interface ContractInterface {
 
     interface IView{
-        abstract fun initView()
+        fun initView()
         fun updateViewData()
         fun onSuccess(msg: String?)
         fun onError(msg: String?)

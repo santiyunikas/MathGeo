@@ -14,6 +14,7 @@ import com.santiyunikas.mathgeo.model.DetailLatihan
 import com.santiyunikas.mathgeo.model.PembahasanLatihan
 import com.santiyunikas.mathgeo.presenter.latihan.DetailLatihanPresenter
 import com.santiyunikas.mathgeo.presenter.latihan.PembahasanLatihanPresenter
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import kotlinx.android.synthetic.main.activity_detail_latihan.*
 import com.santiyunikas.mathgeo.view.content.latihan.DaftarLatihanFragment.Companion as DaftarLatihanFragment1
@@ -29,6 +30,7 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
     var counterSoal = 0
     private var isNotSubmited = true
     private var arrayPembahasan = arrayListOf<PembahasanLatihan>()
+    var state: Boolean = false
 
     companion object {
         const val KEY_SOAL = "SOAL"
@@ -54,7 +56,12 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
         presenter.getDetailLatihan(idLatihan)
 
         presenterPembahasan = PembahasanLatihanPresenter(this)
-        initView()
+
+        if (InternetConnection.isConnected(this)){
+                initView()
+        }else{
+            finish()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

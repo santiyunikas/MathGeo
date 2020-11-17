@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
 import com.santiyunikas.mathgeo.presenter.profil.EditProfilPresenter
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import kotlinx.android.synthetic.main.activity_edit_profile.*
 
@@ -19,7 +20,11 @@ class EditProfileActivity : AppCompatActivity(), IView, View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        initView()
+        if(InternetConnection.isConnected(this)){
+            initView()
+        }else{
+            finish()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

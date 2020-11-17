@@ -17,6 +17,7 @@ import com.santiyunikas.mathgeo.contract.ContractInterface.IView
 import com.bumptech.glide.Glide
 import com.jstarczewski.pc.mathview.src.MathView
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 import kotlinx.android.synthetic.main.activity_detail_materi.*
 
 class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClickListener {
@@ -27,8 +28,12 @@ class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClic
         setContentView(R.layout.activity_detail_materi)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Materi Bangun Ruang"
-        initView()
-        updateViewData()
+        if (InternetConnection.isConnected(this)){
+            initView()
+            updateViewData()
+        }else{
+            finish()
+        }
 
     }
 

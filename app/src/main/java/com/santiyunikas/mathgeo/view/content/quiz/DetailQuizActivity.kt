@@ -12,6 +12,7 @@ import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface
 import com.santiyunikas.mathgeo.model.DetailQuiz
 import com.santiyunikas.mathgeo.presenter.quiz.DetailQuizPresenter
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import kotlinx.android.synthetic.main.activity_detail_quiz.*
 
@@ -49,7 +50,11 @@ class DetailQuizActivity : AppCompatActivity(), ContractInterface.IView {
                 |Kerjakan latihan atau masukkan kode teman untuk mendapat tambahan koin
             """.trimMargin(), Toast.LENGTH_LONG).show()
         }else{
-            initView()
+            if (InternetConnection.isConnected(this)){
+                initView()
+            }else{
+                finish()
+            }
         }
 
     }

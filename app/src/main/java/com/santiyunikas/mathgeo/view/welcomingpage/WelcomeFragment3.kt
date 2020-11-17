@@ -9,9 +9,10 @@ import android.view.ViewGroup
 import android.widget.Button
 
 import com.santiyunikas.mathgeo.R
+import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.view.authentication.LoginActivity
 
-class WelcomeFragment3 : Fragment(), View.OnClickListener {
+class WelcomeFragment3 : Fragment(){
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,12 +26,8 @@ class WelcomeFragment3 : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btnNextToLogin: Button = view.findViewById(R.id.btn_next_to_login)
-        btnNextToLogin.setOnClickListener(this)
-    }
-
-    override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.btn_next_to_login->{
+        btnNextToLogin.setOnClickListener{
+            if (InternetConnection.isConnected(view.context)){
                 val mIntent = Intent(activity, LoginActivity::class.java)
                 startActivity(mIntent)
                 activity?.finish()
