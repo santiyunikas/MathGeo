@@ -39,6 +39,7 @@ class DetailQuizActivity : AppCompatActivity(), ContractInterface.IView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_quiz)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Materi Bangun Ruang"
 
         if (InternetConnection.isConnected(this)){
             idQuiz = intent.getIntExtra(DaftarQuizFragment.KEY_ID_QUIZ, 0)

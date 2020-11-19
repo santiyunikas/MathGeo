@@ -168,7 +168,7 @@
     <string name="cf">CF</string>
     <string name="symbol_samadengan">=</string>
 
-    <string name="tips1">Kamu lulus dalam semua latihan dan dapatkan koin untuk mengerjakan quiz</string>
+    <string name="tips1">Kamu harus mengerjakan latihan terlebih dahulu untuk dapat mengerjakan quiz</string>
     <string name="tips2">Ajaklah teman saling bertukar kode referal, kamu dan temanmu akan mendapat koin gratis untuk mengerjakan quiz</string>
-    <string name="tips3">Gunakan semua fitur MathGeo: selesaikan membaca materi, mengerjakan latihan dan mengerjakan quiz</string>
+    <string name="tips3">Selesaikan membaca materi, mengerjakan latihan dan mengerjakan quiz</string>
 </resources>

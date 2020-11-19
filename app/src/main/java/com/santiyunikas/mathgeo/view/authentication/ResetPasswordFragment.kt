@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import com.santiyunikas.mathgeo.R
-import com.santiyunikas.mathgeo.presenter.auth.ResetPasswordPresenter
+import com.santiyunikas.mathgeo.presenter.authentication.ResetPasswordPresenter
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
 import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences

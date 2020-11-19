@@ -9,7 +9,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
-import com.santiyunikas.mathgeo.presenter.auth.RegisterPresenter
+import com.santiyunikas.mathgeo.presenter.authentication.RegisterPresenter
 import com.santiyunikas.mathgeo.util.network.InternetConnection
 import kotlinx.android.synthetic.main.activity_register.*
 
@@ -59,7 +59,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
                 }
             }
             tv_login.id->{
-                val intent: Intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
             }
@@ -67,7 +67,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
     }
 
     private fun inputValid(fullname: String, numberPhone: String, email: String, password: String, confirmPassword: String):Boolean{
-        var value:Boolean = true
+        var value = true
         if(fullname.isEmpty()){
             edt_full_name.error = "Nama tidak boleh kosong"
             value = false

@@ -30,7 +30,6 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
     var counterSoal = 0
     private var isNotSubmited = true
     private var arrayPembahasan = arrayListOf<PembahasanLatihan>()
-    var state: Boolean = false
 
     companion object {
         const val KEY_SOAL = "SOAL"
@@ -47,6 +46,7 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_latihan)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Materi Bangun Ruang"
 
         if (InternetConnection.isConnected(this)){
             idLatihan = intent.getIntExtra(DaftarLatihanFragment1.KEY_ID_LATIHAN, 0)
@@ -57,7 +57,7 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
             presenter.getDetailLatihan(idLatihan)
 
             presenterPembahasan = PembahasanLatihanPresenter(this)
-                initView()
+            initView()
         }else{
             finish()
         }
@@ -183,6 +183,7 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
         val transaction = fm.beginTransaction()
         transaction.replace(R.id.frame_latihan, fragment)
         transaction.commit()
+
         if (idLatihan>1){
             btn_next_soallatihan.visibility = View.GONE
         }

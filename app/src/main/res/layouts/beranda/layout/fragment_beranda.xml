@@ -31,9 +31,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
         <TextView
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Belajar apa hari ini ?"
+            android:text="Mau belajar apa hari ini ?"
             style="@style/TextViewBlack"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
@@ -111,40 +112,47 @@
         <HorizontalScrollView
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
                 <TextView
                     style="@style/TextViewBlack"
                     android:text="Tips menjadi siswa berprestasi"
                     android:textColor="@color/white"
-                    android:layout_margin="20dp"/>
+                    android:layout_margin="5dp"
+                    />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp">
+                    android:layout_margin="5dp"
+                    >
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardElevation="5dp"
-                        android:layout_margin="20dp"
                         android:background="@color/white"
-                        app:cardCornerRadius="15dp">
+                        app:cardCornerRadius="15dp"
+                        android:layout_margin="10dp">
                         <LinearLayout
-                            android:layout_width="250dp"
-                            android:layout_height="200dp"
+                            android:layout_width="200dp"
+                            android:layout_height="150dp"
                             android:padding="10dp"
                             android:orientation="vertical"
                             android:gravity="center">
                             <TextView
+                                android:textSize="18sp"
                                 style="@style/NormalTextBold"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Penuhi Kewajiban" />
                             <TextView
+                                android:textSize="15sp"
                                 style="@style/TextViewBlack"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -155,22 +163,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardElevation="5dp"
-                        android:layout_margin="20dp"
+                        android:layout_margin="10dp"
                         android:background="@color/white"
                         app:cardCornerRadius="15dp">
                         <LinearLayout
-                            android:layout_width="250dp"
-                            android:layout_height="200dp"
+                            android:layout_width="200dp"
+                            android:layout_height="150dp"
                             android:padding="10dp"
                             android:orientation="vertical"
                             android:gravity="center">
                             <TextView
                                 style="@style/NormalTextBold"
+                                android:textSize="18sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Indahnya Persahabatan" />
                             <TextView
                                 style="@style/TextViewBlack"
+                                android:textSize="15sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/tips2" />
@@ -180,21 +190,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardElevation="5dp"
-                        android:layout_margin="20dp"
+                        android:layout_margin="10dp"
                         android:background="@color/white"
                         app:cardCornerRadius="15dp">
                         <LinearLayout
-                            android:layout_width="250dp"
-                            android:layout_height="200dp"
+                            android:layout_width="200dp"
+                            android:layout_height="150dp"
                             android:padding="10dp"
                             android:orientation="vertical"
                             android:gravity="center">
                             <TextView
+                                android:textSize="18sp"
                                 style="@style/NormalTextBold"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Lewati Semua Tantangan" />
                             <TextView
+                                android:textSize="15sp"
                                 style="@style/TextViewBlack"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"

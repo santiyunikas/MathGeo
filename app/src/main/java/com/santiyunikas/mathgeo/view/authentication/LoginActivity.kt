@@ -9,7 +9,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
-import com.santiyunikas.mathgeo.presenter.auth.LoginPresenter
+import com.santiyunikas.mathgeo.presenter.authentication.LoginPresenter
 import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import com.santiyunikas.mathgeo.view.content.ContentActivity
