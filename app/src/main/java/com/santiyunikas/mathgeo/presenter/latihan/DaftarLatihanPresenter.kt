@@ -6,8 +6,8 @@ import com.santiyunikas.mathgeo.view.content.beranda.BerandaFragment
 import com.santiyunikas.mathgeo.view.content.latihan.DaftarLatihanFragment
 
 class DaftarLatihanPresenter() {
-     var viewLatihan = DaftarLatihanFragment()
-     var viewBeranda = BerandaFragment()
+     private var viewLatihan = DaftarLatihanFragment()
+     private var viewBeranda = BerandaFragment()
 
     constructor(context: DaftarLatihanFragment):this(){
         viewLatihan = context

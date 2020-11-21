@@ -23,9 +23,6 @@ import kotlinx.android.synthetic.main.fragment_beranda.*
 import kotlinx.android.synthetic.main.fragment_beranda.rv_list_latihan
 import kotlinx.android.synthetic.main.fragment_beranda.rv_list_materi
 import kotlinx.android.synthetic.main.fragment_beranda.rv_list_quiz
-import kotlinx.android.synthetic.main.fragment_daftar_latihan.*
-import kotlinx.android.synthetic.main.fragment_daftar_materi.*
-import kotlinx.android.synthetic.main.fragment_daftar_quiz.*
 
 
 class BerandaFragment : Fragment(){
@@ -44,8 +41,7 @@ class BerandaFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_beranda, container, false)
-        return root
+        return inflater.inflate(R.layout.fragment_beranda, container, false)
     }
 
     @SuppressLint("SetTextI18n")

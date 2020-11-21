@@ -6,9 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import android.widget.TextView
 import com.santiyunikas.mathgeo.*
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import com.santiyunikas.mathgeo.view.authentication.LoginActivity
@@ -27,28 +24,28 @@ class ProfileFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         tx_ubah_pass.setOnClickListener {
-            val intent: Intent = Intent(view.context, ResetPasswordActivity::class.java)
+            val intent = Intent(view.context, ResetPasswordActivity::class.java)
             startActivity(intent)
         }
         btn_edit_profile.setOnClickListener{
-            val intent: Intent = Intent(view.context, EditProfileActivity::class.java)
+            val intent = Intent(view.context, EditProfileActivity::class.java)
             startActivity(intent)
         }
         btn_kode_referal.setOnClickListener{
-            val intent: Intent = Intent(view.context, KoinGratisActivity::class.java)
+            val intent = Intent(view.context, KoinGratisActivity::class.java)
             startActivity(intent)
         }
         btn_kompetensi_dan_tujuan.setOnClickListener{
-            val intent: Intent = Intent(view.context, KompetensiTujuanActivity::class.java)
+            val intent = Intent(view.context, KompetensiTujuanActivity::class.java)
             startActivity(intent)
         }
         btn_petunjuk.setOnClickListener{
-            val intent: Intent = Intent(view.context, PetunjukActivity::class.java)
+            val intent = Intent(view.context, PetunjukActivity::class.java)
             startActivity(intent)
         }
         btn_logout.setOnClickListener {
             Preferences.clearLoggedInUser(view.context)
-            val intent: Intent = Intent(view.context, LoginActivity::class.java)
+            val intent = Intent(view.context, LoginActivity::class.java)
             startActivity(intent)
             activity?.finish()
         }

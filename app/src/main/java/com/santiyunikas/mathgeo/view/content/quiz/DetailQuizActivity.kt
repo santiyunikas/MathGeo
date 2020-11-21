@@ -155,9 +155,9 @@ class DetailQuizActivity : AppCompatActivity(), ContractInterface.IView {
         pilihan_ganda: String,
         gambar: String
     ) {
-        val soal = DetailQuiz(id_soal, id_quiz, soal, kunci, pilihan_ganda, gambar)
+        val soalQuiz = DetailQuiz(id_soal, id_quiz, soal, kunci, pilihan_ganda, gambar)
 //        Log.d("masuksini",soal.id_soal)
-        arraySoal.add(soal)
+        arraySoal.add(soalQuiz)
     }
 
     fun showReviewDialog(nilai: Int){

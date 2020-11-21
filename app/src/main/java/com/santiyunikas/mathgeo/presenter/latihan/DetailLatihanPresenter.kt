@@ -37,7 +37,7 @@ class DetailLatihanPresenter() {
                     if (n != null) {
                         while (it < n) {
 //                            Log.d("isiSoal",response.body()?.get(it)?.id_soal!!)
-                            view?.passingData(
+                            view.passingData(
                                 response.body()?.get(it)?.id_soal!!,
                                 response.body()?.get(it)?.id_latihan!!,
                                 response.body()?.get(it)?.soal!!,
@@ -47,11 +47,11 @@ class DetailLatihanPresenter() {
                             it++
                         }
                     }
-                    view?.onSuccess("passingDataDone")
+                    view.onSuccess("passingDataDone")
                 }
 
                 override fun onFailure(call: Call<List<DetailLatihan>>, t: Throwable) {
-                    view?.onError(t.localizedMessage)
+                    view.onError(t.localizedMessage)
                 }
 
             })
@@ -61,47 +61,47 @@ class DetailLatihanPresenter() {
         var jmlBenar = 0
         var jmlSalah = 0
         repeat(jawaban.size){
-            if (jawaban.get(it) == soal.get(it).kunci){
+            if (jawaban[it] == soal[it].kunci){
                 jmlBenar++
             }else{
                 jmlSalah++
             }
         }
-        view?.onSuccess(jmlBenar.toString())
+        view.onSuccess(jmlBenar.toString())
 
         NetworkConfig
             .serviceConnection()
-            .getStatusMengerjakanLatihan(Preferences.getRegisteredIdUser(view?.applicationContext!!).toString(), soal[0].id_latihan)
+            .getStatusMengerjakanLatihan(Preferences.getRegisteredIdUser(view.applicationContext!!).toString(), soal[0].id_latihan)
             .enqueue(object : Callback<List<StatusMengerjakanLatihan>>{
                 override fun onResponse(
                     call: Call<List<StatusMengerjakanLatihan>>,
                     response: Response<List<StatusMengerjakanLatihan>>
                 ) {
                     Log.d("jmlbenar", response.body()?.size.toString())
-                    Log.d("jmlbenar", response.body()?.toString())
+                    Log.d("jmlbenar", response.body().toString())
                     if (response.body()?.size!! > 0){
-                        Preferences.getRegisteredIdUser(view?.applicationContext!!)?.let {
+                        Preferences.getRegisteredIdUser(view.applicationContext!!)?.let {
                             Log.d("jmlbenar", jmlBenar.toString())
                             updateReview(it, soal[0].id_latihan, jmlBenar)
                         }
                     }else if (response.body()?.size!! == 0){
-                        Preferences.getRegisteredIdUser(view?.applicationContext!!)?.let {
+                        Preferences.getRegisteredIdUser(view.applicationContext!!)?.let {
                             postReview(it, soal[0].id_latihan, jmlBenar)
                         }
                     }
                 }
 
                 override fun onFailure(call: Call<List<StatusMengerjakanLatihan>>, t: Throwable) {
-                    view?.onError(t.localizedMessage)
+                    view.onError(t.localizedMessage)
                 }
 
 
             })
 
         if (jmlSalah > jmlBenar){
-            view?.showReviewLatihan("gagal")
+            view.showReviewLatihan("gagal")
         }else{
-            view?.showReviewLatihan("lulus")
+            view.showReviewLatihan("lulus")
         }
     }
 
@@ -116,15 +116,15 @@ class DetailLatihanPresenter() {
                 ) {
                     if (response.body()?.id_latihan != null){
                         Log.d("successAddNilai", response.body().toString())
-                        view?.onSuccess("successAddNilai")
+                        view.onSuccess("successAddNilai")
                     }else{
-                        view?.onError("Gagal Tambah Nilai")
+                        view.onError("Gagal Tambah Nilai")
                     }
 
                 }
 
                 override fun onFailure(call: Call<StatusMengerjakanLatihan>, t: Throwable) {
-                    view?.onError(t.localizedMessage)
+                    view.onError(t.localizedMessage)
                 }
 
             })
@@ -141,14 +141,14 @@ class DetailLatihanPresenter() {
                 ) {
                     if (response.body()?.toString()?.isNotEmpty()!!){
                         Log.d("successUpdateNilai", response.body().toString())
-                        view?.onSuccess("successUpdateNilai")
+                        view.onSuccess("successUpdateNilai")
                     }else{
-                        view?.onError("Gagal Update Nilai")
+                        view.onError("Gagal Update Nilai")
                     }
                 }
 
                 override fun onFailure(call: Call<StatusMengerjakanLatihan>, t: Throwable) {
-                    view?.onError(t.localizedMessage)
+                    view.onError(t.localizedMessage)
                 }
             })
     }
@@ -158,7 +158,7 @@ class DetailLatihanPresenter() {
             .addNCoin(Preferences.getRegisteredEmail(view2), nKoin)
             .enqueue(object: Callback<Member> {
                 override fun onFailure(call: Call<Member>, t: Throwable) {
-                    Log.d("eror",t.localizedMessage)
+                    Log.d("eror",t.localizedMessage!!)
                 }
                 override fun onResponse(
                     call: Call<Member>,

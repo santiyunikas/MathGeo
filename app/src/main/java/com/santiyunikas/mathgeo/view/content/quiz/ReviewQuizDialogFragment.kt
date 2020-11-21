@@ -1,5 +1,6 @@
 package com.santiyunikas.mathgeo.view.content.quiz
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,7 @@ class ReviewQuizDialogFragment : DialogFragment() {
         return inflater.inflate(R.layout.fragment_review_quiz_dialog, container, false)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val nilai = arguments?.getInt(DetailQuizActivity.KEY_NILAI)
@@ -58,13 +60,13 @@ class ReviewQuizDialogFragment : DialogFragment() {
         }
     }
 
-    fun getEmoji(url: String){
+    private fun getEmoji(url: String){
         Glide.with(this)
             .load(url)
             .into(review_quiz_emoji)
     }
 
-    fun getBintang(url: String){
+    private fun getBintang(url: String){
         Glide.with(this)
             .load(url)
             .into(review_quiz_bintang)

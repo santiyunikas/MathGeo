@@ -8,7 +8,7 @@ import com.santiyunikas.mathgeo.R
 
 class SplashScreen : AppCompatActivity() {
 
-    lateinit var handler: Handler
+    private lateinit var handler: Handler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

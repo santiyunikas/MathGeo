@@ -25,7 +25,7 @@ class DetailQuizPresenter(context: DetailQuizActivity) {
                     if (n != null) {
                         while (it < n) {
 //                            Log.d("isiSoal",response.body()?.get(it)?.id_soal!!)
-                            view?.passingData(
+                            view.passingData(
                                 response.body()?.get(it)?.id_soal!!,
                                 response.body()?.get(it)?.id_quiz!!,
                                 response.body()?.get(it)?.soal!!,
@@ -36,11 +36,11 @@ class DetailQuizPresenter(context: DetailQuizActivity) {
                             it++
                         }
                     }
-                    view?.onSuccess("passingDataDone")
+                    view.onSuccess("passingDataDone")
                 }
 
                 override fun onFailure(call: Call<List<DetailQuiz>>, t: Throwable) {
-                    view?.onError(t.localizedMessage)
+                    view.onError(t.localizedMessage)
                 }
 
             })
@@ -50,18 +50,18 @@ class DetailQuizPresenter(context: DetailQuizActivity) {
         var jmlBenar = 0
         var jmlSalah = 0
         repeat(jawaban.size) {
-            if (jawaban.get(it) == soal.get(it).kunci) {
+            if (jawaban[it] == soal[it].kunci) {
                 jmlBenar++
             } else {
                 jmlSalah++
             }
         }
-        view?.onSuccess(jmlBenar.toString())
+        view.onSuccess(jmlBenar.toString())
 
         NetworkConfig
             .serviceConnection()
             .getStatusMengerjakanQuiz(
-                Preferences.getRegisteredIdUser(view?.applicationContext!!).toString(),
+                Preferences.getRegisteredIdUser(view.applicationContext!!).toString(),
                 soal[0].id_quiz
             )
             .enqueue(object : Callback<List<StatusMengerjakanQuiz>> {
@@ -70,26 +70,26 @@ class DetailQuizPresenter(context: DetailQuizActivity) {
                     response: Response<List<StatusMengerjakanQuiz>>
                 ) {
                     if (response.body()?.size!! > 0) {
-                        Preferences.getRegisteredIdUser(view?.applicationContext!!)?.let {
+                        Preferences.getRegisteredIdUser(view.applicationContext!!)?.let {
                             Log.d("jmlbenar", jmlBenar.toString())
                             updateReview(it, soal[0].id_quiz, jmlBenar)
                         }
                     } else if (response.body()?.size!! == 0) {
-                        Preferences.getRegisteredIdUser(view?.applicationContext!!)?.let {
+                        Preferences.getRegisteredIdUser(view.applicationContext!!)?.let {
                             postReview(it, soal[0].id_quiz, jmlBenar)
                         }
                     }
                 }
 
                 override fun onFailure(call: Call<List<StatusMengerjakanQuiz>>, t: Throwable) {
-                    view?.onError(t.localizedMessage)
+                    view.onError(t.localizedMessage)
                 }
 
 
             })
 
 
-        view?.showReviewDialog(jmlBenar)
+        view.showReviewDialog(jmlBenar)
 
     }
 
@@ -104,15 +104,15 @@ class DetailQuizPresenter(context: DetailQuizActivity) {
                 ) {
                     if (response.body()?.id_quiz != null) {
                         Log.d("successAddNilai", response.body().toString())
-                        view?.onSuccess("successAddNilai")
+                        view.onSuccess("successAddNilai")
                     } else {
-                        view?.onError("Gagal Tambah Nilai")
+                        view.onError("Gagal Tambah Nilai")
                     }
 
                 }
 
                 override fun onFailure(call: Call<StatusMengerjakanQuiz>, t: Throwable) {
-                    view?.onError(t.localizedMessage)
+                    view.onError(t.localizedMessage)
                 }
 
             })
@@ -129,14 +129,14 @@ class DetailQuizPresenter(context: DetailQuizActivity) {
                 ) {
                     if (response.body()?.toString()?.isNotEmpty()!!) {
                         Log.d("successUpdateNilai", response.body().toString())
-                        view?.onSuccess("successUpdateNilai")
+                        view.onSuccess("successUpdateNilai")
                     } else {
-                        view?.onError("Gagal Update Nilai")
+                        view.onError("Gagal Update Nilai")
                     }
                 }
 
                 override fun onFailure(call: Call<StatusMengerjakanQuiz>, t: Throwable) {
-                    view?.onError(t.localizedMessage)
+                    view.onError(t.localizedMessage)
                 }
             })
     }
@@ -146,7 +146,7 @@ class DetailQuizPresenter(context: DetailQuizActivity) {
             .addNCoin(Preferences.getRegisteredEmail(view), nKoin)
             .enqueue(object: Callback<Member> {
                 override fun onFailure(call: Call<Member>, t: Throwable) {
-                    Log.d("eror",t.localizedMessage)
+                    Log.d("eror",t.localizedMessage!!)
                 }
                 override fun onResponse(
                     call: Call<Member>,

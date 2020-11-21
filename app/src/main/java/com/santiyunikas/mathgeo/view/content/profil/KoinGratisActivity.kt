@@ -83,11 +83,11 @@ class KoinGratisActivity : AppCompatActivity(), IView, View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.btn_share -> {
-                var kode_unik = Preferences.getRegisteredKodeReferal(this)
-                var nama = Preferences.getRegisteredFullname(this)
+                val referal = Preferences.getRegisteredKodeReferal(this)
+                val nama = Preferences.getRegisteredFullname(this)
                 val sendIntent: Intent = Intent().apply {
                     action = Intent.ACTION_SEND
-                    putExtra(Intent.EXTRA_TEXT, "Hai! Ayo belajar bersama '$nama' di aplikasi MathGeo. Masukkan kode unik '$kode_unik' dan dapatkan satu koin gratis untuk belajar. Tunggu apalagi, yuk download aplikasinya sekarang!")
+                    putExtra(Intent.EXTRA_TEXT, "Hai! Ayo belajar bersama '$nama' di aplikasi MathGeo. Masukkan kode unik '$referal' dan dapatkan satu koin gratis untuk belajar. Tunggu apalagi, yuk download aplikasinya sekarang!")
                     type = "text/plain"
                 }
                 val shareIntent = Intent.createChooser(sendIntent, null)

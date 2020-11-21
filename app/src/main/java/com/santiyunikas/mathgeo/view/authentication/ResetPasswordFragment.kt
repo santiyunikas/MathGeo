@@ -100,10 +100,9 @@ class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
             }
             R.id.tx_back -> {
                 val fragmentOtp = OtpFragment()
-                val fragmentResetPassword: Fragment? = fragmentManager?.findFragmentByTag(
-                    ResetPasswordFragment::class.java.simpleName)
-                val fragmentOtpManager = fragmentManager
-                fragmentOtpManager?.beginTransaction()?.apply {
+                val fragmentResetPassword: Fragment? = parentFragmentManager.findFragmentByTag(ResetPasswordFragment::class.java.simpleName)
+                val fragmentOtpManager = parentFragmentManager
+                fragmentOtpManager.beginTransaction().apply {
                     replace(R.id.frame_reset_password_container,
                         fragmentOtp,
                         ResetPasswordFragment::class.java.simpleName)
@@ -117,7 +116,7 @@ class ResetPasswordFragment : Fragment(), IView, View.OnClickListener {
     }
 
     private fun inputValid(pass: String, confirmPass: String): Boolean{
-        var value: Boolean = true
+        var value = true
         if (pass.isEmpty()){
             edt_pass_reset.error = "Password tidak boleh kosong"
             value = false

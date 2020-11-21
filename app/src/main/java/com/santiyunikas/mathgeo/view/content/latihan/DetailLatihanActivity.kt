@@ -25,9 +25,9 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
     private var judulLatihan = ""
     private lateinit var presenter: DetailLatihanPresenter
     private lateinit var presenterPembahasan: PembahasanLatihanPresenter
-    var arraySoal = arrayListOf<DetailLatihan>()
+    private var arraySoal = arrayListOf<DetailLatihan>()
     private var jawaban = arrayListOf<String>()
-    var counterSoal = 0
+    private var counterSoal = 0
     private var isNotSubmited = true
     private var arrayPembahasan = arrayListOf<PembahasanLatihan>()
 
@@ -151,7 +151,7 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
 
     }
 
-    fun rekamJawaban() {
+    private fun rekamJawaban() {
         jawaban.add(counterSoal, Preferences.getTempJawaban(this).toString())
 //        Log.d("pilihanmasuk", Preferences.getTempJawaban(this).toString())
         Preferences.clearTempJawaban(this)
@@ -165,9 +165,9 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
         pilihan_ganda: String,
         gambar: String
     ) {
-        val soal = DetailLatihan(id_soal, id_latihan, soal, kunci, pilihan_ganda, gambar)
+        val soalLatihan = DetailLatihan(id_soal, id_latihan, soal, kunci, pilihan_ganda, gambar)
 //        Log.d("masuksini",soal.id_soal)
-        arraySoal.add(soal)
+        arraySoal.add(soalLatihan)
     }
 
     override fun updateViewData() {

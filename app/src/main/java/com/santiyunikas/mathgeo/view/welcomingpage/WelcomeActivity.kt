@@ -16,7 +16,7 @@ class WelcomeActivity : AppCompatActivity(){
         setContentView(R.layout.activity_welcome)
         if (Preferences.getLoggedInStatus(applicationContext)){
             //masuk ketika sudah pernah login sebelumnya
-            val intent:Intent= Intent(this@WelcomeActivity, ContentActivity::class.java)
+            val intent = Intent(this@WelcomeActivity, ContentActivity::class.java)
             startActivity(intent)
             finish()
         }else{
@@ -25,7 +25,7 @@ class WelcomeActivity : AppCompatActivity(){
     }
 
     //initial fragment
-    fun fragmentInit(){
+    private fun fragmentInit(){
         val mFragmentManager = supportFragmentManager
         val mWelcomeFragment1 = WelcomeFragment1()
         val fragment = mFragmentManager.findFragmentByTag(WelcomeFragment1::class.java.simpleName)

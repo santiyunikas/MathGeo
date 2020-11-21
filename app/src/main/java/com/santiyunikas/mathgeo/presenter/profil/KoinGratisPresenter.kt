@@ -26,8 +26,8 @@ class KoinGratisPresenter(context: KoinGratisActivity) {
                     response: Response<Member>
                 ) {
                     if(response.body()?.jumlah_koin.toString().isNotEmpty()){
-                        Log.d("memberNKoin", response.body()?.toString())
-                        var koin = response.body()?.jumlah_koin.toString().toInt()
+                        Log.d("memberNKoin", response.body().toString())
+                        val koin = response.body()?.jumlah_koin.toString().toInt()
                         Preferences.setRegisteredJumlahKoin(view, koin)
                         view.onSuccess("addCoinSuccess")
                     }else{
@@ -53,7 +53,7 @@ class KoinGratisPresenter(context: KoinGratisActivity) {
                     }
                 }
                 override fun onFailure(call: Call<List<Member>>, t: Throwable) {
-                    Log.d("failGetKodeReferal", t.localizedMessage)
+                    Log.d("failGetKodeReferal", t.localizedMessage!!)
 
                 }
             })
@@ -84,7 +84,7 @@ class KoinGratisPresenter(context: KoinGratisActivity) {
                 }
 
                 override fun onFailure(call: Call<KodeTeman>, t: Throwable) {
-                    Log.d("onErorAddKodeTeman", t.localizedMessage)
+                    Log.d("onErorAddKodeTeman", t.localizedMessage!!)
                 }
 
             })

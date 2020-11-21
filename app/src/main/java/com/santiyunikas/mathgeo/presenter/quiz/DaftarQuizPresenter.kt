@@ -7,8 +7,8 @@ import com.santiyunikas.mathgeo.view.content.quiz.DaftarQuizFragment
 
 class DaftarQuizPresenter() {
 
-    var viewQuiz = DaftarQuizFragment()
-    var viewBeranda = BerandaFragment()
+    private var viewQuiz = DaftarQuizFragment()
+    private var viewBeranda = BerandaFragment()
 
     constructor(context: DaftarQuizFragment):this(){
         viewQuiz = context

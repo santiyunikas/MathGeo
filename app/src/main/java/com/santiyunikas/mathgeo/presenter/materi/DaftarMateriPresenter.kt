@@ -7,8 +7,8 @@ import com.santiyunikas.mathgeo.view.content.materi.DaftarMateriFragment
 
 class DaftarMateriPresenter() {
 
-    var viewMateri = DaftarMateriFragment()
-    var viewBeranda = BerandaFragment()
+    private var viewMateri = DaftarMateriFragment()
+    private var viewBeranda = BerandaFragment()
 
     constructor(context: DaftarMateriFragment):this(){
         viewMateri = context

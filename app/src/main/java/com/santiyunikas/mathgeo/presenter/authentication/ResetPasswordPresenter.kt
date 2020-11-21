@@ -38,7 +38,7 @@ class ResetPasswordPresenter(context: ResetPasswordFragment) {
                 override fun onResponse(call: Call<Member>, response: Response<Member>) {
                     if(response.body()?.email != null){
                         view.onSuccess(response.message())
-                        Log.d("changePasswordSuccess", response.body()?.toString())
+                        Log.d("changePasswordSuccess", response.body().toString())
                     }else{
                         view.onError("noAccount")
                         Log.d("changePasswordFail", response.message())
@@ -47,7 +47,8 @@ class ResetPasswordPresenter(context: ResetPasswordFragment) {
 
                 override fun onFailure(call: Call<Member>, t: Throwable) {
                     view.onError("noResponse")
-                    Log.d("changePasswordFail", t.localizedMessage)
+                    Log.d("changePasswordFail", t.localizedMessage!!)
+
                 }
 
             })

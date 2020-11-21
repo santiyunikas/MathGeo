@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.model.DaftarQuiz
 import com.santiyunikas.mathgeo.presenter.quiz.DaftarQuizPresenter
-import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import kotlinx.android.synthetic.main.fragment_daftar_quiz.*
 

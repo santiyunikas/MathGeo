@@ -29,8 +29,8 @@ class WelcomeFragment1 : Fragment(), View.OnClickListener {
         when(v?.id){
             R.id.btn_next_to_fragment_2->{
                 val mWelcomeFragment2 = WelcomeFragment2()
-                val mFragmentManager = fragmentManager
-                mFragmentManager?.beginTransaction()?.apply {
+                val mFragmentManager = parentFragmentManager
+                mFragmentManager.beginTransaction().apply {
                     replace(R.id.frame_welcome_container, mWelcomeFragment2, WelcomeFragment2::class.java.simpleName)
                     addToBackStack(null)
                     commit()

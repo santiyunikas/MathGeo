@@ -4,7 +4,6 @@ import android.util.Log
 import com.santiyunikas.mathgeo.model.PembahasanLatihan
 import com.santiyunikas.mathgeo.util.network.NetworkConfig
 import com.santiyunikas.mathgeo.view.content.latihan.DetailLatihanActivity
-import com.santiyunikas.mathgeo.view.content.latihan.PembahasanLatihanDialogFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -28,7 +27,7 @@ class PembahasanLatihanPresenter(context: DetailLatihanActivity) {
                 }
 
                 override fun onFailure(call: Call<List<PembahasanLatihan>>, t: Throwable) {
-                    Log.d("erorPembahasan", t.localizedMessage)
+                    Log.d("erorPembahasan", t.localizedMessage!!)
                 }
 
             })

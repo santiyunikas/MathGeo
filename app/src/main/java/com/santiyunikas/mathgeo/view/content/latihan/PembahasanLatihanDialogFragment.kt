@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.bumptech.glide.Glide
 import com.santiyunikas.mathgeo.R
-import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
 import kotlinx.android.synthetic.main.fragment_pembahasan_latihan_dialog.*
 

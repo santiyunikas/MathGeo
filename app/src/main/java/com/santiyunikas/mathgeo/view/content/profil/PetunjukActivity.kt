@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.TextView
 import com.santiyunikas.mathgeo.R
 import kotlinx.android.synthetic.main.activity_petunjuk.*
 

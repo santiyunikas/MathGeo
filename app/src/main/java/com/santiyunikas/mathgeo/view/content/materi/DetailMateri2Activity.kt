@@ -5,11 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.fragment.app.FragmentManager
-import com.jstarczewski.pc.mathview.src.MathView
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.*
 import com.santiyunikas.mathgeo.util.network.InternetConnection
@@ -37,7 +33,7 @@ class DetailMateri2Activity : AppCompatActivity(), IView, View.OnClickListener {
         }
     }
 
-    fun getImageView(url: String) {
+    private fun getImageView(url: String) {
         val bundle = Bundle()
         bundle.putString("IMAGE_KUBUS_URL", url)
         val fragment = MateriImageDialogFragment()

@@ -17,7 +17,7 @@ class RegisterPresenter(context: RegisterActivity){
     private var view: RegisterActivity = context
 
     //method untuk register pengguna baru
-    fun register(fullname: String, numberPhone: String, email: String, password: String, active: Int){
+    fun register(fullname: String, numberPhone: String, email: String, password: String){
         NetworkConfig.serviceConnection()
             .register(email, password, fullname, numberPhone)
             .enqueue(object: Callback<Member>{
@@ -31,7 +31,7 @@ class RegisterPresenter(context: RegisterActivity){
                 ) {
                     if(response.body()?.email  != null){
                         view.onSuccess(response.message())
-                        Log.d("memberRegister", response.body()?.toString())
+                        Log.d("memberRegister", response.body().toString())
                     }else{
                         view.onError(response.message())
                     }

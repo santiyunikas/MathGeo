@@ -8,16 +8,16 @@ import androidx.preference.PreferenceManager
 object Preferences {
     /** Pendeklarasian key-data berupa String, untuk sebagai wadah penyimpanan data.
      * Jadi setiap data mempunyai key yang berbeda satu sama lain  */
-    const val KEY_ID_USER_TEREGISTER = "id_user"
-    const val KEY_NAMA_LENGKAP_TEREGISTER = "nama_lengkap"
-    const val KEY_NOMOR_TELEPON_TEREGISTER = "nomor_telepon"
-    const val KEY_EMAIL_TEREGISTER = "email"
-    const val KEY_KODE_REFERAL_TEREGISTER = "kode_referal"
-    const val KEY_JUMLAH_KOIN_TEREGISTER = "jumlah_koin"
+    private const val KEY_ID_USER_TEREGISTER = "id_user"
+    private const val KEY_NAMA_LENGKAP_TEREGISTER = "nama_lengkap"
+    private const val KEY_NOMOR_TELEPON_TEREGISTER = "nomor_telepon"
+    private const val KEY_EMAIL_TEREGISTER = "email"
+    private const val KEY_KODE_REFERAL_TEREGISTER = "kode_referal"
+    private const val KEY_JUMLAH_KOIN_TEREGISTER = "jumlah_koin"
 
-    const val KEY_STATUS_SEDANG_LOGIN = "Status_logged_in"
+    private const val KEY_STATUS_SEDANG_LOGIN = "Status_logged_in"
 
-    const val KEY_TEMP_JAWABAN = "jawaban"
+    private const val KEY_TEMP_JAWABAN = "jawaban"
 
     /** Pendlakarasian Shared Preferences yang berdasarkan paramater context  */
     private fun getSharedPreference(context: Context): SharedPreferences {

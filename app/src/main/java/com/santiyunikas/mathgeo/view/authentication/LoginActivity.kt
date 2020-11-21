@@ -100,16 +100,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
 
      override fun onSuccess(msg: String?) {
         if(msg.equals("isSuccess")){
-            Log.d("suksesRegister", msg)
+            Log.d("suksesRegister", msg!!)
             updateViewData()
             Toast.makeText(this, "Login Berhasil", Toast.LENGTH_LONG).show()
 
-            val intent: Intent = Intent(this@LoginActivity, ContentActivity::class.java)
+            val intent = Intent(this@LoginActivity, ContentActivity::class.java)
             startActivity(intent)
             finish()
 
         }else if(msg.equals("resetPassSuccess")){
-            Log.d("suksesResetPassword", msg)
+            Log.d("suksesResetPassword", msg!!)
             Toast.makeText(this, "Pasword Berhasil Diubah", Toast.LENGTH_LONG).show()
         }
     }
@@ -128,7 +128,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
             }
             else -> {
                 Toast.makeText(this, "Login gagal", Toast.LENGTH_LONG).show()
-                Log.d("erorLogin", msg)
+                Log.d("erorLogin", msg!!)
             }
         }
         updateViewData()

@@ -278,8 +278,8 @@ class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClic
         lyt_detail_materi.addView(view)
     }
 
-    override fun getButton(text: String) {
-        btn_pembahasan_materi.text = text
+    override fun getButton(pembahasan: String) {
+        btn_pembahasan_materi.text = pembahasan
         btn_pembahasan_materi.visibility = View.VISIBLE
     }
 
@@ -304,11 +304,11 @@ class DetailMateriActivity : AppCompatActivity(), IView, CustomView, View.OnClic
         TODO("Not yet implemented")
     }
 
-    override fun setTextview(text: String?, tv: TextView) {
+    override fun setTextview(tx: String?, tv: TextView) {
         TODO("Not yet implemented")
     }
 
-    override fun setMathview(text: String?, mv: MathView) {
+    override fun setMathview(tx: String?, mv: MathView) {
         TODO("Not yet implemented")
     }
 

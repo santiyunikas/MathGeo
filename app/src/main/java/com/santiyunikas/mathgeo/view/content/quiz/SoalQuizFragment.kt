@@ -34,8 +34,8 @@ class SoalQuizFragment : Fragment() {
         }
         val soal = arguments?.getString(DetailQuizActivity.KEY_SOAL)
         tx_soal_quiz.text = soal?.trimMargin()
-        val pilgan_string = arguments?.getString(DetailQuizActivity.KEY_PILIHAN_GANDA)
-        val array: Array<String>? = pilgan_string?.split("|")?.toTypedArray()
+        val pilgan = arguments?.getString(DetailQuizActivity.KEY_PILIHAN_GANDA)
+        val array: Array<String>? = pilgan?.split("|")?.toTypedArray()
         pilihan_A.text = array?.get(0) ?: "null"
         pilihan_B.text = array?.get(1) ?: "null"
         pilihan_C.text = array?.get(2) ?: "null"
@@ -45,23 +45,23 @@ class SoalQuizFragment : Fragment() {
         radio_quiz.setOnCheckedChangeListener { _, checkedId ->
             when(checkedId){
                 pilihan_A.id -> {
-                    Preferences.setTempJawaban(view?.context!!, "A")
+                    Preferences.setTempJawaban(view.context!!, "A")
                     Log.d("pilihan", "A")
                 }
                 pilihan_B.id -> {
-                    Preferences.setTempJawaban(view?.context!!, "B")
+                    Preferences.setTempJawaban(view.context!!, "B")
                     Log.d("pilihan", "B")
                 }
                 pilihan_C.id -> {
-                    Preferences.setTempJawaban(view?.context!!, "C")
+                    Preferences.setTempJawaban(view.context!!, "C")
                     Log.d("pilihan", "C")
                 }
                 pilihan_D.id -> {
-                    Preferences.setTempJawaban(view?.context!!, "D")
+                    Preferences.setTempJawaban(view.context!!, "D")
                     Log.d("pilihan", "D")
                 }
                 pilihan_E.id -> {
-                    Preferences.setTempJawaban(view?.context!!, "E")
+                    Preferences.setTempJawaban(view.context!!, "E")
                     Log.d("pilihan", "E")
                 }
             }

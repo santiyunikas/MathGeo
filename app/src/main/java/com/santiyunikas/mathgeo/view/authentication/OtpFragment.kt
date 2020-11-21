@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.mukesh.OnOtpCompletionListener
 import com.santiyunikas.mathgeo.presenter.authentication.OtpPresenter
 import com.santiyunikas.mathgeo.R
 import com.santiyunikas.mathgeo.contract.ContractInterface.IView
@@ -69,9 +68,9 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
 
         presenter = OtpPresenter(this)
 
-        otp_view.setOtpCompletionListener(OnOtpCompletionListener { otp -> // do Stuff
+        otp_view.setOtpCompletionListener { otp -> // do Stuff
             Log.d("onOtpCompleted=>", otp)
-        })
+        }
     }
 
     override fun updateViewData() {
@@ -104,7 +103,7 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
                 Toast.makeText(activity, "Ubah password gagal", Toast.LENGTH_LONG).show()
                 btn_get_otp.visibility = View.VISIBLE
                 timer.visibility = View.INVISIBLE
-                Log.d("erorResetPassword", msg)
+                Log.d("erorResetPassword", msg!!)
             }
         }
     }
@@ -153,9 +152,9 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
                         mBundle.putString("EMAIL_KEY", edt_email_reset_pass.text.toString().trim())
                         fragmentResetPassword.arguments = mBundle
 
-                        val fragmentOtp: Fragment? = fragmentManager?.findFragmentByTag(OtpFragment::class.java.simpleName)
-                        val fragmentResetPasswordManager = fragmentManager
-                        fragmentResetPasswordManager?.beginTransaction()?.apply {
+                        val fragmentOtp: Fragment? = parentFragmentManager.findFragmentByTag(OtpFragment::class.java.simpleName)
+                        val fragmentResetPasswordManager = parentFragmentManager
+                        fragmentResetPasswordManager.beginTransaction().apply {
                             replace(R.id.frame_reset_password_container,
                                 fragmentResetPassword,
                                 ResetPasswordFragment::class.java.simpleName)

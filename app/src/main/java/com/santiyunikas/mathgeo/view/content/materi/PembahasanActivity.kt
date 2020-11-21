@@ -72,8 +72,8 @@ class PembahasanActivity : AppCompatActivity(), ContractInterface.IView, Contrac
         TODO("Not yet implemented")
     }
 
-    override fun setTextview(text: String?, tv: TextView) {
-        tv.text = text
+    override fun setTextview(tx: String?, tv: TextView) {
+        tv.text = tx
     }
 
     override fun setMathview(tx: String?, mv: MathView) {

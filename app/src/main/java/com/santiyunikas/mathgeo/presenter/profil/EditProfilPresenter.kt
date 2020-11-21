@@ -29,7 +29,7 @@ class EditProfilPresenter(context: EditProfileActivity) {
                 }
 
                 override fun onFailure(call: Call<Member>, t: Throwable) {
-                    Log.d("editMemberFail", t.localizedMessage)
+                    Log.d("editMemberFail", t.localizedMessage!!)
                     view.onError("editError")
                 }
 

@@ -25,7 +25,7 @@ class OtpPresenter(contextOtp: OtpFragment){
                 ) {
                     if (response.body()!![0].email.isNotEmpty()){
                         if(response.body()!![0].email == email){
-                            Log.d("memberSendOtp", response.body()?.toString())
+                            Log.d("memberSendOtp", response.body().toString())
                             if (response.body()!![0].active == "0"){
                                 view.onError("notActive")
                             }else{

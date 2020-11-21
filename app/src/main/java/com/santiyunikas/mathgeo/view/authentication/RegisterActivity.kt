@@ -55,7 +55,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
                 val confirmPassword: String = edt_confirmpass.text.toString().trim()
 
                 if (inputValid(fullname, numberPhone, email, password, confirmPassword) && InternetConnection.isConnected(this)){
-                        presenter.register(fullname, numberPhone, email, password, 0)
+                        presenter.register(fullname, numberPhone, email, password)
                 }
             }
             tv_login.id->{
@@ -112,16 +112,16 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
     }
 
     override fun onSuccess(msg: String?) {
-        Log.d("suksesRegister", msg)
+        Log.d("suksesRegister", msg!!)
         Toast.makeText(this, "Registrasi Berhasil, Cek Email Kamu untuk Verifikasi!", Toast.LENGTH_LONG).show()
         updateViewData()
-        val mIntent: Intent = Intent(this, LoginActivity::class.java)
+        val mIntent= Intent(this, LoginActivity::class.java)
         startActivity(mIntent)
         finish()
     }
 
     override fun onError(msg: String?) {
-        Log.d("erorRegister", msg)
+        Log.d("erorRegister", msg!!)
         Toast.makeText(this, "Registrasi Gagal, Email Sudah Terdaftar", Toast.LENGTH_LONG).show()
     }
 

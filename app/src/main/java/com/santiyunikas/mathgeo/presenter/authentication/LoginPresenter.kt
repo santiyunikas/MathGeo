@@ -31,7 +31,7 @@ class LoginPresenter(context: LoginActivity){
                     response: Response<List<Member>>
                 ) {
                     if(response.body()?.isNotEmpty()!!){
-                        Log.d("memberLogin", response.body()?.toString())
+                        Log.d("memberLogin", response.body().toString())
                         if (response.body()?.get(0)?.email.toString() == email && response.body()?.get(0)?.password.toString() == password){
                             if (response.body()?.get(0)?.active.toString() == "0"){
                                 view.onError("notActive")
@@ -58,12 +58,12 @@ class LoginPresenter(context: LoginActivity){
 
     fun showHidePass(editText: EditText, imageView: ImageView){
         if(editText.transformationMethod == PasswordTransformationMethod.getInstance()){
-            imageView.setImageResource(R.drawable.ic_show_pass);
+            imageView.setImageResource(R.drawable.ic_show_pass)
             //Show Password
             editText.transformationMethod = HideReturnsTransformationMethod.getInstance()
         }
         else{
-            imageView.setImageResource(R.drawable.ic_hide_pass);
+            imageView.setImageResource(R.drawable.ic_hide_pass)
             //Hide Password
             editText.transformationMethod = PasswordTransformationMethod.getInstance()
         }

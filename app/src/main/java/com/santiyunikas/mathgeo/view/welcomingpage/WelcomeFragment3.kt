@@ -18,9 +18,8 @@ class WelcomeFragment3 : Fragment(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView:View = inflater.inflate(R.layout.fragment_welcome3, container, false)
         // Inflate the layout for this fragment
-        return rootView
+        return inflater.inflate(R.layout.fragment_welcome3, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
