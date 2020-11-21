@@ -77,17 +77,6 @@
         <item>Latihan 8</item>
     </string-array>
 
-    <string-array name="array_desc_latihan">
-        <item>Pra Syarat</item>
-        <item>Dari Materi</item>
-        <item>Dari Materi</item>
-        <item>Dari Materi</item>
-        <item>Dari Materi</item>
-        <item>Dari Materi</item>
-        <item>Dari Materi</item>
-        <item>Dari Materi</item>
-    </string-array>
-
     <string-array name="array_title_quiz">
         <item>Quiz 1</item>
         <item>Quiz 2</item>
@@ -164,7 +153,6 @@
     <string name="panjang">Panjang\t</string>
     <string name="pb">PB</string>
     <string name="ap">AP</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cf">CF</string>
     <string name="symbol_samadengan">=</string>
 

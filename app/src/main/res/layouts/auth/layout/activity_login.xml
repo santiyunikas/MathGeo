@@ -11,7 +11,6 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="40dp"
@@ -39,7 +38,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/cont_pass"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
@@ -86,7 +84,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/noacc_string"
-            android:id="@+id/tv_hvacc"
             android:fontFamily="@font/roboto_regular"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"

@@ -161,7 +161,6 @@
                     android:layout_marginTop="20dp" />
 
                 <TextView
-                    android:id="@+id/tx_pembahasan41"
                     style="@style/TextViewBlack"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
