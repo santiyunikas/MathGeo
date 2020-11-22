@@ -16,7 +16,8 @@
             android:src="@drawable/peta_konsep_materi"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            tools:ignore="ContentDescription" />
         <TextView
             style="@style/NormalTextBold"
             android:layout_marginTop="10dp"

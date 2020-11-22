@@ -21,21 +21,26 @@
             android:id="@+id/jawaban_benar">
 
             <TextView
+                tools:ignore="HardcodedText"
                 android:text="BENAR"
                 style="@style/NormalTextBold"
                 android:textStyle="italic"
                 android:layout_marginTop="20dp"
                 android:textSize="25sp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"/>
+                android:layout_marginRight="20dp"
+                 />
             <ImageView
+                tools:ignore="ContentDescription"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:id="@+id/img_pembahasan"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                 />
 
             <TextView
+                tools:ignore="HardcodedText"
                 android:id="@+id/tx_pembahasan"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -52,6 +57,7 @@
             android:padding="20dp"
             >
             <TextView
+                tools:ignore="HardcodedText"
                 android:text="Salah"
                 style="@style/NormalTextBold"
                 android:textStyle="italic"
@@ -59,6 +65,7 @@
                 android:textSize="25sp"/>
 
             <TextView
+                tools:ignore="HardcodedText"
                 android:text="Cari jawaban yang benar dan dan lanjut ke soal berikutnya. Semangat!"
                 style="@style/NormalTextBold"
                 android:layout_marginTop="20dp"
@@ -76,7 +83,8 @@
             android:padding="15dp"
             android:layout_marginTop="10dp"
             android:id="@+id/btn_next"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
 </ScrollView>

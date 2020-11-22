@@ -20,18 +20,16 @@
             android:gravity="center"
             android:orientation="vertical"
             android:padding="20dp">
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/ic_baseline_account_circle_24"
-                />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:id="@+id/btn_edit_profile">
+                android:id="@+id/btn_edit_profile"
+                tools:ignore="UseCompoundDrawables">
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/nama_lengkap"
@@ -42,6 +40,7 @@
                     android:textStyle="bold"
                     />
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:src="@drawable/ic_edit"
@@ -54,9 +53,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardElevation="10dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:background="@color/white"
             app:cardCornerRadius="20dp"
             >
@@ -66,6 +65,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/info_pribadi"
@@ -75,6 +75,7 @@
                     android:layout_marginBottom="10dp"
                     />
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/nama_lengkap"
@@ -82,6 +83,7 @@
                     android:textSize="15sp"
                     />
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/nama_lengkap"
@@ -91,6 +93,7 @@
                     android:id="@+id/tx_nama_lengkap"
                     />
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/nomor_telepon"
@@ -98,6 +101,7 @@
                     android:textSize="15sp"
                     />
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/nomor_telepon"
@@ -106,6 +110,7 @@
                     android:id="@+id/tx_nomor_telepon"
                     />
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/email"
@@ -113,6 +118,7 @@
                     android:textSize="15sp"
                     />
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/email"
@@ -121,6 +127,7 @@
                     android:id="@+id/tx_email"
                     />
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/password"
@@ -128,6 +135,7 @@
                     android:textSize="15sp"
                     />
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/isi_password"
@@ -135,6 +143,7 @@
                     android:textSize="17sp"
                     />
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/TextClickable"
@@ -149,9 +158,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:background="@color/white"
             app:cardCornerRadius="20dp"
             app:cardElevation="10dp">
@@ -161,6 +170,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
+                    tools:ignore="HardcodedText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/info_aplikasi"
@@ -174,28 +184,32 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/btn_kode_referal">
                     <ImageView
+                        tools:ignore="ContentDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_kode_referal"
                         android:id="@+id/ic_kode_referal"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         />
                     <TextView
+                        tools:ignore="HardcodedText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Koin Quiz Gratis"
                         style="@style/TextViewBlack"
-                        android:layout_toRightOf="@id/ic_kode_referal"
+                        android:layout_toEndOf="@id/ic_kode_referal"
                         android:id="@+id/tx_kode_referal"
                         android:textSize="18sp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"/>
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                         />
 
                     <ImageView
+                        tools:ignore="ContentDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/tx_kode_referal"
+                        android:layout_toEndOf="@+id/tx_kode_referal"
                         android:src="@drawable/ic_kanan"
                         />
                 </RelativeLayout>
@@ -204,28 +218,31 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/btn_kompetensi_dan_tujuan">
                     <ImageView
+                        tools:ignore="ContentDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_kompetensi_dan_tujuan"
                         android:id="@+id/ic_kompetensi_dan_tujuan"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         />
                     <TextView
+                        tools:ignore="HardcodedText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Kompetensi dan Tujuan"
                         style="@style/TextViewBlack"
-                        android:layout_toRightOf="@id/ic_kompetensi_dan_tujuan"
+                        android:layout_toEndOf="@id/ic_kompetensi_dan_tujuan"
                         android:id="@+id/tx_kompetensi_dan_tujuan"
                         android:textSize="18sp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"/>
 
                     <ImageView
+                        tools:ignore="ContentDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/tx_kompetensi_dan_tujuan"
+                        android:layout_toEndOf="@+id/tx_kompetensi_dan_tujuan"
                         android:src="@drawable/ic_kanan"
                         />
                 </RelativeLayout>
@@ -234,28 +251,31 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/btn_petunjuk">
                     <ImageView
+                        tools:ignore="ContentDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_petunjuk"
                         android:id="@+id/ic_petunjuk"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         />
                     <TextView
+                        tools:ignore="HardcodedText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Petunjuk"
                         style="@style/TextViewBlack"
-                        android:layout_toRightOf="@id/ic_petunjuk"
+                        android:layout_toEndOf="@id/ic_petunjuk"
                         android:id="@+id/tx_petunjuk"
                         android:textSize="18sp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"/>
 
                     <ImageView
+                        tools:ignore="ContentDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/tx_petunjuk"
+                        android:layout_toEndOf="@+id/tx_petunjuk"
                         android:src="@drawable/ic_kanan"
                         />
                 </RelativeLayout>
@@ -265,21 +285,23 @@
                     android:id="@+id/btn_logout"
                     android:layout_marginTop="20dp">
                     <ImageView
+                        tools:ignore="ContentDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_close"
                         android:id="@+id/ic_logout"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         />
 
                     <TextView
+                        tools:ignore="HardcodedText"
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
-                        android:layout_toRightOf="@id/ic_logout"
+                        android:layout_toEndOf="@id/ic_logout"
                         android:text="Logout"
                         android:textSize="18sp" />
 

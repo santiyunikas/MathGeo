@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+            tools:ignore="HardcodedText"
             style="@style/NormalTextBold"
             android:text="Pilih Quiz:"
             android:layout_marginRight="10dp"
@@ -17,15 +18,16 @@
             android:layout_marginLeft="10dp" />
 
         <RelativeLayout
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_width="104dp"
             android:layout_height="38dp"
             android:background="@drawable/view_koin"
             android:layout_margin="10dp"
             android:gravity="center|right"
-            >
+            tools:ignore="RtlHardcoded">
 
             <TextView
+                tools:ignore="HardcodedText"
                 android:id="@+id/tx_koin"
                 style="@style/TextViewBlack"
                 android:layout_width="60dp"

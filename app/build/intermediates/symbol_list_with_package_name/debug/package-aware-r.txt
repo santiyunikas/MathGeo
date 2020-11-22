@@ -60,7 +60,6 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
-array array_desc_latihan
 array array_desc_materi
 array array_title_latihan
 array array_title_materi
@@ -1658,6 +1657,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bottom_border
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1706,7 +1706,6 @@ drawable ic_phone
 drawable ic_profil_logo
 drawable ic_quiz_logo
 drawable ic_show_pass
-drawable kubus_1
 drawable logo_mathgeo
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1840,8 +1839,6 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id blocking
-id body3
-id body31
 id bottom
 id bounce
 id btn_a
@@ -1947,7 +1944,6 @@ id btn_submit_soalquiz
 id btn_titik_sudut
 id btn_ulangi_latihan
 id btn_verifikasi
-id bullet
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -1969,13 +1965,10 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id collapseActionView
-id con_1
 id confirm_button
 id cont_bidang_diagonal
-id cont_confirmpass
 id cont_diagonal_ruang
 id cont_diagonal_sisi
-id cont_pass
 id cont_pembahasan3
 id cont_pembahasan4
 id cont_pembahasan5
@@ -2121,7 +2114,6 @@ id judul_materi
 id judul_quiz
 id jumpToEnd
 id jumpToStart
-id ket_rusuk
 id kode_referal
 id kode_referal_title
 id kode_teman
@@ -2144,7 +2136,6 @@ id media_actions
 id message
 id middle
 id mini
-id mobile_navigation
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -2365,14 +2356,10 @@ id transition_transform
 id triangle
 id tujuan
 id tv_forgot_pass
-id tv_hvacc
 id tv_item_desc
 id tv_item_title
 id tv_login
 id tv_signup
-id tv_welcome
-id tx1
-id tx3
 id tx_back
 id tx_email
 id tx_gagal
@@ -2381,13 +2368,11 @@ id tx_kembali
 id tx_kode_referal
 id tx_koin
 id tx_kompetensi_dan_tujuan
-id tx_logout
 id tx_lulus
 id tx_nama_lengkap
 id tx_nama_lengkap_edit
 id tx_nomor_telepon
 id tx_pembahasan
-id tx_pembahasan41
 id tx_pembahasan51
 id tx_pembahasan52
 id tx_pembahasan53
@@ -2542,6 +2527,8 @@ layout fragment_welcome3
 layout image_frame
 layout item_daftar_materi_latihan
 layout item_daftar_quiz
+layout item_list_latihan_materi_beranda
+layout item_list_quiz_beranda
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2671,6 +2658,7 @@ string app_name
 string appbar_scrolling_view_behavior
 string b
 string bagian_bagian_kubus
+string bagikan
 string bc
 string bd
 string be
@@ -2683,6 +2671,10 @@ string bidang_sisi
 string body3
 string body4
 string bottom_sheet_behavior
+string btn_cek_jawaban
+string btn_selanjutnya
+string btn_simpan_jawaban
+string btn_soal_berikutnya
 string c
 string cf
 string cg
@@ -2707,6 +2699,10 @@ string diagonal_ruang
 string diagonal_sisi_diagonal_bidang
 string e
 string ec
+string edt_edit_profil
+string edt_email
+string edt_nama_lengkap
+string edt_nomor_telepon
 string ef
 string efcd
 string efgh
@@ -2733,7 +2729,6 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string h
-string hello_blank_fragment
 string hg
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
@@ -2746,12 +2741,17 @@ string kembali
 string ket_bidang_diagonal
 string ket_diagonal_ruang
 string ket_diagonal_sisi
+string ket_pembahasan_3
 string ket_rusuk
 string ket_sisi
 string kirim
+string kode
+string kode_kamu
+string koin
 string kompetensi_pembelajaran
 string kubus_diatas_memiliki_8_titik_sudut_yaitu
 string login_string
+string lupa_password
 string masukkan_email
 string masukkan_kode_otp
 string material_slider_range_end
@@ -2807,7 +2807,9 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string pb
 string pembahasan
+string pembahasan_1
 string perhatikan_gambar
+string periksa
 string petunjuk_penggunaan_media_pembelajaran
 string pilih_materi
 string preference_copied
@@ -2820,6 +2822,7 @@ string status_bar_notification_info_overflow
 string sudah_punya_akun
 string summary_collapsed_preference_list
 string symbol_samadengan
+string text
 string tips1
 string tips2
 string tips3
@@ -3086,7 +3089,6 @@ style MyActionBar
 style NormalTextBold
 style OtpWidget
 style OtpWidget_OtpView
-style PembahasanDialog
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents
@@ -3170,7 +3172,6 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
-style TabWidgetTheme
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
 style Test_Widget_MaterialComponents_MaterialCalendar

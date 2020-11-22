@@ -1,4 +1,4 @@
-#Sat Nov 21 15:08:01 ICT 2020
+#Sun Nov 22 09:36:12 ICT 2020
 base.0=C\:\\Users\\SantiYS\\AndroidStudioProjects\\MathGeo\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

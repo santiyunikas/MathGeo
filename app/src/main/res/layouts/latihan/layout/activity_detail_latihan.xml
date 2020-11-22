@@ -64,7 +64,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="right"
-                android:layout_margin="20dp">
+                android:layout_margin="20dp"
+                tools:ignore="RtlHardcoded">
                 <Button
                     android:id="@+id/btn_cek_jawaban"
                     android:layout_width="wrap_content"
@@ -75,8 +76,9 @@
                     android:elevation="5dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Cek Jawaban"
-                    android:textColor="@color/white" />
+                    android:text="@string/btn_cek_jawaban"
+                    android:textColor="@color/white"
+                    tools:ignore="ButtonStyle" />
                 <Button
                     android:id="@+id/btn_next_soallatihan"
                     android:layout_width="wrap_content"
@@ -88,8 +90,9 @@
                     android:elevation="5dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Soal Berikutnya"
-                    android:textColor="@color/white" />
+                    android:text="@string/btn_soal_berikutnya"
+                    android:textColor="@color/white"
+                    tools:ignore="ButtonStyle" />
 
             </LinearLayout>
 
@@ -101,15 +104,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginLeft="20dp"
-
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/button_rounded"
                 android:elevation="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:text="Simpan Jawaban"
-                android:textColor="@color/white" />
+                android:text="@string/btn_simpan_jawaban"
+                android:textColor="@color/white"
+                tools:ignore="RtlHardcoded" />
 
         </LinearLayout>
     </LinearLayout>

@@ -9,7 +9,7 @@
     >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/gradient">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -37,7 +37,7 @@
                     android:textSize="30sp"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    />
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -52,13 +52,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/masukkan_email"
-                    android:drawableLeft="@drawable/ic_email"
+                    android:drawableStart="@drawable/ic_email"
                     android:paddingBottom="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="20dp"
                     android:inputType="textEmailAddress"
-                    android:id="@+id/edt_email_reset_pass"/>
+                    android:id="@+id/edt_email_reset_pass"
+                    tools:ignore="Autofill" />
 
                 <TextView
                     android:id="@+id/timer"
@@ -67,7 +68,8 @@
                     android:layout_margin="6dp"
                     android:gravity="center"
                     android:text="Waktu"
-                    style="@style/TextViewBlack"/>
+                    style="@style/TextViewBlack"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -125,7 +127,7 @@
                             android:layout_margin="20dp"
                             android:background="#adff00"
                             android:id="@+id/btn_verifikasi"
-                            />
+                            tools:ignore="HardcodedText" />
                     </LinearLayout>
 
 

@@ -10,22 +10,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="16dp">
 
-        <ImageView
-            android:layout_gravity="center"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@color/materi_list_green"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tv_item_title"
                 android:layout_width="match_parent"
@@ -43,6 +31,6 @@
                 android:maxLines="2"
                 android:textStyle="italic"
                 tools:text="@string/title_materi" />
-        </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

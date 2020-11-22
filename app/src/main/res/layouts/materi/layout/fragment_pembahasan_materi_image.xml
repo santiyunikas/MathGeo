@@ -11,6 +11,6 @@
         android:layout_height="300dp"
         android:id="@+id/img_kubus_pembahasan"
         android:layout_gravity="center"
-        />
+        tools:ignore="ContentDescription" />
 
 </LinearLayout>

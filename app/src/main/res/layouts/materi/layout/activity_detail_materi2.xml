@@ -16,7 +16,7 @@
             style="@style/NormalTextBold"
             android:text="@string/bagian_bagian_kubus"
             android:layout_gravity="left"
-            />
+            tools:ignore="RtlHardcoded" />
         <FrameLayout
             android:layout_width="350dp"
             android:layout_height="350dp"
@@ -388,7 +388,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="TooManyViews">
                 <TextView
                     style="@style/NormalTextBold"
                     android:text="@string/diagonal_sisi_diagonal_bidang"
@@ -419,7 +420,7 @@
                         />
                     <Button
                         style="@style/BtnBeforeClick2"
-                        android:text="CF"
+                        android:text="@string/cf"
                         android:id="@+id/btn_cf" />
                 </LinearLayout>
 

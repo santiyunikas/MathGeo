@@ -157,6 +157,24 @@
     <string name="symbol_samadengan">=</string>
 
     <string name="tips1">Kamu harus mengerjakan latihan terlebih dahulu untuk dapat mengerjakan quiz</string>
-    <string name="tips2">Ajaklah teman saling bertukar kode referal, kamu dan temanmu akan mendapat koin gratis untuk mengerjakan quiz</string>
+    <string name="tips2">Ajaklah teman saling bertukar kode referral, kamu dan temanmu akan mendapat koin gratis untuk mengerjakan quiz</string>
     <string name="tips3">Selesaikan membaca materi, mengerjakan latihan dan mengerjakan quiz</string>
+
+    <string name="btn_cek_jawaban">Cek Jawaban</string>
+    <string name="btn_soal_berikutnya">Soal Berikutnya</string>
+    <string name="btn_simpan_jawaban">Simpan Jawaban</string>
+    <string name="btn_selanjutnya">Selanjutnya</string>
+    <string name="edt_edit_profil">EDIT PROFIL</string>
+    <string name="edt_nama_lengkap">Nama Lengkap</string>
+    <string name="edt_nomor_telepon">Nomor Telepon</string>
+    <string name="edt_email">Email</string>
+    <string name="koin">koin</string>
+    <string name="kode_kamu">Kode Kamu:</string>
+    <string name="periksa">Periksa</string>
+    <string name="bagikan">bagikan</string>
+    <string name="kode">Kode</string>
+    <string name="text">text</string>
+    <string name="lupa_password">Lupa Password?</string>
+    <string name="ket_pembahasan_3">ket pembahasan 3</string>
+    <string name="pembahasan_1">dengan menggunakan rumus pythagoras, kita akan memperoleh nilai AP seperti terlihat pada cara berikut</string>
 </resources>

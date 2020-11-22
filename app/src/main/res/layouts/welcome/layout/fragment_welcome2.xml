@@ -24,12 +24,13 @@
             android:layout_marginLeft="20dp"
             android:textSize="30sp"
             android:textAlignment="center"
-            />
+            tools:ignore="NestedWeights,RtlHardcoded" />
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/teacher_fragment2"/>
+            android:src="@drawable/teacher_fragment2"
+            tools:ignore="ContentDescription" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,7 +50,7 @@
             android:layout_margin="20dp"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
-            />
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
 </LinearLayout>

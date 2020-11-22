@@ -14,9 +14,11 @@
         android:id="@+id/review_quiz_emoji"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_margin="10dp" />
+        android:layout_margin="10dp"
+        tools:ignore="ContentDescription"/>
 
     <TextView
+        tools:ignore="HardcodedText"
         style="@style/NormalTextBold"
         android:text="text"
         android:layout_margin="10dp"
@@ -24,6 +26,7 @@
         android:id="@+id/review_quiz_text"/>
 
     <TextView
+        tools:ignore="HardcodedText"
         style="@style/TextViewBlack"
         android:textStyle="italic"
         android:text="Score"
@@ -35,9 +38,11 @@
         android:id="@+id/review_quiz_bintang"
         android:layout_width="275dp"
         android:layout_height="55dp"
-        android:layout_margin="10dp" />
+        android:layout_margin="10dp"
+        tools:ignore="ContentDescription" />
 
     <Button
+        tools:ignore="HardcodedText"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

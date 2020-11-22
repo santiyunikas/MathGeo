@@ -14,17 +14,8 @@
         android:padding="16dp"
         >
 
-        <ImageView
-            android:id="@+id/bullet"
-            android:layout_alignParentLeft="true"
-            android:layout_gravity="center"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/materi_list_green"
-
-            />
         <TextView
-            android:layout_toRightOf="@+id/bullet"
+
             android:id="@+id/tv_item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,13 +24,14 @@
             tools:text="@string/title_materi"
             android:textColor="@color/black"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginStart="10dp"
+            tools:ignore="RelativeOverlap" />
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/heart"
-            android:layout_alignParentRight="true"
-            />
+            android:layout_alignParentEnd="true"
+            tools:ignore="ContentDescription" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

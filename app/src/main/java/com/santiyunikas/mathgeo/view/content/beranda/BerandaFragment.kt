@@ -16,9 +16,6 @@ import com.santiyunikas.mathgeo.presenter.latihan.DaftarLatihanPresenter
 import com.santiyunikas.mathgeo.presenter.materi.DaftarMateriPresenter
 import com.santiyunikas.mathgeo.presenter.quiz.DaftarQuizPresenter
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
-import com.santiyunikas.mathgeo.view.content.latihan.DaftarLatihanAdapter
-import com.santiyunikas.mathgeo.view.content.materi.DaftarMateriAdapter
-import com.santiyunikas.mathgeo.view.content.quiz.DaftarQuizAdapter
 import kotlinx.android.synthetic.main.fragment_beranda.*
 import kotlinx.android.synthetic.main.fragment_beranda.rv_list_latihan
 import kotlinx.android.synthetic.main.fragment_beranda.rv_list_materi

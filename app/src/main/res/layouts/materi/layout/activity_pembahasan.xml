@@ -16,6 +16,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
+            tools:ignore="HardcodedText"
             android:text="@string/pembahasan" />
 
         <androidx.cardview.widget.CardView
@@ -34,15 +35,18 @@
                 <TextView
                     style="@style/TextViewBlack"
                     android:layout_margin="20dp"
+                    tools:ignore="HardcodedText"
                     android:text="@string/perhatikan_gambar"
                     android:textAlignment="textStart" />
 
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan3"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="20dp" />
+                    android:layout_marginBottom="20dp"
+                    android:contentDescription="@string/ket_pembahasan_3" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -55,12 +59,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="@string/panjang" />
 
                     <Button
                         android:id="@+id/btn_pb"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="@string/pb" />
 
                     <com.jstarczewski.pc.mathview.src.MathView
@@ -73,7 +79,8 @@
                     style="@style/TextViewBlack"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:text="dengan menggunakan rumus pythagoras, kita akan memperoleh nilai AP seperti terlihat pada cara berikut"
+                    android:text="@string/pembahasan_1"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <LinearLayout
@@ -87,6 +94,7 @@
                         android:id="@+id/btn_ap"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="@string/ap" />
 
                     <com.jstarczewski.pc.mathview.src.MathView
@@ -107,6 +115,7 @@
                         android:id="@+id/btn_ap2"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="@string/ap" />
 
                     <com.jstarczewski.pc.mathview.src.MathView
@@ -128,6 +137,7 @@
                         android:id="@+id/btn_ap3"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="@string/ap" />
 
                     <com.jstarczewski.pc.mathview.src.MathView
@@ -154,18 +164,21 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan41"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp" />
+                    android:layout_marginTop="20dp"
+                    />
 
                 <TextView
                     style="@style/TextViewBlack"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:text="Dengan mudah kita dapat mengetahui bahwa CH, CF dan FH merupakan diagonal sisi. Sehingga dapat disimpulkan bahwa:"
-                    android:textAlignment="textStart" />
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -178,33 +191,39 @@
                         android:id="@+id/btn_ch"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="@string/ch" />
 
                     <TextView
                         style="@style/TextViewBlack"
+                        tools:ignore="HardcodedText"
                         android:text="@string/symbol_samadengan" />
 
                     <Button
                         android:id="@+id/btn_cf"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="@string/cf" />
 
                     <TextView
                         style="@style/TextViewBlack"
+                        tools:ignore="HardcodedText"
                         android:text="@string/symbol_samadengan" />
 
                     <Button
                         android:id="@+id/btn_fh"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="@string/fh" />
 
                     <TextView
                         style="@style/TextViewBlack"
                         android:text="=diagonal sisi=6√2"
                         android:textAlignment="textStart"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText"/>
                 </LinearLayout>
 
                 <TextView
@@ -212,19 +231,23 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:text="Selanjutnya, perhatikan segitiga yang terdapat pada bangun ruang diatas, jika segitiga CFH digambar ulang akan terlihat seperti gambar berikut"
-                    android:textAlignment="textStart" />
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText"/>
 
                 <ImageView
                     android:id="@+id/img_pembahasan42"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     style="@style/TextViewBlack"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
+
                     android:text="Jarak C ke FH = CC' adalah"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <com.jstarczewski.pc.mathview.src.MathView
@@ -239,6 +262,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="20dp"
+                    tools:ignore="HardcodedText"
                     android:text="Jadi, jarak titik C ke garis FH pada kubus ABCD.EFGH dengan panjang rusuk 6cm adalah 3√6"
                     android:textAlignment="textStart"
                     android:textStyle="bold|italic" />
@@ -263,9 +287,11 @@
                     style="@style/TextViewBlack"
                     android:layout_margin="20dp"
                     android:text="Berdasarkan keterangan pada soal, dapat diperoleh gambar dibawah"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan51"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -278,6 +304,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <com.jstarczewski.pc.mathview.src.MathView
@@ -291,6 +318,7 @@
                     style="@style/TextViewBlack"
                     android:layout_margin="20dp"
                     android:text="Untuk langkah selanjutnya, perhatikan segitiga"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <LinearLayout
@@ -304,16 +332,19 @@
                         android:id="@+id/btn_hdh_aksen"
                         style="@style/BtnBeforeClick3"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="HDH'" />
 
                     <TextView
                         style="@style/TextViewBlack"
                         android:layout_margin="20dp"
                         android:text=" (siku-siku di D)!"
+                        tools:ignore="HardcodedText"
                         android:textAlignment="textStart" />
                 </LinearLayout>
 
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan52"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -324,6 +355,7 @@
                     android:id="@+id/tx_pembahasan52"
                     style="@style/TextViewBlack"
                     android:layout_margin="20dp"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <com.jstarczewski.pc.mathview.src.MathView
@@ -340,12 +372,14 @@
                     android:layout_marginBottom="20dp"
                     android:text="Jadi, jarak D ke bidang ACH adalah 2√3 cm"
                     android:textAlignment="textStart"
+                    tools:ignore="HardcodedText"
                     android:textStyle="bold|italic" />
 
                 <TextView
                     android:id="@+id/tx_pembahasan53"
                     style="@style/TextViewBlack"
                     android:layout_margin="20dp"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
             </LinearLayout>
@@ -370,9 +404,11 @@
                     style="@style/TextViewBlack"
                     android:layout_margin="20dp"
                     android:text="Perhatikan garis PQ dan garis EG"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan61"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -385,6 +421,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <LinearLayout
@@ -398,12 +435,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Mencari panjang " />
 
                     <Button
                         android:id="@+id/btn_pq"
                         style="@style/BtnBeforeClick"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="PQ" />
                 </LinearLayout>
 
@@ -412,6 +451,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:text="Berdasarkan teorema phytagoras, maka dapat diperoleh panjang PQ dengan cara berikut"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <com.jstarczewski.pc.mathview.src.MathView
@@ -432,12 +472,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Mencari panjang " />
 
                     <Button
                         android:id="@+id/btn_qn"
                         style="@style/BtnBeforeClick"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="QN" />
                 </LinearLayout>
 
@@ -459,12 +501,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Mencari panjang " />
 
                     <Button
                         android:id="@+id/btn_bn"
                         style="@style/BtnBeforeClick"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="BN" />
                 </LinearLayout>
 
@@ -472,6 +516,7 @@
                     style="@style/TextViewBlack"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
+                    tools:ignore="HardcodedText"
                     android:text="Berdasarkan teorema phytagoras (segitiga siku-siku di N)"
                     android:textAlignment="textStart" />
 
@@ -493,12 +538,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Mencari panjang " />
 
                     <Button
                         android:id="@+id/btn_fm"
                         style="@style/BtnBeforeClick"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="FM" />
                 </LinearLayout>
 
@@ -507,10 +554,12 @@
                     style="@style/TextViewBlack"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
+                    tools:ignore="HardcodedText"
                     android:text="Dengan mudah kita dapat mengetahui bahwa CH, CF dan FH merupakan diagonal sisi. Sehingga dapat disimpulkan bahwa:"
                     android:textAlignment="textStart" />
 
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan62"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -528,12 +577,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Mencari panjang " />
 
                     <Button
                         android:id="@+id/btn_mf_aksen"
                         style="@style/BtnBeforeClick"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="MF'" />
                 </LinearLayout>
 
@@ -542,6 +593,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="20dp"
+                    tools:ignore="HardcodedText,TooManyViews"
                     android:text="MF = FM - BN"
                     android:textAlignment="textStart" />
 
@@ -563,12 +615,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Mencari panjang " />
 
                     <Button
                         android:id="@+id/btn_mn"
                         style="@style/BtnBeforeClick"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="MN" />
                 </LinearLayout>
 
@@ -584,6 +638,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="20dp"
+                    tools:ignore="HardcodedText"
                     android:text="Jadi, panjang garis MN adalah 15√2/2"
                     android:textAlignment="textStart"
                     android:textStyle="bold|italic" />
@@ -609,9 +664,11 @@
                     style="@style/TextViewBlack"
                     android:layout_margin="20dp"
                     android:text="@string/perhatikan_gambar"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan71"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -623,6 +680,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan71"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -635,12 +693,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Perhatikan segitiga" />
 
                     <Button
                         android:id="@+id/btn_klb"
                         style="@style/BtnBeforeClick"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="KLB" />
 
                 </LinearLayout>
@@ -649,6 +709,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan72"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <com.jstarczewski.pc.mathview.src.MathView
                     android:id="@+id/mv71"
@@ -661,6 +722,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan73"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -673,12 +735,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Mencari panjang " />
 
                     <Button
                         android:id="@+id/btn_hp"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="HP" />
 
                 </LinearLayout>
@@ -687,6 +751,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan74"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <com.jstarczewski.pc.mathview.src.MathView
                     android:id="@+id/mv72"
@@ -705,12 +770,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Mencari panjang " />
 
                     <Button
                         android:id="@+id/btn_dq"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="DQ" />
 
                 </LinearLayout>
@@ -725,8 +792,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan75"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan72"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -743,12 +812,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Mencari panjang " />
 
                     <Button
                         android:id="@+id/btn_pf_aksen"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="PF'" />
 
                 </LinearLayout>
@@ -757,6 +828,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan76"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <com.jstarczewski.pc.mathview.src.MathView
                     android:id="@+id/mv74"
@@ -769,6 +841,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan77"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <com.jstarczewski.pc.mathview.src.MathView
                     android:id="@+id/mv75"
@@ -777,6 +850,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp" />
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan73"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -793,12 +867,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Mencari panjang " />
 
                     <Button
                         android:id="@+id/btn_dp"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="DP" />
 
                 </LinearLayout>
@@ -813,8 +889,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan78"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan74"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -825,6 +903,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan79"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <com.jstarczewski.pc.mathview.src.MathView
                     android:id="@+id/mv77"
@@ -837,6 +916,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan80"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <com.jstarczewski.pc.mathview.src.MathView
                     android:id="@+id/mv78"
@@ -851,6 +931,7 @@
                     android:layout_marginBottom="20dp"
                     android:textStyle="bold"
                     android:text="Jadi, jarak KL ke bidang DMN = panjang QR = 6 cm"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
             </LinearLayout>
 
@@ -872,10 +953,13 @@
                 <TextView
                     style="@style/TextViewBlack"
                     android:layout_margin="20dp"
+
                     android:text="@string/perhatikan_gambar"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan81"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -887,6 +971,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan81"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <LinearLayout
@@ -900,12 +985,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Menghitung panjang" />
 
                     <Button
                         android:id="@+id/btn_pq_pembahasan8"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="PQ" />
 
                 </LinearLayout>
@@ -915,6 +1002,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan82"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <com.jstarczewski.pc.mathview.src.MathView
@@ -929,6 +1017,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan83"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <LinearLayout
@@ -942,12 +1031,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Menghitung panjang" />
 
                     <Button
                         android:id="@+id/btn_bm_pembahasan8"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="BM" />
 
                 </LinearLayout>
@@ -957,6 +1048,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan84"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <com.jstarczewski.pc.mathview.src.MathView
@@ -977,12 +1069,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Menghitung panjang" />
 
                     <Button
                         android:id="@+id/btn_fm_pembahasan8"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="FM" />
 
                 </LinearLayout>
@@ -992,6 +1086,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan85"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <com.jstarczewski.pc.mathview.src.MathView
@@ -1012,12 +1107,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Menghitung panjang" />
 
                     <Button
                         android:id="@+id/btn_bd_pembahasan8"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="BD" />
 
                 </LinearLayout>
@@ -1027,6 +1124,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan86"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1039,12 +1137,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Menghitung panjang" />
 
                     <Button
                         android:id="@+id/btn_dm_pembahasan8"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="DM" />
 
                 </LinearLayout>
@@ -1054,6 +1154,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan87"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart" />
 
                 <LinearLayout
@@ -1067,12 +1168,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Perhatikan jajar genjang " />
 
                     <Button
                         android:id="@+id/btn_dmfk_pembahasan8"
                         style="@style/BtnBeforeClick"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="DMFK" />
                 </LinearLayout>
                 <TextView
@@ -1081,9 +1184,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
+                    tools:ignore="HardcodedText"
                     android:text="yang berasal dari kubus sebelumnya!" />
 
                 <ImageView
+                    tools:ignore="ContentDescription"
                     android:id="@+id/img_pembahasan82"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -1101,12 +1206,14 @@
                         style="@style/TextViewBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="Menghitung panjang" />
 
                     <Button
                         android:id="@+id/btn_ml_pembahasan8"
                         style="@style/BtnBeforeClick4"
                         android:background="@drawable/button_rounded_beforeclick"
+                        tools:ignore="HardcodedText"
                         android:text="ML" />
 
                 </LinearLayout>
@@ -1116,6 +1223,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan88"
+                    tools:ignore="HardcodedText"
                     android:textAlignment="textStart"
                     android:layout_marginBottom="20dp"/>
                 <TextView
@@ -1123,7 +1231,9 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/tx_pembahasan89"
+
                     android:textAlignment="textStart"
+                    tools:ignore="HardcodedText"
                     android:textStyle="bold|italic"
                     android:layout_marginBottom="20dp"/>
 

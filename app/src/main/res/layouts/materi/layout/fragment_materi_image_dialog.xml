@@ -11,6 +11,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/img_kubus"
         android:layout_gravity="center"
-         />
+        tools:ignore="ContentDescription" />
 
 </LinearLayout>

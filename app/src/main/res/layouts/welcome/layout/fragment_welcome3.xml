@@ -21,15 +21,16 @@
             android:text="@string/fragment3"
             android:textColor="@color/white"
             android:layout_marginTop="150dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:textSize="30sp"
             android:textAlignment="center"
-            />
+            tools:ignore="NestedWeights" />
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/teacher_fragment3"/>
+            android:src="@drawable/teacher_fragment3"
+            tools:ignore="ContentDescription" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +41,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/group3"/>
+            android:src="@drawable/group3"
+            tools:ignore="ContentDescription" />
         <Button
             android:id="@+id/btn_next_to_login"
             android:layout_width="wrap_content"
@@ -49,7 +51,7 @@
             android:layout_margin="20dp"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
-            />
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
 </LinearLayout>

@@ -8,12 +8,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/gradient"
         android:paddingTop="20dp"
         android:paddingBottom="20dp">
         <TextView
+            tools:ignore="HardcodedText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tx_greetings"
@@ -21,7 +22,8 @@
             style="@style/TextViewBlack"
             android:textColor="@color/white"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+             />
         <ImageView
             android:layout_gravity="center"
             android:layout_width="360dp"
@@ -29,8 +31,10 @@
             android:src="@drawable/header_beranda"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            tools:ignore="ContentDescription" />
         <TextView
+            tools:ignore="HardcodedText"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,13 +73,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
                             <androidx.recyclerview.widget.RecyclerView
-                                android:layout_marginTop="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_marginLeft="10dp"
                                 android:layout_width="match_parent"
+                                android:layout_marginBottom="10dp"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/rv_list_materi"
-                                tools:listitem="@layout/item_daftar_materi_latihan"
+                                tools:listitem="@layout/item_list_latihan_materi_beranda"
                                 android:scrollbars="none" />
                         </LinearLayout>
                         <LinearLayout
@@ -83,26 +85,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
                             <androidx.recyclerview.widget.RecyclerView
-                                android:layout_marginTop="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:id="@+id/rv_list_latihan"
-                                tools:listitem="@layout/item_daftar_materi_latihan"/>
+                                tools:listitem="@layout/item_list_latihan_materi_beranda"/>
                         </LinearLayout>
                         <LinearLayout
                             android:id="@+id/quiz"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
                             <androidx.recyclerview.widget.RecyclerView
-                                android:layout_marginTop="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:id="@+id/rv_list_quiz"
-                                tools:listitem="@layout/item_daftar_quiz"/>
+                                tools:listitem="@layout/item_list_quiz_beranda"/>
                         </LinearLayout>
                     </FrameLayout>
                 </LinearLayout>
@@ -122,6 +120,7 @@
                 android:padding="10dp"
                 >
                 <TextView
+                    tools:ignore="HardcodedText"
                     style="@style/TextViewBlack"
                     android:text="Tips menjadi siswa berprestasi"
                     android:textColor="@color/white"
@@ -146,12 +145,14 @@
                             android:orientation="vertical"
                             android:gravity="center">
                             <TextView
+                                tools:ignore="HardcodedText"
                                 android:textSize="18sp"
                                 style="@style/NormalTextBold"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Penuhi Kewajiban" />
                             <TextView
+                                tools:ignore="HardcodedText"
                                 android:textSize="15sp"
                                 style="@style/TextViewBlack"
                                 android:layout_width="wrap_content"
@@ -173,12 +174,15 @@
                             android:orientation="vertical"
                             android:gravity="center">
                             <TextView
+                                tools:ignore="HardcodedText"
                                 style="@style/NormalTextBold"
                                 android:textSize="18sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Indahnya Persahabatan" />
+                                android:text="Indahnya Persahabatan"
+                                android:textAlignment="center"/>
                             <TextView
+                                tools:ignore="HardcodedText"
                                 style="@style/TextViewBlack"
                                 android:textSize="15sp"
                                 android:layout_width="wrap_content"
@@ -200,12 +204,15 @@
                             android:orientation="vertical"
                             android:gravity="center">
                             <TextView
+                                tools:ignore="HardcodedText"
                                 android:textSize="18sp"
                                 style="@style/NormalTextBold"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Lewati Semua Tantangan" />
+                                android:text="Lewati Semua Tantangan"
+                                android:textAlignment="center"/>
                             <TextView
+                                tools:ignore="HardcodedText"
                                 android:textSize="15sp"
                                 style="@style/TextViewBlack"
                                 android:layout_width="wrap_content"

@@ -13,16 +13,20 @@
         android:id="@+id/review_latihan_emoji"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_margin="10dp" />
+        android:layout_margin="10dp"
+        tools:ignore="ContentDescription" />
 
     <TextView
+        tools:ignore="HardcodedText"
         android:id="@+id/tx_lulus"
         style="@style/NormalTextBold"
         android:text="Selamat!\nKamu lulus dalam latihan ini"
         android:layout_margin="10dp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+         />
 
     <TextView
+        tools:ignore="HardcodedText"
         style="@style/NormalTextBold"
         android:text="Sayang sekali!\nKamu gagal dalam latihan ini"
         android:layout_margin="10dp"
@@ -34,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        tools:ignore="HardcodedText"
         android:text="Selesai dan kumpulkan 1 koin"
         android:background="@color/colorPrimary"
         android:textColor="@color/white"
@@ -45,6 +50,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="Ulangi Latihan"
+        tools:ignore="HardcodedText"
         android:background="@color/colorPrimary"
         android:textColor="@color/white"
         android:id="@+id/btn_ulangi_latihan"/>

@@ -7,13 +7,13 @@
     tools:context=".view.authentication.RegisterActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:text="@string/tv_register"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
@@ -22,6 +22,7 @@
             />
 
         <EditText
+            tools:ignore="Autofill,HardcodedText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/nama_lengkap"
@@ -36,10 +37,11 @@
             />
 
         <EditText
+            tools:ignore="Autofill,HardcodedText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nomor Telepon"
-            android:drawableLeft="@drawable/ic_phone"
+            android:drawableStart="@drawable/ic_phone"
             android:layout_marginBottom="20dp"
             android:id="@+id/edt_telepon"
             android:layout_marginLeft="20dp"
@@ -49,10 +51,11 @@
             />
 
         <EditText
+            tools:ignore="Autofill,HardcodedText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
-            android:drawableLeft="@drawable/ic_email"
+            android:drawableStart="@drawable/ic_email"
             android:layout_marginBottom="20dp"
             android:id="@+id/edt_email_signup"
             android:fontFamily="@font/roboto_regular"
@@ -69,10 +72,11 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
             <EditText
+                tools:ignore="Autofill,HardcodedText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
-                android:drawableLeft="@drawable/ic_lock"
+                android:drawableStart="@drawable/ic_lock"
                 android:id="@+id/edt_pass_signup"
                 android:inputType="textPassword"
                 android:fontFamily="@font/roboto_regular"
@@ -82,10 +86,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_hide_pass"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
                 android:layout_centerVertical="true"
-                android:id="@+id/img_showhide_passsignup" />
+                android:id="@+id/img_showhide_passsignup"
+                tools:ignore="ContentDescription" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -95,10 +100,11 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
             <EditText
+                tools:ignore="Autofill,HardcodedText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Konfirmasi Password"
-                android:drawableLeft="@drawable/ic_lock"
+                android:drawableStart="@drawable/ic_lock"
                 android:id="@+id/edt_confirmpass"
                 android:inputType="textPassword"
                 android:fontFamily="@font/roboto_regular"
@@ -108,10 +114,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_hide_pass"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
                 android:layout_centerVertical="true"
-                android:id="@+id/img_showhide_confirmpass" />
+                android:id="@+id/img_showhide_confirmpass"
+                tools:ignore="ContentDescription" />
         </RelativeLayout>
 
 
@@ -140,7 +147,7 @@
                     android:textColor="@color/colorPrimary"
                     android:id="@+id/tv_login"
                     android:layout_gravity="center"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     style="@style/TextClickable"
                     />
     </LinearLayout>

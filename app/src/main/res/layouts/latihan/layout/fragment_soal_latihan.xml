@@ -10,7 +10,8 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:id="@+id/img_soal_latihan"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        tools:ignore="ContentDescription"/>
 
     <TextView
         android:text="Soal"
@@ -18,7 +19,8 @@
         android:layout_margin="10dp"
         style="@style/TextViewBlack"
         android:textAlignment="textStart"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -26,6 +28,7 @@
         android:layout_margin="10dp"
         android:id="@+id/radio_latihan">
         <RadioButton
+            tools:ignore="HardcodedText"
             android:padding="5dp"
             android:button="@drawable/radio_button"
             style="@style/TextViewBlack"
@@ -33,6 +36,7 @@
             android:id="@+id/pilihan_A"
             android:textAlignment="textStart"/>
         <RadioButton
+            tools:ignore="HardcodedText"
             android:padding="5dp"
             android:button="@drawable/radio_button"
             style="@style/TextViewBlack"
@@ -40,6 +44,7 @@
             android:id="@+id/pilihan_B"
             android:textAlignment="textStart"/>
         <RadioButton
+            tools:ignore="HardcodedText"
             android:padding="5dp"
             android:button="@drawable/radio_button"
             style="@style/TextViewBlack"
@@ -47,6 +52,7 @@
             android:id="@+id/pilihan_C"
             android:textAlignment="textStart"/>
         <RadioButton
+            tools:ignore="HardcodedText"
             android:padding="5dp"
             android:button="@drawable/radio_button"
             style="@style/TextViewBlack"
@@ -54,12 +60,13 @@
             android:id="@+id/pilihan_D"
             android:textAlignment="textStart"/>
         <RadioButton
+            tools:ignore="HardcodedText"
             android:padding="5dp"
             android:button="@drawable/radio_button"
             style="@style/TextViewBlack"
             android:text="pilihan E"
             android:id="@+id/pilihan_E"
             android:textAlignment="textStart"/>
-    </RadioGroup>`
+    </RadioGroup>
 
 </LinearLayout>

@@ -10,15 +10,18 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:id="@+id/img_soal_quiz"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:text="Soal"
+        tools:ignore="HardcodedText"
         android:id="@+id/tx_soal_quiz"
         android:layout_margin="10dp"
         style="@style/TextViewBlack"
         android:textAlignment="textStart"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+         />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -30,6 +33,7 @@
             android:button="@drawable/radio_button"
             style="@style/TextViewBlack"
             android:text="pilihan A"
+            tools:ignore="HardcodedText"
             android:id="@+id/pilihan_A"
             android:textAlignment="textStart"/>
         <RadioButton
@@ -37,6 +41,7 @@
             android:button="@drawable/radio_button"
             style="@style/TextViewBlack"
             android:text="pilihan B"
+            tools:ignore="HardcodedText"
             android:id="@+id/pilihan_B"
             android:textAlignment="textStart"/>
         <RadioButton
@@ -44,6 +49,7 @@
             android:button="@drawable/radio_button"
             style="@style/TextViewBlack"
             android:text="pilihan C"
+            tools:ignore="HardcodedText"
             android:id="@+id/pilihan_C"
             android:textAlignment="textStart"/>
         <RadioButton
@@ -51,6 +57,7 @@
             android:button="@drawable/radio_button"
             style="@style/TextViewBlack"
             android:text="pilihan D"
+            tools:ignore="HardcodedText"
             android:id="@+id/pilihan_D"
             android:textAlignment="textStart"/>
         <RadioButton
@@ -58,6 +65,7 @@
             android:button="@drawable/radio_button"
             style="@style/TextViewBlack"
             android:text="pilihan E"
+            tools:ignore="HardcodedText"
             android:id="@+id/pilihan_E"
             android:textAlignment="textStart"/>
     </RadioGroup>
