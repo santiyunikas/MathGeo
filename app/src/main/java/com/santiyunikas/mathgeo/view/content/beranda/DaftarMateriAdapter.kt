@@ -11,9 +11,14 @@ import kotlinx.android.synthetic.main.item_daftar_materi_latihan.view.*
 class DaftarMateriAdapter(private val listMateri: ArrayList<DaftarMateri>): RecyclerView.Adapter<DaftarMateriAdapter.ListViewHolder>(){
     private var onItemClickCallback: OnItemClickCallback? = null
 
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     interface OnItemClickCallback {
         fun onItemClicked(data: DaftarMateri, position: Int)
     }
+
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(materi: DaftarMateri, position: Int) {
             with(itemView){

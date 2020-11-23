@@ -1,11 +1,13 @@
 package com.santiyunikas.mathgeo.view.content.beranda
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TabHost
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.santiyunikas.mathgeo.R
@@ -16,6 +18,12 @@ import com.santiyunikas.mathgeo.presenter.latihan.DaftarLatihanPresenter
 import com.santiyunikas.mathgeo.presenter.materi.DaftarMateriPresenter
 import com.santiyunikas.mathgeo.presenter.quiz.DaftarQuizPresenter
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
+import com.santiyunikas.mathgeo.view.content.latihan.DaftarLatihanFragment
+import com.santiyunikas.mathgeo.view.content.latihan.DetailLatihanActivity
+import com.santiyunikas.mathgeo.view.content.materi.DaftarMateriFragment
+import com.santiyunikas.mathgeo.view.content.materi.DetailMateriActivity
+import com.santiyunikas.mathgeo.view.content.quiz.DaftarQuizFragment
+import com.santiyunikas.mathgeo.view.content.quiz.DetailQuizActivity
 import kotlinx.android.synthetic.main.fragment_beranda.*
 import kotlinx.android.synthetic.main.fragment_beranda.rv_list_latihan
 import kotlinx.android.synthetic.main.fragment_beranda.rv_list_materi
@@ -84,17 +92,66 @@ class BerandaFragment : Fragment(){
         rv_list_latihan.layoutManager = LinearLayoutManager(context)
         val daftarLatihanAdapter = DaftarLatihanAdapter(listLatihan)
         rv_list_latihan.adapter = daftarLatihanAdapter
+
+        daftarLatihanAdapter.setOnItemClickCallback(object :
+            DaftarLatihanAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: DaftarLatihan, position: Int) {
+                moveDetailLatihan(data, position)
+            }
+        })
     }
+    private fun moveDetailLatihan(latihan: DaftarLatihan, position: Int){
+        val intent = Intent(context, DetailLatihanActivity::class.java)
+        intent.putExtra(DaftarLatihanFragment.KEY_ID_LATIHAN, position+1)
+        intent.putExtra(DaftarLatihanFragment.KEY_JUDUL_LATIHAN, latihan.title)
+        startActivity(intent)
+    }
+
     private fun showRecyclerListMateri(){
         rv_list_materi.layoutManager = LinearLayoutManager(context)
         val daftarMateriAdapter = DaftarMateriAdapter(listMateri)
         rv_list_materi.adapter = daftarMateriAdapter
+
+        daftarMateriAdapter.setOnItemClickCallback(object :
+            DaftarMateriAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: DaftarMateri, position: Int) {
+                moveDetailMateri(data, position)
+            }
+
+        })
+    }
+
+    private fun moveDetailMateri(materi: DaftarMateri, position: Int) {
+        val intent = Intent(context, DetailMateriActivity::class.java)
+        intent.putExtra(DaftarMateriFragment.KEY_ID_MATERI, position+1)
+        intent.putExtra(DaftarMateriFragment.KEY_JUDUL_MATERI, materi.title)
+        startActivity(intent)
     }
 
     private fun showRecyclerListQuiz(){
         rv_list_quiz.layoutManager = LinearLayoutManager(context)
         val daftarQuizAdapter = DaftarQuizAdapter(listQuiz)
         rv_list_quiz.adapter = daftarQuizAdapter
+
+        daftarQuizAdapter.setOnItemClickCallback(object :
+            DaftarQuizAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: DaftarQuiz, position: Int) {
+                if (view?.context?.let { Preferences.getRegisteredJumlahKoin(it) }!! <= 0){
+                    Toast.makeText(view?.context, """Koin kamu tidak mencukupi!
+                |Kerjakan latihan atau masukkan kode teman untuk mendapat tambahan koin
+            """.trimMargin(), Toast.LENGTH_LONG).show()
+                }else{
+                    moveDetailQuiz(data, position)
+                }
+            }
+        })
+    }
+
+    private fun moveDetailQuiz(quiz: DaftarQuiz, position: Int){
+        val intent = Intent(context, DetailQuizActivity::class.java)
+        intent.putExtra(DaftarQuizFragment.KEY_ID_QUIZ, position+1)
+        intent.putExtra(DaftarQuizFragment.KEY_JUDUL_QUIZ, quiz.title)
+        startActivity(intent)
     }
 
 

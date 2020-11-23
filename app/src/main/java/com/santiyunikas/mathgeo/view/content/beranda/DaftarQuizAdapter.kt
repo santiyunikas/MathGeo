@@ -11,6 +11,10 @@ import kotlinx.android.synthetic.main.item_daftar_quiz.view.*
 class DaftarQuizAdapter(private val listQuiz: ArrayList<DaftarQuiz>): RecyclerView.Adapter<DaftarQuizAdapter.ListViewHolder>() {
     private var onItemClickCallback: OnItemClickCallback? = null
 
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     interface OnItemClickCallback {
         fun onItemClicked(data: DaftarQuiz, position: Int)
     }
