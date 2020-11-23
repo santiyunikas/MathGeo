@@ -46,7 +46,7 @@ class DetailLatihanActivity : AppCompatActivity(), IView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_latihan)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Materi Bangun Ruang"
+        supportActionBar?.title = "Latihan Bangun Ruang"
 
         if (InternetConnection.isConnected(this)){
             idLatihan = intent.getIntExtra(DaftarLatihanFragment1.KEY_ID_LATIHAN, 0)

@@ -34,7 +34,6 @@ class DaftarMateriFragment : Fragment() {
         rv_list_materi.setHasFixedSize(true)
         rv_list_materi.isNestedScrollingEnabled = true
         presenter = DaftarMateriPresenter(this)
-
         list.addAll(presenter.getDaftarMateri())
         showRecyclerList()
     }

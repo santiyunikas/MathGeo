@@ -36,7 +36,6 @@ class DaftarLatihanFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         rv_list_latihan.setHasFixedSize(true)
         presenter = DaftarLatihanPresenter(this)
-
         list.addAll(presenter.getDaftarLatihan())
         showRecyclerList()
     }

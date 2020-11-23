@@ -34,7 +34,6 @@ class DaftarQuizFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         rv_list_quiz.setHasFixedSize(true)
         presenter = DaftarQuizPresenter(this)
-
         tx_koin.text = Preferences.getRegisteredJumlahKoin(view.context).toString()
         list.addAll(presenter.getDaftarQuiz())
         showRecyclerList()
