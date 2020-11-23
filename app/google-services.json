@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "1069756392490",
-    "firebase_url": "https://mathgeo-93acc.firebaseio.com",
-    "project_id": "mathgeo-93acc",
-    "storage_bucket": "mathgeo-93acc.appspot.com"
+    "project_number": "453296838709",
+    "firebase_url": "https://mathgeo-application-76734.firebaseio.com",
+    "project_id": "mathgeo-application-76734",
+    "storage_bucket": "mathgeo-application-76734.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1069756392490:android:ae345c320c459a8b778f53",
+        "mobilesdk_app_id": "1:453296838709:android:78859956c544bbe458b97c",
         "android_client_info": {
           "package_name": "com.santiyunikas.mathgeo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1069756392490-bq4uo27khkmg32hbln3qd9rn2m13oc0u.apps.googleusercontent.com",
+          "client_id": "453296838709-2q2e3ug2i0h5eocs0j7465jt2cdnbal9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCdQubFrcbqHQTAqip4YSCjcQDrElvLlM8"
+          "current_key": "AIzaSyCT5Nxd4P1wS7gSXMgLGtWZuoj0x8-sVyk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1069756392490-bq4uo27khkmg32hbln3qd9rn2m13oc0u.apps.googleusercontent.com",
+              "client_id": "453296838709-2q2e3ug2i0h5eocs0j7465jt2cdnbal9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
