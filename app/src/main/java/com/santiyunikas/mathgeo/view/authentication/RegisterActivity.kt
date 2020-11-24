@@ -77,10 +77,10 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
             edt_telepon.error = "Nomor telepon tidak boleh kosong"
             value = false
         }else if (!Patterns.PHONE.matcher(numberPhone).matches()){
-            edt_telepon.error = "Masukkan nomor telepon"
+            edt_telepon.error = "Masukkan nomor telepon dengan benar"
             value = false
         }else if(numberPhone.length<10){
-            edt_telepon.error = "Masukkan nomor telepon"
+            edt_telepon.error = "Nomor telepon tidak boleh kurang dari 10 digit"
             value = false
         }
 
@@ -88,7 +88,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
             edt_email_signup.error = "Email tidak boleh kosong"
             value = false
         }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            edt_email_signup.error = "Masukkan email"
+            edt_email_signup.error = "Masukkan email dengan benar"
             value = false
         }
 

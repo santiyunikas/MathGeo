@@ -80,9 +80,10 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:background="@color/colorPrimary"
-                    android:text="@string/kirim"
+                    android:text="Ubah Profil"
                     android:id="@+id/btn_send_edit_profile"
-                    android:layout_margin="20dp"/>
+                    android:layout_margin="20dp"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 

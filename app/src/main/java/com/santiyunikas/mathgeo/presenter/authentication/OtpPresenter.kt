@@ -23,11 +23,11 @@ class OtpPresenter(contextOtp: OtpFragment){
                     call: Call<List<Member>>,
                     response: Response<List<Member>>
                 ) {
-                    if (response.body()!![0].email.isNotEmpty()){
+                    if (response.body()!!.isNotEmpty()){
                         if(response.body()!![0].email == email){
                             Log.d("memberSendOtp", response.body().toString())
                             if (response.body()!![0].active == "0"){
-                                view.onError("notActive")
+                                      view.onError("notActive")
                             }else{
                                 view.onSuccess(response.body()!![0].otp)
                             }

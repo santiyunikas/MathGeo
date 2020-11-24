@@ -84,7 +84,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
             edt_email_login.error = "Email tidak boleh kosong"
             value = false
          }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            edt_email_login.error = "Masukkan email"
+            edt_email_login.error = "Masukkan email dengan benar"
         }
 
         if (password.isEmpty()){
@@ -131,6 +131,5 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
                 Log.d("erorLogin", msg!!)
             }
         }
-        updateViewData()
     }
 }

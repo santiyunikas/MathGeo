@@ -114,7 +114,7 @@ class OtpFragment : Fragment(), IView, View.OnClickListener{
             edt_email_reset_pass.error = "Email tidak boleh kosong"
             value = false
         }else if(!Patterns.EMAIL_ADDRESS.matcher(edt_email_reset_pass.text.toString()).matches()){
-            edt_email_reset_pass.error = "Masukkan email"
+            edt_email_reset_pass.error = "Masukkan email dengan benar"
             value = false
         }
 
