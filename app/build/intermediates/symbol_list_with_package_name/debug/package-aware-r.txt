@@ -2512,6 +2512,7 @@ layout fragment_beranda
 layout fragment_daftar_latihan
 layout fragment_daftar_materi
 layout fragment_daftar_quiz
+layout fragment_loading_dialog
 layout fragment_materi_image_dialog
 layout fragment_otp
 layout fragment_pembahasan_latihan_dialog
@@ -2731,6 +2732,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string h
+string hello_blank_fragment
 string hg
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description

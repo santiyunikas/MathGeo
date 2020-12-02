@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
     private lateinit var presenter: LoginPresenter
+    private val fragment = LoadingDialogFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +54,13 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
                 startActivity(intent)
             }
             R.id.btn_login->{
+                val bundle = Bundle()
+
+                fragment.arguments = bundle
+
+                val fm = supportFragmentManager
+                fragment.show(fm, LoadingDialogFragment::class.java.simpleName)
+
                 val email: String = edt_email_login.text.toString().trim()
                 val password: String = edt_pass_login.text.toString().trim()
 
@@ -100,6 +108,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
 
      override fun onSuccess(msg: String?) {
         if(msg.equals("isSuccess")){
+            fragment.dismiss()
             Log.d("suksesRegister", msg!!)
             updateViewData()
             Toast.makeText(this, "Login Berhasil", Toast.LENGTH_LONG).show()
@@ -118,16 +127,19 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
 
         when {
             msg.equals("notActive") -> {
+                fragment.dismiss()
                 Toast.makeText(this, "Login gagal: Cek email untuk konfirmasi akun anda", Toast.LENGTH_LONG).show()
             }
             msg.equals("differentPass") -> {
+                fragment.dismiss()
                 Toast.makeText(this, "Login gagal: Email atau Password Salah", Toast.LENGTH_LONG).show()
             }
             msg.equals("resetPasswordFail") -> {
                 Toast.makeText(this, "Password Gagal Diubah", Toast.LENGTH_LONG).show()
             }
             else -> {
-                Toast.makeText(this, "Login gagal", Toast.LENGTH_LONG).show()
+                fragment.dismiss()
+                Toast.makeText(this, "Login gagal: $msg", Toast.LENGTH_LONG).show()
                 Log.d("erorLogin", msg!!)
             }
         }

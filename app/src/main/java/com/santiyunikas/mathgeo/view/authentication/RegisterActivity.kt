@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
     private lateinit var presenter: RegisterPresenter
+    private val fragment = LoadingDialogFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +56,13 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
                 val confirmPassword: String = edt_confirmpass.text.toString().trim()
 
                 if (inputValid(fullname, numberPhone, email, password, confirmPassword) && InternetConnection.isConnected(this)){
-                        presenter.register(fullname, numberPhone, email, password)
+                    val bundle = Bundle()
+
+                    fragment.arguments = bundle
+
+                    val fm = supportFragmentManager
+                    fragment.show(fm, LoadingDialogFragment::class.java.simpleName)
+                    presenter.register(fullname, numberPhone, email, password)
                 }
             }
             tv_login.id->{
@@ -112,6 +119,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
     }
 
     override fun onSuccess(msg: String?) {
+        fragment.dismiss()
         Log.d("suksesRegister", msg!!)
         Toast.makeText(this, "Registrasi Berhasil, Cek Email Kamu untuk Verifikasi!", Toast.LENGTH_LONG).show()
         updateViewData()
@@ -121,8 +129,9 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
     }
 
     override fun onError(msg: String?) {
+        fragment.dismiss()
         Log.d("erorRegister", msg!!)
-        Toast.makeText(this, "Registrasi Gagal, Email Sudah Terdaftar", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Registrasi Gagal, Email Sudah Terdaftar, Hubungi Admin!", Toast.LENGTH_LONG).show()
     }
 
 

@@ -2,6 +2,7 @@ package com.santiyunikas.mathgeo.view.content.profil
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
@@ -11,11 +12,12 @@ import com.santiyunikas.mathgeo.contract.ContractInterface.IView
 import com.santiyunikas.mathgeo.presenter.profil.KoinGratisPresenter
 import com.santiyunikas.mathgeo.util.network.InternetConnection
 import com.santiyunikas.mathgeo.util.sharedpreferences.Preferences
+import com.santiyunikas.mathgeo.view.authentication.LoadingDialogFragment
 import kotlinx.android.synthetic.main.activity_koin_gratis.*
-
 
 class KoinGratisActivity : AppCompatActivity(), IView, View.OnClickListener {
     private lateinit var presenter: KoinGratisPresenter
+    private val fragment = LoadingDialogFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +57,7 @@ class KoinGratisActivity : AppCompatActivity(), IView, View.OnClickListener {
     override fun onSuccess(msg: String?) {
         when(msg){
             "addCoinSuccess"->{
+                fragment.dismiss()
                 Toast.makeText(this, "Berhasil menambah koin", Toast.LENGTH_LONG).show()
                 updateViewData()
             }
@@ -94,8 +97,26 @@ class KoinGratisActivity : AppCompatActivity(), IView, View.OnClickListener {
                 startActivity(shareIntent)
             }
             R.id.btn_periksa -> {
-                presenter.validasiKode(kode_teman.text.toString()).toString()
+                if (inputValid(kode_teman.text.toString())){
+                    val bundle = Bundle()
+
+                    fragment.arguments = bundle
+
+                    val fm = supportFragmentManager
+                    fragment.show(fm, LoadingDialogFragment::class.java.simpleName)
+                    Log.d("kodeteman", kode_teman.text.toString())
+                    presenter.validasiKode(kode_teman.text.toString()).toString()
+                }
             }
         }
+    }
+
+    private fun inputValid(kodeteman: String): Boolean{
+        var value = true
+        if (kodeteman.isEmpty()){
+            kode_teman.error = "Kode Referal Tidak Boleh Kosong"
+            value = false
+        }
+        return value
     }
 }
