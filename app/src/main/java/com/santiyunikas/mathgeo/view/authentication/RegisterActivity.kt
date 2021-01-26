@@ -131,7 +131,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, IView{
     override fun onError(msg: String?) {
         fragment.dismiss()
         Log.d("erorRegister", msg!!)
-        Toast.makeText(this, "Registrasi Gagal, Email Sudah Terdaftar, Hubungi Admin!", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Email Sudah Terdaftar, Cek Email Kamu untuk Verifikasi!", Toast.LENGTH_LONG).show()
     }
 
 

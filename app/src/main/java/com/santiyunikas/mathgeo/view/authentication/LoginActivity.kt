@@ -139,7 +139,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, IView{
             }
             else -> {
                 fragment.dismiss()
-                Toast.makeText(this, "Login gagal: $msg", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Login gagal $msg", Toast.LENGTH_LONG).show()
                 Log.d("erorLogin", msg!!)
             }
         }
